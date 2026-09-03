@@ -100,13 +100,14 @@ export default function CostCalculator() {
             src={src}
             alt="Background"
             fill
+            unoptimized={true}
             className="object-cover"
             priority={idx === 0}
           />
         </div>
       ))}
-      {/* Overlay to ensure text visibility */}
-      <div className="absolute inset-0 bg-white/80 backdrop-blur-sm"></div>
+      {/* Overlay to ensure text visibility without expensive GPU blur */}
+      <div className="absolute inset-0 bg-white/90"></div>
       
       <div className="max-w-4xl mx-auto px-4 relative z-10">
         
@@ -142,7 +143,7 @@ export default function CostCalculator() {
         </div>
 
         {/* Calculator Card */}
-        <div className="bg-white/90 backdrop-blur-xl min-h-[500px] rounded-[40px] shadow-[0_20px_60px_rgba(0,0,0,0.1)] border border-white/50 p-6 md:p-12 relative overflow-hidden flex flex-col justify-center">
+        <div className="bg-white min-h-[500px] rounded-[40px] shadow-[0_20px_60px_rgba(0,0,0,0.1)] border border-gray-100 p-6 md:p-12 relative overflow-hidden flex flex-col justify-center">
           
           {/* Decorative Blur */}
           <div className="absolute top-0 right-0 w-96 h-96 bg-[#0077B6]/5 blur-[100px] rounded-full -mr-48 -mt-48 pointer-events-none" />
