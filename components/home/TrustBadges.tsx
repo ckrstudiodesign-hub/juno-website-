@@ -5,15 +5,12 @@ import { Landmark, Building2, Globe2, BadgeCheck, Home } from 'lucide-react';
 
 const TrustBadges = () => {
   return (
-    <div className="bg-white section-padding border-y border-gray-100 relative overflow-hidden">
+    <div className="bg-white pt-16 pb-12 rounded-t-[40px] md:rounded-t-[60px] relative z-30 -mt-12 md:-mt-20 shadow-[0_-20px_40px_rgba(0,0,0,0.03)] overflow-hidden border-t border-gray-100">
       {/* Subtle Background Pattern */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#5465ff 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
       
       <div className="max-w-7xl mx-auto px-4 relative z-10">
-        <div className="text-center mb-16">
-          <span className="text-electric-sapphire font-black tracking-[0.4em] uppercase text-[10px] mb-4 block">Our Credibility</span>
-          <h2 className="text-3xl md:text-5xl font-black text-black tracking-tighter uppercase">Authorized & <span className="text-electric-sapphire">Accredited</span></h2>
-        </div>
+        {/* Removed the large title "Authorized & Accredited" to match the cleaner look of the reference design */}
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-12">
           {[
@@ -29,7 +26,7 @@ const TrustBadges = () => {
               </div>
               <div className="space-y-1">
                 <h4 className="text-black font-black text-lg tracking-tight uppercase">{badge.title}</h4>
-                <p className="text-gray-400 text-[10px] md:text-xs font-medium leading-relaxed max-w-[180px] mx-auto uppercase tracking-[0.05em]">{badge.desc}</p>
+                <p className="text-deep-navy/80 text-[10px] md:text-xs font-medium leading-relaxed max-w-[180px] mx-auto uppercase tracking-[0.05em]">{badge.desc}</p>
               </div>
               <div className="w-8 h-0.5 bg-electric-sapphire/20 rounded-full group-hover:w-16 group-hover:bg-electric-sapphire transition-all duration-500"></div>
             </div>

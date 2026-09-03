@@ -49,7 +49,7 @@ const ServicePage = ({
   faqs
 }: ServicePageProps) => {
   return (
-    <div className="bg-[#030303] text-white min-h-screen pb-32 pt-20">
+    <div className="bg-white text-deep-navy min-h-screen pb-32 pt-20">
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-electric-sapphire/5 blur-[150px] rounded-full pointer-events-none"></div>
       
       {/* Dynamic Hero Section */}
@@ -62,7 +62,7 @@ const ServicePage = ({
             className="object-cover opacity-30 grayscale-[0.8]"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#030303] via-[#030303]/40 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-white via-white/70 to-white/40"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full text-center">
@@ -75,7 +75,7 @@ const ServicePage = ({
               <Link href="/" className="inline-flex items-center gap-2 text-electric-sapphire text-[10px] font-black tracking-[0.4em] uppercase mb-10 hover:gap-4 transition-all opacity-60 hover:opacity-100">
                 <ArrowLeft size={14} /> Back to Hub
               </Link>
-              <h1 className="text-4xl md:text-7xl font-black mb-8 leading-[1.1] text-white tracking-tighter uppercase">
+              <h1 className="text-4xl md:text-7xl font-black mb-8 leading-[1.1] text-deep-navy tracking-tighter uppercase">
                 {title.split(' ').map((word, i) => (
                   <span key={i} className={i % 3 === 2 ? "text-gradient-primary" : ""}>{word} </span>
                 ))}
@@ -102,7 +102,7 @@ const ServicePage = ({
               viewport={{ once: true }}
               className="prose prose-invert prose-xl max-w-none"
             >
-              <div className="text-gray-400 text-lg md:text-xl leading-relaxed space-y-10 font-light">
+              <div className="text-deep-navy/80 text-lg md:text-xl leading-relaxed space-y-10 font-light">
                 {Array.isArray(description) ? (
                   description.map((p, i) => <p key={i} className="first-letter:text-5xl first-letter:font-black first-letter:text-electric-sapphire first-letter:mr-3 first-letter:float-left">{p}</p>)
                 ) : (
@@ -133,12 +133,12 @@ const ServicePage = ({
               >
                 <div className="flex items-center gap-6">
                   <div className="w-12 h-px bg-electric-sapphire"></div>
-                  <h2 className="text-2xl md:text-4xl font-black text-white uppercase tracking-tight">{section.title}</h2>
+                  <h2 className="text-2xl md:text-4xl font-black text-deep-navy uppercase tracking-tight">{section.title}</h2>
                 </div>
                 
                 <div className="space-y-10">
                   {section.content && (
-                    <div className="text-gray-400 text-lg leading-relaxed font-light">
+                    <div className="text-deep-navy/80 text-lg leading-relaxed font-light">
                       {Array.isArray(section.content) ? (
                         section.content.map((p, i) => <p key={i} className="mb-6">{p}</p>)
                       ) : (
@@ -155,7 +155,7 @@ const ServicePage = ({
                          const logo = isString ? null : item.logo;
                          
                          return (
-                          <div key={i} className="bg-white/5 p-6 rounded-3xl flex items-center gap-6 hover:bg-white/10 transition-all border border-white/5 hover:border-electric-sapphire/30 group">
+                          <div key={i} className="bg-deep-navy/5 p-6 rounded-3xl flex items-center gap-6 hover:bg-white/10 transition-all border border-deep-navy/10 hover:border-electric-sapphire/30 group">
                             {logo ? (
                               <div className="w-16 h-12 relative shrink-0 grayscale group-hover:grayscale-0 transition-all opacity-80 group-hover:opacity-100">
                                 <Image src={logo} alt={name} fill className="object-contain object-left" />
@@ -165,7 +165,7 @@ const ServicePage = ({
                                 <CheckCircle2 className="text-electric-sapphire group-hover:text-black w-4 h-4 transition-colors" />
                               </div>
                             )}
-                            <span className={`text-gray-300 font-medium text-sm leading-relaxed ${logo ? 'font-bold text-white' : ''}`}>{name}</span>
+                            <span className={`text-deep-navy/80 font-medium text-sm leading-relaxed ${logo ? 'font-bold text-deep-navy' : ''}`}>{name}</span>
                           </div>
                          );
                       })}
@@ -176,10 +176,10 @@ const ServicePage = ({
             ))}
 
             {/* Standard Service Highlights - Universal Content Expansion */}
-            <section className="space-y-12 pt-12 border-t border-white/5">
+            <section className="space-y-12 pt-12 border-t border-deep-navy/10">
                 <div className="flex items-center gap-6">
                   <div className="w-12 h-px bg-electric-sapphire"></div>
-                  <h2 className="text-2xl md:text-4xl font-black text-white uppercase tracking-tight">Our Premium Standard</h2>
+                  <h2 className="text-2xl md:text-4xl font-black text-deep-navy uppercase tracking-tight">Our Premium Standard</h2>
                 </div>
                 <div className="grid md:grid-cols-3 gap-6">
                    {[
@@ -189,7 +189,7 @@ const ServicePage = ({
                    ].map((item, i) => (
                      <div key={i} className="glass p-8 rounded-3xl space-y-4 border-electric-sapphire/10">
                         <h4 className="text-electric-sapphire font-black uppercase text-sm tracking-widest">{item.t}</h4>
-                        <p className="text-gray-500 text-xs leading-relaxed font-light">{item.d}</p>
+                        <p className="text-deep-navy/70 text-xs leading-relaxed font-light">{item.d}</p>
                      </div>
                    ))}
                 </div>
@@ -198,14 +198,14 @@ const ServicePage = ({
             {hallmarks && (
               <section className="space-y-12">
                 <div className="text-center md:text-left">
-                  <h2 className="text-3xl font-black text-white uppercase tracking-tight">{hallmarksTitle}</h2>
+                  <h2 className="text-3xl font-black text-deep-navy uppercase tracking-tight">{hallmarksTitle}</h2>
                   <div className="w-16 h-1 bg-electric-sapphire mt-4 rounded-full"></div>
                 </div>
                 <div className="grid md:grid-cols-2 gap-6">
                   {hallmarks.map((hallmark, idx) => (
                     <div key={idx} className="glass-card p-10 rounded-[40px] space-y-6">
                       <h4 className="text-xl font-bold text-electric-sapphire uppercase tracking-tight">{hallmark.title}</h4>
-                      <p className="text-gray-400 font-light leading-relaxed text-sm italic">{hallmark.description}</p>
+                      <p className="text-deep-navy/80 font-light leading-relaxed text-sm italic">{hallmark.description}</p>
                     </div>
                   ))}
                 </div>
@@ -237,12 +237,12 @@ const ServicePage = ({
               {advantages && (
                 <div className="glass p-10 rounded-[48px] border border-electric-sapphire/10 space-y-10 shadow-2xl relative overflow-hidden group">
                   <div className="absolute top-0 left-0 w-full h-1 bg-electric-sapphire scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
-                  <h3 className="text-xl font-black text-white uppercase tracking-widest border-b border-white/5 pb-6">{advantagesTitle}</h3>
+                  <h3 className="text-xl font-black text-deep-navy uppercase tracking-widest border-b border-deep-navy/10 pb-6">{advantagesTitle}</h3>
                   <ul className="space-y-6">
                     {advantages.map((advantage, idx) => (
                       <li key={idx} className="flex items-start gap-4 group/item">
                         <CheckCircle2 className="text-electric-sapphire w-4 h-4 shrink-0 mt-1 opacity-50 group-hover/item:opacity-100 transition-opacity" />
-                        <span className="text-gray-400 font-medium text-xs md:text-sm leading-relaxed group-hover/item:text-white transition-colors">{advantage}</span>
+                        <span className="text-deep-navy/80 font-medium text-xs md:text-sm leading-relaxed group-hover/item:text-deep-navy transition-colors">{advantage}</span>
                       </li>
                     ))}
                   </ul>

@@ -29,7 +29,7 @@ export default function BlogIndex() {
   };
 
   return (
-    <div className="bg-[#030303] text-white min-h-screen pb-32 pt-32">
+    <div className="bg-white text-deep-navy min-h-screen pb-32 pt-32">
       <SchemaMarkup type="Organization" data={GlobalSchemas.Organization} />
       <SchemaMarkup type="BreadcrumbList" data={breadcrumbSchema} />
       
@@ -38,7 +38,7 @@ export default function BlogIndex() {
         <h1 className="text-4xl md:text-6xl font-black mb-6 uppercase tracking-tighter">
           Business <span className="text-electric-sapphire">Insights</span>
         </h1>
-        <p className="text-gray-400 max-w-2xl mx-auto text-lg md:text-xl font-light">
+        <p className="text-deep-navy/80 max-w-2xl mx-auto text-lg md:text-xl font-light">
           Expert analysis, regulatory updates, and step-by-step guides for navigating the UAE corporate landscape.
         </p>
       </section>
@@ -48,7 +48,7 @@ export default function BlogIndex() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {posts.map((post) => (
             <Link key={post.meta.slug} href={`/blog/${post.meta.slug}`} className="group block h-full">
-              <article className="bg-[#0a0a0a] rounded-3xl overflow-hidden border border-white/5 hover:border-electric-sapphire/30 transition-colors h-full flex flex-col shadow-2xl shadow-black/50">
+              <article className="bg-white/40 rounded-3xl overflow-hidden border border-deep-navy/10 hover:border-electric-sapphire/30 transition-colors h-full flex flex-col shadow-2xl shadow-black/50">
                 {/* Image */}
                 <div className="relative h-64 w-full overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent z-10"></div>
@@ -67,26 +67,26 @@ export default function BlogIndex() {
 
                 {/* Content */}
                 <div className="p-8 flex-1 flex flex-col">
-                  <h2 className="text-2xl font-black text-white mb-4 group-hover:text-electric-sapphire transition-colors line-clamp-2">
+                  <h2 className="text-2xl font-black text-deep-navy mb-4 group-hover:text-electric-sapphire transition-colors line-clamp-2">
                     {post.meta.title}
                   </h2>
-                  <p className="text-gray-400 text-sm leading-relaxed mb-8 line-clamp-3 font-light flex-1">
+                  <p className="text-deep-navy/80 text-sm leading-relaxed mb-8 line-clamp-3 font-light flex-1">
                     {post.meta.excerpt}
                   </p>
                   
                   {/* Meta */}
-                  <div className="mt-auto pt-6 border-t border-white/5">
+                  <div className="mt-auto pt-6 border-t border-deep-navy/10">
                     <div className="flex items-center gap-4 mb-4">
-                      <div className="relative w-10 h-10 rounded-full overflow-hidden border border-white/10">
+                      <div className="relative w-10 h-10 rounded-full overflow-hidden border border-deep-navy/10">
                         <Image src={post.meta.author.image} alt={post.meta.author.name} fill className="object-cover" />
                       </div>
                       <div>
-                        <p className="text-white text-xs font-bold">{post.meta.author.name}</p>
-                        <p className="text-gray-500 text-[10px] uppercase tracking-widest">{post.meta.author.role}</p>
+                        <p className="text-deep-navy text-xs font-bold">{post.meta.author.name}</p>
+                        <p className="text-deep-navy/70 text-[10px] uppercase tracking-widest">{post.meta.author.role}</p>
                       </div>
                     </div>
                     
-                    <div className="flex items-center justify-between text-gray-500 text-[11px] font-medium tracking-wide">
+                    <div className="flex items-center justify-between text-deep-navy/70 text-[11px] font-medium tracking-wide">
                       <div className="flex items-center gap-4">
                         <span className="flex items-center gap-1.5"><Calendar size={14} className="text-electric-sapphire" /> {format(parseISO(post.meta.date), 'MMM d, yyyy')}</span>
                         <span className="flex items-center gap-1.5"><Clock size={14} className="text-electric-sapphire" /> {post.meta.readingTime}</span>

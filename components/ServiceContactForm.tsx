@@ -126,7 +126,7 @@ const ServiceContactForm = ({
           <CheckCircle2 className="text-green-600" size={28} />
         </div>
         <h4 className="text-xl font-black text-black">Form submitted</h4>
-        <p className="text-gray-500 text-sm">Your request was sent successfully.</p>
+        <p className="text-deep-navy/70 text-sm">Your request was sent successfully.</p>
       </div>
     );
   }
@@ -139,7 +139,7 @@ const ServiceContactForm = ({
       <div className="relative z-10 space-y-6">
         <div className="space-y-1">
           <h4 className="text-xl font-black text-black uppercase tracking-tighter">{title}</h4>
-          <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">Start your {defaultService.split(' ')[0]} setup</p>
+          <p className="text-[10px] text-deep-navy/80 font-bold uppercase tracking-widest">Start your {defaultService.split(' ')[0]} setup</p>
         </div>
 
         {/* ✅ SECURITY: Display validation errors */}
@@ -153,7 +153,7 @@ const ServiceContactForm = ({
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-1">
             <div className="relative">
-              <User className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={16} />
+              <User className="absolute left-4 top-1/2 -translate-y-1/2 text-deep-navy/80" size={16} />
               <input 
                 ref={nameRef}
                 required
@@ -166,7 +166,7 @@ const ServiceContactForm = ({
 
           <div className="space-y-1">
             <div className="relative">
-              <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={16} />
+              <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-deep-navy/80" size={16} />
               <input 
                 ref={emailRef}
                 required
@@ -179,7 +179,7 @@ const ServiceContactForm = ({
 
           <div className="space-y-1">
             <div className="relative">
-              <Phone className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={16} />
+              <Phone className="absolute left-4 top-1/2 -translate-y-1/2 text-deep-navy/80" size={16} />
               <input 
                 ref={phoneRef}
                 required
@@ -192,7 +192,7 @@ const ServiceContactForm = ({
 
           <div className="space-y-1">
             <div className="relative">
-              <Landmark className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={16} />
+              <Landmark className="absolute left-4 top-1/2 -translate-y-1/2 text-deep-navy/80" size={16} />
               <select 
                 value={service}
                 onChange={(e) => setService(e.target.value)}
@@ -219,13 +219,13 @@ const ServiceContactForm = ({
                   <option value="RAK Offshore Company Formation">RAK Offshore</option>
                 </optgroup>
               </select>
-              <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" size={14} />
+              <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 text-deep-navy/80 pointer-events-none" size={14} />
             </div>
           </div>
 
           <div className="space-y-1">
             <div className="relative">
-              <MessageSquare className="absolute left-4 top-4 text-gray-400" size={16} />
+              <MessageSquare className="absolute left-4 top-4 text-deep-navy/80" size={16} />
               <textarea 
                 ref={messageRef}
                 placeholder="Special Requirements..." 
@@ -254,7 +254,7 @@ const ServiceContactForm = ({
           </button>
         </form>
         
-        <p className="text-[9px] text-gray-400 text-center font-bold uppercase tracking-tighter">
+        <p className="text-[9px] text-deep-navy/80 text-center font-bold uppercase tracking-tighter">
           Response within 2 business hours
         </p>
       </div>

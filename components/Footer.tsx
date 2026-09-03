@@ -12,7 +12,7 @@ const Footer = () => {
   };
 
   return (
-    <footer id="contact" className="bg-[#030303] pt-20 md:pt-32 lg:pt-40 pb-12 relative overflow-hidden">
+    <footer id="contact" className="bg-white pt-20 md:pt-32 lg:pt-40 pb-12 relative overflow-hidden">
       {/* Decorative Light */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-electric-sapphire/5 blur-[150px] rounded-full opacity-50"></div>
 
@@ -29,15 +29,15 @@ const Footer = () => {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="text-2xl font-black tracking-tighter text-white">
+                <span className="text-2xl font-black tracking-tighter text-deep-navy">
                   Juno <span className="text-electric-sapphire">BizHUB</span>
                 </span>
-                <span className="text-[10px] uppercase tracking-[0.4em] text-gray-400 font-bold -mt-1 whitespace-nowrap">
+                <span className="text-[10px] uppercase tracking-[0.4em] text-deep-navy/80 font-bold -mt-1 whitespace-nowrap">
                   Corporate Services Providers
                 </span>
               </div>
             </Link>
-            <p className="text-gray-400 text-lg font-light leading-relaxed max-w-md">
+            <p className="text-deep-navy/80 text-lg font-light leading-relaxed max-w-md">
               The premier business gateway to the UAE. Leveraging two decades of elite banking expertise to architect your corporate future in Dubai and beyond.
             </p>
             <div className="flex gap-4">
@@ -51,7 +51,7 @@ const Footer = () => {
                   href={href} 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full glass flex items-center justify-center text-gray-400 hover:text-electric-sapphire hover:border-electric-sapphire/50 transition-all"
+                  className="w-12 h-12 rounded-full bg-gray-50 border border-gray-200 flex items-center justify-center text-deep-navy/80 hover:text-electric-sapphire hover:border-electric-sapphire/50 transition-all"
                 >
                   <Icon size={20} />
                 </a>
@@ -60,8 +60,8 @@ const Footer = () => {
           </div>
 
           <div className="lg:col-span-2">
-            <h4 className="text-white font-black uppercase tracking-widest text-sm mb-10">Formation</h4>
-            <ul className="space-y-5 text-gray-500 font-medium">
+            <h4 className="text-deep-navy font-black uppercase tracking-widest text-sm mb-10">Formation</h4>
+            <ul className="space-y-5 text-deep-navy/70 font-medium">
               <li><Link href="/mainland-company-formation-in-dubai" className="hover:text-electric-sapphire transition-colors flex items-center gap-2 group">Mainland Setup <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-all" /></Link></li>
               <li><Link href="/dubai-free-zone-company-overview" className="hover:text-electric-sapphire transition-colors flex items-center gap-2 group">Free Zone Centers <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-all" /></Link></li>
               <li><Link href="/bank-account-opening-dubai" className="hover:text-electric-sapphire transition-colors flex items-center gap-2 group">Banking Services <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-all" /></Link></li>
@@ -71,8 +71,8 @@ const Footer = () => {
           </div>
 
           <div className="lg:col-span-2">
-            <h4 className="text-white font-black uppercase tracking-widest text-sm mb-10">Offshore</h4>
-            <ul className="space-y-5 text-gray-500 font-medium">
+            <h4 className="text-deep-navy font-black uppercase tracking-widest text-sm mb-10">Offshore</h4>
+            <ul className="space-y-5 text-deep-navy/70 font-medium">
               <li><Link href="/offshore-company-formation-in-dubai" className="hover:text-electric-sapphire transition-colors flex items-center gap-2 group">Overview <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-all" /></Link></li>
               <li><Link href="/rak-offshore-company-formation" className="hover:text-electric-sapphire transition-colors flex items-center gap-2 group">RAK Offshore <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-all" /></Link></li>
               <li><Link href="/jafza-offshore-company-setup" className="hover:text-electric-sapphire transition-colors flex items-center gap-2 group">JAFZA Offshore <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-all" /></Link></li>
@@ -82,47 +82,47 @@ const Footer = () => {
           </div>
 
           <div className="lg:col-span-4">
-            <h4 className="text-white font-black uppercase tracking-widest text-sm mb-10">Headquarters</h4>
+            <h4 className="text-deep-navy font-black uppercase tracking-widest text-sm mb-10">Headquarters</h4>
             <div className="space-y-8">
               <div className="flex items-start gap-6 group">
-                <div className="w-14 h-14 rounded-2xl glass flex items-center justify-center text-electric-sapphire group-hover:bg-electric-sapphire/10 transition-colors shrink-0">
+                <div className="w-14 h-14 rounded-2xl bg-gray-50 border border-gray-200 flex items-center justify-center text-electric-sapphire group-hover:bg-electric-sapphire/10 transition-colors shrink-0">
                   <MapPin size={24} />
                 </div>
                 <div>
-                  <p className="text-white font-bold mb-1">Visit Our Office</p>
-                  <p className="text-gray-500 leading-relaxed font-light">106 Sheikh Zayed Rd - Trade Center First - Dubai, Aspin Commercial Tower</p>
+                  <p className="text-deep-navy font-bold mb-1">Visit Our Office</p>
+                  <p className="text-deep-navy/70 leading-relaxed font-light">106 Sheikh Zayed Rd - Trade Center First - Dubai, Aspin Commercial Tower</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-6 group">
-                <div className="w-14 h-14 rounded-2xl glass flex items-center justify-center text-electric-sapphire group-hover:bg-electric-sapphire/10 transition-colors shrink-0">
+                <div className="w-14 h-14 rounded-2xl bg-gray-50 border border-gray-200 flex items-center justify-center text-electric-sapphire group-hover:bg-electric-sapphire/10 transition-colors shrink-0">
                   <Phone size={24} />
                 </div>
                 <div>
-                  <p className="text-white font-bold mb-1">Direct Lines</p>
+                  <p className="text-deep-navy font-bold mb-1">Direct Lines</p>
                   <div className="flex flex-col gap-1">
-                    <a href="tel:+971 54 129 0038" className="text-gray-500 hover:text-electric-sapphire transition-colors">+971 54 129 0038</a>
+                    <a href="tel:+971 54 129 0038" className="text-deep-navy/70 hover:text-electric-sapphire transition-colors">+971 54 129 0038</a>
 
                   </div>
                 </div>
               </div>
 
               <div className="flex items-start gap-6 group">
-                <div className="w-14 h-14 rounded-2xl glass flex items-center justify-center text-electric-sapphire group-hover:bg-electric-sapphire/10 transition-colors shrink-0">
+                <div className="w-14 h-14 rounded-2xl bg-gray-50 border border-gray-200 flex items-center justify-center text-electric-sapphire group-hover:bg-electric-sapphire/10 transition-colors shrink-0">
                   <Mail size={24} />
                 </div>
                 <div>
-                  <p className="text-white font-bold mb-1">Email Inquiry</p>
+                  <p className="text-deep-navy font-bold mb-1">Email Inquiry</p>
                   <div className="flex flex-col gap-1">
-                    <a href="mailto:info.junobh@gmail.com" className="text-gray-500 hover:text-electric-sapphire transition-colors">info.junobh@gmail.com</a>
-                    <Link href="/contact" className="text-gray-500 hover:text-electric-sapphire transition-colors italic">Send Secure Message</Link>
+                    <a href="mailto:info.junobh@gmail.com" className="text-deep-navy/70 hover:text-electric-sapphire transition-colors">info.junobh@gmail.com</a>
+                    <Link href="/contact" className="text-deep-navy/70 hover:text-electric-sapphire transition-colors italic">Send Secure Message</Link>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-         <div className="pt-12 border-t border-white/5 flex flex-col-reverse md:flex-row justify-between items-center gap-8">
+         <div className="pt-12 border-t border-deep-navy/10 flex flex-col-reverse md:flex-row justify-between items-center gap-8">
            <div className="flex flex-col items-center md:items-start gap-2">
              <p className="text-gray-600 text-xs font-light">
                Design & developed by{' '}
@@ -137,16 +137,16 @@ const Footer = () => {
              </p>
              <p className="text-gray-700 text-xs font-light">© 2024 Juno BizHub. All rights reserved.</p>
              <div className="flex gap-4 mt-2">
-               <Link href="/privacy-policy" className="text-gray-500 hover:text-electric-sapphire text-xs">Privacy Policy</Link>
+               <Link href="/privacy-policy" className="text-deep-navy/70 hover:text-electric-sapphire text-xs">Privacy Policy</Link>
              </div>
            </div>
 
            <button 
              onClick={scrollToTop}
-             className="group flex items-center gap-4 text-gray-500 hover:text-electric-sapphire transition-all duration-500"
+             className="group flex items-center gap-4 text-deep-navy/70 hover:text-electric-sapphire transition-all duration-500"
            >
              <span className="text-[10px] font-black uppercase tracking-[0.4em]">Back to Top</span>
-             <div className="w-12 h-12 rounded-2xl border border-white/5 flex items-center justify-center group-hover:border-electric-sapphire/50 group-hover:bg-electric-sapphire/5 transition-all duration-500 rotate-45 group-hover:rotate-0">
+             <div className="w-12 h-12 rounded-2xl border border-deep-navy/10 flex items-center justify-center group-hover:border-electric-sapphire/50 group-hover:bg-electric-sapphire/5 transition-all duration-500 rotate-45 group-hover:rotate-0">
                <ArrowUpRight size={18} className="-rotate-45" />
              </div>
            </button>

@@ -56,17 +56,17 @@ const OurServicesAccordion = () => {
   };
 
   return (
-    <section className="section-padding relative overflow-hidden bg-[#030303]" id="our-services">
+    <section className="section-padding relative overflow-hidden bg-white" id="our-services">
       {/* Background Decorative Elements */}
       <div className="absolute top-0 right-1/4 w-1/3 h-[500px] bg-electric-sapphire/5 blur-[120px] rounded-full opacity-50 pointer-events-none" />
       
       <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <span className="text-electric-sapphire font-black tracking-[0.4em] uppercase text-[10px] mb-4 block">Our Services</span>
-          <h2 className="text-4xl md:text-6xl font-black text-white leading-tight tracking-tighter uppercase max-w-4xl mx-auto">
+          <h2 className="text-4xl md:text-6xl font-black text-deep-navy leading-tight tracking-tighter uppercase max-w-4xl mx-auto">
             Tailored corporate solutions designed to navigate the complexities of the <span className="text-electric-sapphire">UAE market</span>.
           </h2>
-          <p className="text-gray-400 text-lg md:text-xl font-medium mt-6 max-w-2xl mx-auto">
+          <p className="text-deep-navy/80 text-lg md:text-xl font-medium mt-6 max-w-2xl mx-auto">
             From inception to expansion, we are your strategic partners.
           </p>
         </div>
@@ -84,7 +84,7 @@ const OurServicesAccordion = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`glass border transition-all duration-500 rounded-[2rem] overflow-hidden ${
-                  isOpen ? 'border-electric-sapphire/40 shadow-[0_10px_40px_rgba(84,101,255,0.1)]' : 'border-white/5 hover:border-white/10'
+                  isOpen ? 'border-electric-sapphire/40 shadow-[0_10px_40px_rgba(84,101,255,0.1)]' : 'border-deep-navy/10 hover:border-deep-navy/10'
                 }`}
               >
                 <button
@@ -93,19 +93,19 @@ const OurServicesAccordion = () => {
                 >
                   <div className="flex items-center gap-6">
                     <div className={`p-4 rounded-2xl transition-colors duration-500 ${
-                      isOpen ? 'bg-electric-sapphire/20 text-electric-sapphire' : 'bg-white/5 text-gray-400'
+                      isOpen ? 'bg-electric-sapphire/20 text-electric-sapphire' : 'bg-deep-navy/5 text-deep-navy/80'
                     }`}>
                       <Icon className="w-6 h-6 md:w-8 md:h-8" />
                     </div>
                     <h3 className={`text-xl md:text-3xl font-black uppercase tracking-tighter transition-colors duration-500 ${
-                      isOpen ? 'text-white' : 'text-gray-400'
+                      isOpen ? 'text-deep-navy' : 'text-deep-navy/80'
                     }`}>
                       {service.title}
                     </h3>
                   </div>
                   <ChevronDown 
                     className={`w-6 h-6 transition-transform duration-500 ${
-                      isOpen ? 'rotate-180 text-electric-sapphire' : 'text-gray-500'
+                      isOpen ? 'rotate-180 text-electric-sapphire' : 'text-deep-navy/70'
                     }`} 
                   />
                 </button>
@@ -119,7 +119,7 @@ const OurServicesAccordion = () => {
                       transition={{ duration: 0.4, ease: "easeInOut" }}
                     >
                       <div className="px-6 md:px-8 pb-8 md:pl-[6.5rem]">
-                        <p className="text-gray-400 text-base md:text-lg font-light leading-relaxed mb-8 max-w-3xl">
+                        <p className="text-deep-navy/80 text-base md:text-lg font-light leading-relaxed mb-8 max-w-3xl">
                           {service.description}
                         </p>
                         
@@ -127,7 +127,7 @@ const OurServicesAccordion = () => {
                           {service.links.map((link, linkIdx) => (
                             <span 
                               key={linkIdx}
-                              className="px-4 py-2 rounded-full border border-white/10 bg-white/5 text-xs font-bold uppercase tracking-wider text-gray-300 hover:text-white hover:border-electric-sapphire/50 transition-colors cursor-default"
+                              className="px-4 py-2 rounded-full border border-deep-navy/10 bg-deep-navy/5 text-xs font-bold uppercase tracking-wider text-deep-navy/80 hover:text-deep-navy hover:border-electric-sapphire/50 transition-colors cursor-default"
                             >
                               {link}
                             </span>
@@ -136,7 +136,7 @@ const OurServicesAccordion = () => {
 
                         <Link 
                           href={service.href}
-                          className="inline-flex items-center gap-2 text-electric-sapphire font-bold uppercase tracking-widest text-xs hover:text-white transition-colors group"
+                          className="inline-flex items-center gap-2 text-electric-sapphire font-bold uppercase tracking-widest text-xs hover:text-deep-navy transition-colors group"
                         >
                           Explore Category
                           <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />

@@ -17,16 +17,16 @@ interface TeamMember {
 
 const TeamMemberClient = ({ member }: { member: TeamMember }) => {
   return (
-    <main className="min-h-screen bg-background text-white relative overflow-hidden font-serif">
+    <main className="min-h-screen bg-background text-deep-navy relative overflow-hidden font-serif">
       {/* Decorative background elements */}
-      <div className="absolute top-0 right-0 w-[50%] h-full bg-[#0a0a0a] -skew-x-12 translate-x-32 z-0 hidden lg:block"></div>
+      <div className="absolute top-0 right-0 w-[50%] h-full bg-white/40 -skew-x-12 translate-x-32 z-0 hidden lg:block"></div>
       <div className="absolute top-1/2 left-0 w-96 h-96 bg-electric-sapphire/5 blur-[120px] rounded-full -ml-48 pointer-events-none"></div>
       
       {/* Navigation */}
       <nav className="absolute top-32 left-10 z-20">
         <Link 
           href="/about-us#team" 
-          className="flex items-center gap-2 text-white/60 hover:text-white transition-colors group"
+          className="flex items-center gap-2 text-deep-navy/60 hover:text-deep-navy transition-colors group"
         >
           <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
           <span className="uppercase tracking-widest text-xs font-bold">Back to Team</span>
@@ -47,23 +47,23 @@ const TeamMemberClient = ({ member }: { member: TeamMember }) => {
               <div className="w-12 h-[3px] bg-red-600"></div>
               <div>
                 <h1 className="text-4xl md:text-5xl font-black tracking-tight">{member.name}</h1>
-                <p className="text-white/60 tracking-wider text-sm mt-2 font-bold">{member.role}</p>
+                <p className="text-deep-navy/60 tracking-wider text-sm mt-2 font-bold">{member.role}</p>
               </div>
             </div>
             
-            <div className="pt-8 space-y-6 border-t border-white/10">
+            <div className="pt-8 space-y-6 border-t border-deep-navy/10">
               {member.email && (
                 <div>
-                  <h3 className="uppercase tracking-widest text-[10px] text-white/40 font-bold mb-1">Email</h3>
-                  <a href={`mailto:${member.email}`} className="text-electric-sapphire hover:text-white transition-colors">
+                  <h3 className="uppercase tracking-widest text-[10px] text-deep-navy/40 font-bold mb-1">Email</h3>
+                  <a href={`mailto:${member.email}`} className="text-electric-sapphire hover:text-deep-navy transition-colors">
                     {member.email}
                   </a>
                 </div>
               )}
               {member.mobile && (
                 <div>
-                  <h3 className="uppercase tracking-widest text-[10px] text-white/40 font-bold mb-1">Phone</h3>
-                  <a href={`tel:${member.mobile}`} className="text-electric-sapphire hover:text-white transition-colors">
+                  <h3 className="uppercase tracking-widest text-[10px] text-deep-navy/40 font-bold mb-1">Phone</h3>
+                  <a href={`tel:${member.mobile}`} className="text-electric-sapphire hover:text-deep-navy transition-colors">
                     {member.mobile}
                   </a>
                 </div>
@@ -88,15 +88,15 @@ const TeamMemberClient = ({ member }: { member: TeamMember }) => {
                 priority
               />
             ) : (
-              <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0a] to-[#030303] border border-white/5 rounded-[24px]" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0a] to-[#030303] border border-deep-navy/10 rounded-[24px]" />
             )}
           </motion.div>
         </div>
 
         {/* Footer */}
-        <footer className="mt-20 pt-10 border-t border-white/5 flex justify-between items-end text-[10px] font-black uppercase tracking-[0.3em] text-white/20">
+        <footer className="mt-20 pt-10 border-t border-deep-navy/10 flex justify-between items-end text-[10px] font-black uppercase tracking-[0.3em] text-deep-navy/20">
           <div>COMPANY PROFILE</div>
-          <div className="text-white/40">02</div>
+          <div className="text-deep-navy/40">02</div>
         </footer>
       </div>
     </main>

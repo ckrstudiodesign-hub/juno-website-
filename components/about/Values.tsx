@@ -53,8 +53,8 @@ const Values = () => {
             className="glass p-12 rounded-[40px] border border-electric-sapphire/10 hover:border-electric-sapphire/40 transition-all group"
           >
             <div className="mb-8 group-hover:scale-110 transition-transform origin-left">{val.icon}</div>
-            <h4 className="text-2xl font-bold text-white mb-4">{val.title}</h4>
-            <p className="text-gray-500 font-light leading-relaxed">{val.desc}</p>
+            <h4 className="text-2xl font-bold text-deep-navy mb-4">{val.title}</h4>
+            <p className="text-deep-navy/70 font-light leading-relaxed">{val.desc}</p>
           </motion.div>
         ))}
       </div>

@@ -13,15 +13,15 @@ interface ExecutiveSummaryProps {
  */
 export default function ExecutiveSummary({ summary, keyFacts }: ExecutiveSummaryProps) {
   return (
-    <section className="bg-white/5 border border-electric-sapphire/30 rounded-3xl p-8 mb-12 shadow-lg shadow-black/50" aria-label="Executive Summary">
+    <section className="bg-deep-navy/5 border border-electric-sapphire/30 rounded-3xl p-8 mb-12 shadow-lg shadow-black/50" aria-label="Executive Summary">
       <div className="flex items-center gap-4 mb-6">
         <div className="w-12 h-12 bg-electric-sapphire/10 rounded-full flex items-center justify-center shrink-0">
           <Lightbulb className="text-electric-sapphire w-6 h-6" />
         </div>
-        <h2 className="text-2xl font-black text-white uppercase tracking-tight m-0">Quick Answer</h2>
+        <h2 className="text-2xl font-black text-deep-navy uppercase tracking-tight m-0">Quick Answer</h2>
       </div>
 
-      <div className="text-gray-300 text-lg leading-relaxed font-light mb-8 space-y-4">
+      <div className="text-deep-navy/80 text-lg leading-relaxed font-light mb-8 space-y-4">
         {Array.isArray(summary) ? (
           summary.map((p, i) => <p key={i}>{p}</p>)
         ) : (
@@ -30,13 +30,13 @@ export default function ExecutiveSummary({ summary, keyFacts }: ExecutiveSummary
       </div>
 
       {keyFacts && keyFacts.length > 0 && (
-        <div className="bg-black/50 rounded-2xl p-6 border border-white/5">
+        <div className="bg-gray-50 rounded-2xl p-6 border border-deep-navy/10">
           <h3 className="text-sm font-bold text-electric-sapphire uppercase tracking-widest mb-4">Key Facts</h3>
           <ul className="grid md:grid-cols-2 gap-4">
             {keyFacts.map((fact, idx) => (
               <li key={idx} className="flex items-start gap-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-electric-sapphire shrink-0 mt-2"></span>
-                <span className="text-gray-400 text-sm">{fact}</span>
+                <span className="text-deep-navy/80 text-sm">{fact}</span>
               </li>
             ))}
           </ul>

@@ -120,7 +120,7 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <section className="section-padding bg-white relative overflow-hidden">
+    <section className="py-10 bg-white relative overflow-hidden">
       <div className="absolute top-0 right-0 w-96 h-96 bg-electric-sapphire/5 blur-[150px] rounded-full opacity-50 pointer-events-none"></div>
       
       <div className="max-w-7xl mx-auto px-4 relative z-10 mb-12">
@@ -179,7 +179,7 @@ const Testimonials = () => {
                   </div>
                   <div>
                     <p className="text-black font-bold text-sm">{testimonial.name}</p>
-                    <p className="text-gray-500 text-xs">{testimonial.role}</p>
+                    <p className="text-deep-navy/70 text-xs">{testimonial.role}</p>
                   </div>
                 </div>
               </div>

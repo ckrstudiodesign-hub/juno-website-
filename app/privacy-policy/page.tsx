@@ -14,22 +14,22 @@ const LAST_UPDATED = 'May 7, 2026';
 
 export default function PrivacyPolicyPage() {
   return (
-    <main className="min-h-screen bg-[#030303] text-white pt-24 pb-24">
+    <main className="min-h-screen bg-white text-deep-navy pt-24 pb-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <header className="mb-12 text-center">
           <h1 className="text-4xl md:text-5xl font-black tracking-tight">
             Privacy Policy
           </h1>
-          <p className="mt-4 text-gray-400 max-w-3xl mx-auto">
-            Last updated: <span className="text-gray-200 font-medium">{LAST_UPDATED}</span>
+          <p className="mt-4 text-deep-navy/80 max-w-3xl mx-auto">
+            Last updated: <span className="text-deep-navy font-medium">{LAST_UPDATED}</span>
           </p>
         </header>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           <nav className="hidden lg:block lg:col-span-3 sticky top-28 self-start">
-            <div className="bg-[#0a0a0a] border border-white/5 rounded-2xl p-6">
-              <h4 className="text-sm font-black uppercase text-white/80 mb-4">On This Page</h4>
-              <ul className="space-y-3 text-gray-400 text-sm">
+            <div className="bg-white/40 border border-deep-navy/10 rounded-2xl p-6">
+              <h4 className="text-sm font-black uppercase text-deep-navy/80 mb-4">On This Page</h4>
+              <ul className="space-y-3 text-deep-navy/80 text-sm">
                 <li><a href="#introduction" className="hover:text-electric-sapphire">Introduction</a></li>
                 <li><a href="#who-we-are" className="hover:text-electric-sapphire">Who We Are</a></li>
                 <li><a href="#information-we-collect" className="hover:text-electric-sapphire">Information We Collect</a></li>
@@ -265,7 +265,7 @@ export default function PrivacyPolicyPage() {
               </footer>
             </div>
 
-            <div className="mt-8 text-sm text-gray-400">
+            <div className="mt-8 text-sm text-deep-navy/80">
               <p>For convenience, you can return to the <Link href="/" className="text-electric-sapphire">homepage</Link> or <Link href="/contact" className="text-electric-sapphire">contact our team</Link>.</p>
             </div>
           </article>

@@ -27,42 +27,42 @@ const CoreServices = () => {
     {
       title: "Business Setup & Company Formation",
       desc: "Mainland and Free Zone setup coordination, jurisdiction assessment, and licence application support.",
-      img: "/images/mainland.png",
+      img: "/images/core_setup.jpg",
       link: "/mainland-company-formation-in-dubai",
       icon: <Building2 className="text-electric-sapphire mb-4" />
     },
     {
       title: "Free Zone Selection & Partner Facilitation",
       desc: "Compare suitable Free Zones, coordinate applications, and access our authorised channel partner networks.",
-      img: "/images/freezone.png",
+      img: "/images/core_freezone.jpg",
       link: "/dubai-free-zone-company-overview",
       icon: <Globe2 className="text-electric-sapphire mb-4" />
     },
     {
       title: "PRO, Visa & Immigration Support",
       desc: "Establishment coordination, investor/employee visa processing, Emirates ID, and government documentation.",
-      img: "/images/wills-service.png",
+      img: "/images/core_pro.jpg",
       link: "/pro-services-dubai",
       icon: <FileCheck className="text-electric-sapphire mb-4" />
     },
     {
       title: "Corporate Banking Assistance",
       desc: "Bank selection guidance, account-opening documentation, application preparation, and follow-up support.",
-      img: "/images/mainland.png",
+      img: "/images/core_banking.jpg",
       link: "/bank-account-opening-dubai",
       icon: <Landmark className="text-electric-sapphire mb-4" />
     },
     {
       title: "Corporate Compliance & Ongoing Support",
       desc: "Licence renewals, document updates, shareholder changes, UBO coordination, and administrative assistance.",
-      img: "/images/freezone.png",
+      img: "/images/core_compliance.jpg",
       link: "/services",
       icon: <Shield className="text-electric-sapphire mb-4" />
     },
     {
       title: "Accounting, VAT & Tax Coordination",
       desc: "Bookkeeping, VAT/Corporate Tax registration, management reporting, and specialist referrals.",
-      img: "/images/offshore.png",
+      img: "/images/core_accounting.jpg",
       link: "/bookkeeping-and-accounting-services",
       icon: <PlusCircle className="text-electric-sapphire mb-4" />
     }
@@ -70,12 +70,37 @@ const CoreServices = () => {
 
   return (
     <section className="section-padding bg-white relative overflow-hidden">
+      {/* ── Background Design ── */}
+      <div className="absolute inset-0 z-0 pointer-events-none select-none overflow-hidden bg-gradient-to-b from-[#e0f7fa]/60 via-[#e1f5fe]/40 to-white">
+        <div 
+          className="absolute inset-0"
+          style={{
+            backgroundImage: 'repeating-linear-gradient(45deg, rgba(0, 119, 182, 0.04) 0px, rgba(0, 119, 182, 0.04) 1px, transparent 1px, transparent 16px)'
+          }}
+        />
+        <div className="absolute top-[5%] md:top-[10%] inset-0 w-full flex items-center opacity-80">
+          <motion.div
+            animate={{ x: ['100%', '-100%'] }}
+            transition={{ duration: 45, repeat: Infinity, ease: 'linear' }}
+            className="whitespace-nowrap w-full"
+            style={{ willChange: 'transform' }}
+          >
+            <span className="text-[20vw] font-black text-white drop-shadow-[0_20px_50px_rgba(0,119,182,0.12)] leading-none tracking-tighter uppercase pl-[10%]">
+              EXPERTISE
+            </span>
+            <span className="text-[20vw] font-black text-white drop-shadow-[0_20px_50px_rgba(0,119,182,0.12)] leading-none tracking-tighter uppercase pl-[30%] hidden md:inline">
+              EXPERTISE
+            </span>
+          </motion.div>
+        </div>
+      </div>
+
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-electric-sapphire/10 to-transparent"></div>
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 relative z-10">
         <div className="text-center mb-24 space-y-6">
           <h2 className="text-electric-sapphire font-black tracking-[0.4em] uppercase text-xs">Our Expertise</h2>
           <h3 className="text-4xl md:text-6xl font-black text-black leading-tight">Choose Your Path to <br /><span className="text-electric-sapphire">UAE Success</span></h3>
-          <p className="text-gray-500 max-w-2xl mx-auto font-medium">Explore our specialized business setup categories designed to meet diverse corporate requirements in the heart of the Emirates.</p>
+          <p className="text-deep-navy/70 max-w-2xl mx-auto font-medium">Explore our specialized business setup categories designed to meet diverse corporate requirements in the heart of the Emirates.</p>
         </div>
 
         <motion.div 
@@ -86,8 +111,8 @@ const CoreServices = () => {
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-10"
         >
           {services.map((service, idx) => (
-            <motion.div key={idx} variants={item} className="group bg-gray-50 overflow-hidden rounded-[40px] border border-gray-100 hover:border-electric-sapphire/30 hover:bg-white hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] transition-all duration-700">
-              <div className="h-72 relative overflow-hidden">
+            <motion.div key={idx} variants={item} className="group flex flex-col bg-gray-50 overflow-hidden rounded-[40px] border border-gray-100 hover:border-electric-sapphire/30 hover:bg-white hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] transition-all duration-700">
+              <div className="h-60 relative overflow-hidden shrink-0">
                 <Image 
                   src={service.img} 
                   alt={service.title} 
@@ -95,19 +120,13 @@ const CoreServices = () => {
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover group-hover:scale-110 transition-transform duration-1000" 
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-                <div className="absolute bottom-8 left-8">
-                   <div className="w-12 h-12 bg-electric-sapphire rounded-2xl flex items-center justify-center text-black mb-4">
-                     {service.icon}
-                   </div>
-                   <h4 className="text-3xl font-black text-white">{service.title}</h4>
-                </div>
               </div>
-              <div className="p-10 space-y-8">
-                <p className="text-gray-500 font-medium leading-relaxed text-justify">
+              <div className="p-8 md:p-10 flex flex-col grow">
+                <h4 className="text-2xl font-black text-deep-navy leading-tight mb-6">{service.title}</h4>
+                <p className="text-deep-navy/70 font-medium leading-relaxed text-justify mb-8 grow">
                   {service.desc}
                 </p>
-                <Link href={service.link} className="inline-flex items-center gap-3 text-electric-sapphire font-black hover:gap-6 transition-all uppercase tracking-widest text-xs">
+                <Link href={service.link} className="inline-flex items-center gap-3 text-electric-sapphire font-black hover:gap-6 transition-all uppercase tracking-widest text-xs mt-auto">
                   Read Full Details <ArrowRight size={16} />
                 </Link>
               </div>

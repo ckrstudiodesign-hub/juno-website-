@@ -15,7 +15,7 @@ const AboutHero = () => {
           className="object-cover opacity-40 scale-105"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/80 to-[#030303]"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/80 to-white"></div>
       </div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
@@ -27,7 +27,7 @@ const AboutHero = () => {
           <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight">
             Our <span className="text-gradient-primary">Journey</span>
           </h1>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed font-light">
+          <p className="text-xl text-deep-navy/80 max-w-2xl mx-auto leading-relaxed font-light">
             Founded on two decades of elite banking expertise, navigating the corporate landscape of Dubai with precision and prestige.
           </p>
         </motion.div>

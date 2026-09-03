@@ -5,7 +5,8 @@ import dynamic from 'next/dynamic';// ========================================
 // Juno BizHub Corporate Services Providers Website
 // ========================================
 import Hero from '@/components/home/Hero';
-import TrustBadges from '@/components/home/TrustBadges';
+import ServicesTicker from '@/components/home/ServicesTicker';
+import GlobalBackground from '@/components/global/GlobalBackground';
 
 export const metadata: Metadata = {
   title: 'Business Setup Dubai & Corporate Services UAE',
@@ -16,34 +17,43 @@ export const metadata: Metadata = {
   },
 };
 
-const OurServicesAccordion = dynamic(() => import('@/components/home/OurServicesAccordion'));
+const ServicesOrbit = dynamic(() => import('@/components/home/ServicesOrbit'));
+const PartnersMarquee = dynamic(() => import('@/components/home/PartnersMarquee'));
+const TrustBadges = dynamic(() => import('@/components/home/TrustBadges'));
 const About = dynamic(() => import('@/components/home/About'));
 const CoreServices = dynamic(() => import('@/components/home/CoreServices'));
 const VisionMission = dynamic(() => import('@/components/home/VisionMission'));
 const Stats = dynamic(() => import('@/components/home/Stats'));
+const ClientJourney = dynamic(() => import('@/components/home/ClientJourney'));
 const WhyChooseUs = dynamic(() => import('@/components/home/WhyChooseUs'));
 const Testimonials = dynamic(() => import('@/components/home/Testimonials'));
 const FAQ = dynamic(() => import('@/components/home/FAQ'));
 const LocationMap = dynamic(() => import('@/components/home/LocationMap'));
-const Team = dynamic(() => import('@/components/about/Team'));
-const ContactBanner = dynamic(() => import('@/components/home/ContactBanner'));
+const CostCalculator = dynamic(() => import('@/components/home/CostCalculator'));
+const PhotoShowcase = dynamic(() => import('@/components/home/PhotoShowcase'));
+const ParallaxBand = dynamic(() => import('@/components/home/ParallaxBand'));
 
 export default function Home() {
   return (
-    <div className="flex flex-col w-full bg-[#030303] overflow-x-hidden">
+    <div className="flex flex-col w-full bg-transparent overflow-x-hidden relative">
+      <GlobalBackground />
       <Hero />
-      <TrustBadges />
-      <OurServicesAccordion />
-      <About />
-      <Team />
+      <ServicesTicker />
+      <ServicesOrbit />
+      <PhotoShowcase />
       <CoreServices />
+      <About />
       <VisionMission />
+      <ParallaxBand />
       <Stats />
+      <ClientJourney />
       <WhyChooseUs />
+      <TrustBadges />
+      <PartnersMarquee />
       <Testimonials />
       <FAQ />
       <LocationMap />
-      <ContactBanner />
+      <CostCalculator />
     </div>
   );
 }

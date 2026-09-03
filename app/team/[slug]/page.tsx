@@ -14,7 +14,7 @@ export default function Page({ params }: { params: { slug: string } }) {
 
   if (!member) {
     return (
-      <div className="min-h-screen bg-[#030303] flex items-center justify-center text-white">
+      <div className="min-h-screen bg-white flex items-center justify-center text-deep-navy">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">Member Not Found</h1>
           <Link href="/about-us" className="text-electric-sapphire hover:underline">Return to About Us</Link>

@@ -18,7 +18,7 @@ const WhatsAppFloat = () => {
         className="hidden md:block overflow-hidden"
       >
         <motion.div
-          className="whitespace-nowrap rounded-full bg-black/80 border border-white/10 px-4 py-2 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(0,0,0,0.35)] backdrop-blur-md"
+          className="whitespace-nowrap rounded-full bg-black/80 border border-deep-navy/10 px-4 py-2 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(0,0,0,0.35)] backdrop-blur-md"
           animate={{ y: [0, -2, 0] }}
           transition={{ duration: 2.8, repeat: Infinity, ease: 'easeInOut' }}
         >

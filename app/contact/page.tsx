@@ -62,7 +62,7 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="flex flex-col w-full bg-[#030303] overflow-x-hidden pt-20">
+    <div className="flex flex-col w-full bg-white overflow-x-hidden pt-20">
       {/* Hero Header */}
       <section className="relative py-20 md:py-32 overflow-hidden">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-electric-sapphire/5 blur-[120px] rounded-full -mr-40"></div>
@@ -74,11 +74,11 @@ const ContactPage = () => {
             className="space-y-6"
           >
             <span className="text-electric-sapphire font-black tracking-[0.5em] uppercase text-xs">Get In Touch</span>
-            <h1 className="text-5xl md:text-8xl font-black text-white leading-tight tracking-tighter">
+            <h1 className="text-5xl md:text-8xl font-black text-deep-navy leading-tight tracking-tighter">
               Let's Start Your <br />
               <span className="text-gradient-primary">UAE Journey</span>
             </h1>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto font-light leading-relaxed">
+            <p className="text-xl text-deep-navy/80 max-w-2xl mx-auto font-light leading-relaxed">
               Our consultants are ready to assist you with elite business setup solutions. Connect with us to architect your corporate future.
             </p>
           </motion.div>
@@ -93,51 +93,51 @@ const ContactPage = () => {
             {/* Contact Information */}
             <div className="lg:col-span-5 space-y-12">
               <div className="space-y-8">
-                <h3 className="text-3xl font-black text-white">Direct <span className="text-electric-sapphire">Contact</span></h3>
-                <p className="text-gray-400 font-light">Visit our headquarters in the heart of Dubai or reach out through our digital channels.</p>
+                <h3 className="text-3xl font-black text-deep-navy">Direct <span className="text-electric-sapphire">Contact</span></h3>
+                <p className="text-deep-navy/80 font-light">Visit our headquarters in the heart of Dubai or reach out through our digital channels.</p>
               </div>
 
               <div className="space-y-8">
                 <div className="flex items-start gap-6 group">
-                  <div className="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center text-electric-sapphire border border-white/10 group-hover:bg-electric-sapphire group-hover:text-black transition-all duration-500">
+                  <div className="w-16 h-16 bg-deep-navy/5 rounded-2xl flex items-center justify-center text-electric-sapphire border border-deep-navy/10 group-hover:bg-electric-sapphire group-hover:text-black transition-all duration-500">
                     <MapPin size={28} />
                   </div>
                   <div className="space-y-1">
-                    <p className="text-white font-black uppercase text-xs tracking-widest opacity-50">Headquarters</p>
-                    <p className="text-white text-lg font-medium">106 Sheikh Zayed Rd - Trade Center First - Dubai, Aspin Commercial Tower</p>
+                    <p className="text-deep-navy font-black uppercase text-xs tracking-widest opacity-50">Headquarters</p>
+                    <p className="text-deep-navy text-lg font-medium">106 Sheikh Zayed Rd - Trade Center First - Dubai, Aspin Commercial Tower</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-6 group">
-                  <div className="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center text-electric-sapphire border border-white/10 group-hover:bg-electric-sapphire group-hover:text-black transition-all duration-500">
+                  <div className="w-16 h-16 bg-deep-navy/5 rounded-2xl flex items-center justify-center text-electric-sapphire border border-deep-navy/10 group-hover:bg-electric-sapphire group-hover:text-black transition-all duration-500">
                     <Phone size={28} />
                   </div>
                   <div className="space-y-1">
-                    <p className="text-white font-black uppercase text-xs tracking-widest opacity-50">Call Us</p>
-                    <a href="tel:+971 54 129 0038" className="text-white text-lg font-medium hover:text-electric-sapphire transition-colors">+971 54 129 0038</a>
+                    <p className="text-deep-navy font-black uppercase text-xs tracking-widest opacity-50">Call Us</p>
+                    <a href="tel:+971 54 129 0038" className="text-deep-navy text-lg font-medium hover:text-electric-sapphire transition-colors">+971 54 129 0038</a>
                     <br />
                   </div>
                 </div>
 
                 <div className="flex items-start gap-6 group">
-                  <div className="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center text-electric-sapphire border border-white/10 group-hover:bg-electric-sapphire group-hover:text-black transition-all duration-500">
+                  <div className="w-16 h-16 bg-deep-navy/5 rounded-2xl flex items-center justify-center text-electric-sapphire border border-deep-navy/10 group-hover:bg-electric-sapphire group-hover:text-black transition-all duration-500">
                     <Mail size={28} />
                   </div>
                   <div className="space-y-1">
-                    <p className="text-white font-black uppercase text-xs tracking-widest opacity-50">Email Us</p>
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=junobizhub295%40gmail.com" target="_blank" rel="noopener noreferrer" className="text-white text-lg font-medium hover:text-electric-sapphire transition-colors italic">info.junobh@gmail.com</a>
+                    <p className="text-deep-navy font-black uppercase text-xs tracking-widest opacity-50">Email Us</p>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=junobizhub295%40gmail.com" target="_blank" rel="noopener noreferrer" className="text-deep-navy text-lg font-medium hover:text-electric-sapphire transition-colors italic">info.junobh@gmail.com</a>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-6 group">
-                  <div className="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center text-electric-sapphire border border-white/10 group-hover:bg-electric-sapphire group-hover:text-black transition-all duration-500">
+                  <div className="w-16 h-16 bg-deep-navy/5 rounded-2xl flex items-center justify-center text-electric-sapphire border border-deep-navy/10 group-hover:bg-electric-sapphire group-hover:text-black transition-all duration-500">
                     <Clock size={28} />
                   </div>
                   <div className="space-y-1">
-                    <p className="text-white font-black uppercase text-xs tracking-widest opacity-50">Office Hours</p>
+                    <p className="text-deep-navy font-black uppercase text-xs tracking-widest opacity-50">Office Hours</p>
                     <div className="flex flex-col">
-                      <p className="text-white text-lg font-medium">Monday to Saturday | 9:30 AM – 6:30 PM</p>
-                      <p className="text-white/50 text-sm font-medium">Closed on 1st and 2nd Saturdays</p>
+                      <p className="text-deep-navy text-lg font-medium">Monday to Saturday | 9:30 AM – 6:30 PM</p>
+                      <p className="text-deep-navy/50 text-sm font-medium">Closed on 1st and 2nd Saturdays</p>
                     </div>
                   </div>
                 </div>
@@ -155,7 +155,7 @@ const ContactPage = () => {
                 <div className="relative z-10 space-y-8">
                   <div className="space-y-2">
                     <h3 className="text-3xl font-black text-black">Inquiry <span className="text-electric-sapphire">Form</span></h3>
-                    <p className="text-gray-500 text-sm">Fill out the details below and our experts will contact you shortly.</p>
+                    <p className="text-deep-navy/70 text-sm">Fill out the details below and our experts will contact you shortly.</p>
                   </div>
 
                   <form onSubmit={handleSubmit} className="space-y-6">
@@ -268,8 +268,8 @@ const ContactPage = () => {
             className="absolute inset-0"
           />
 
-          <div className="absolute left-4 bottom-4 md:left-8 md:bottom-8 bg-black/80 backdrop-blur-sm rounded-2xl px-4 py-3 border border-white/10">
-            <p className="text-white font-black uppercase tracking-[0.2em] text-[10px] md:text-xs">106 Sheikh Zayed Rd - Trade Center First - Dubai, Aspin Commercial Tower</p>
+          <div className="absolute left-4 bottom-4 md:left-8 md:bottom-8 bg-black/80 backdrop-blur-sm rounded-2xl px-4 py-3 border border-deep-navy/10">
+            <p className="text-deep-navy font-black uppercase tracking-[0.2em] text-[10px] md:text-xs">106 Sheikh Zayed Rd - Trade Center First - Dubai, Aspin Commercial Tower</p>
             <a
               href="https://www.google.com/maps/search/?api=1&query=Sheikh+Zayed+Road+Dubai+UAE"
               target="_blank"

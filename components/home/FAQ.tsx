@@ -48,7 +48,7 @@ const faqSchema = {
 
 const FAQ = () => {
   return (
-    <section className="section-padding bg-white relative overflow-hidden" id="faq">
+    <section className="py-10 bg-white relative overflow-hidden" id="faq">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-electric-sapphire/5 blur-[150px] rounded-full opacity-50 pointer-events-none"></div>
       <div className="max-w-4xl mx-auto px-4 relative z-10">
         <div className="text-center mb-12 space-y-4">
@@ -56,7 +56,7 @@ const FAQ = () => {
           <h2 className="text-3xl md:text-5xl font-black text-black tracking-tighter uppercase">
             Questions <span className="text-electric-sapphire">People Ask</span>
           </h2>
-          <p className="text-gray-500 max-w-2xl mx-auto font-medium">
+          <p className="text-deep-navy/70 max-w-2xl mx-auto font-medium">
             Clear answers for founders searching for business setup Dubai and corporate services UAE.
           </p>
         </div>

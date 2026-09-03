@@ -23,7 +23,7 @@ const Narrative = () => {
               <div className="w-12 h-1 bg-electric-sapphire rounded-full"></div>
             </div>
             
-            <div className="space-y-6 text-gray-400 text-lg leading-relaxed font-light text-justify">
+            <div className="space-y-6 text-deep-navy/80 text-lg leading-relaxed font-light text-justify">
               <p>
                 Juno BizHub is a UAE-based Corporate Service Provider focused on making business establishment and ongoing corporate administration simpler, clearer and more efficient.
               </p>

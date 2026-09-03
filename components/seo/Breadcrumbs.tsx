@@ -36,7 +36,7 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
     <>
       <SchemaMarkup type="BreadcrumbList" data={schemaData} />
       <nav aria-label="Breadcrumb" className="mb-6 flex">
-        <ol className="flex items-center space-x-2 text-xs md:text-sm text-gray-500 font-medium">
+        <ol className="flex items-center space-x-2 text-xs md:text-sm text-deep-navy/70 font-medium">
           {allItems.map((item, index) => {
             const isLast = index === allItems.length - 1;
             
@@ -45,7 +45,7 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
                 {index > 0 && <ChevronRight className="w-4 h-4 mx-2 text-gray-600 shrink-0" />}
                 
                 {isLast || !item.url ? (
-                  <span className="text-gray-300 pointer-events-none truncate max-w-[150px] md:max-w-[300px]" aria-current="page">
+                  <span className="text-deep-navy/80 pointer-events-none truncate max-w-[150px] md:max-w-[300px]" aria-current="page">
                     {item.name}
                   </span>
                 ) : (

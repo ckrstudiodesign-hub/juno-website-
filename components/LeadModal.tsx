@@ -131,7 +131,7 @@ export default function LeadModal() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
             transition={{ type: "spring", duration: 0.5 }}
-            className="relative w-full max-w-md bg-[#0a0a0a] border border-electric-sapphire/20 rounded-[2rem] shadow-[0_0_50px_rgba(84,101,255,0.1)] overflow-hidden"
+            className="relative w-full max-w-md bg-white/40 border border-electric-sapphire/20 rounded-[2rem] shadow-[0_0_50px_rgba(84,101,255,0.1)] overflow-hidden"
           >
             {/* Decorative Background Elements */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-electric-sapphire/10 blur-[50px] rounded-full pointer-events-none -mr-10 -mt-10" />
@@ -140,7 +140,7 @@ export default function LeadModal() {
             {/* Close Button */}
             <button
               onClick={() => setIsOpen(false)}
-              className="absolute top-4 right-4 p-2 text-white/40 hover:text-white hover:bg-white/10 rounded-full transition-all z-20"
+              className="absolute top-4 right-4 p-2 text-deep-navy/40 hover:text-deep-navy hover:bg-white/10 rounded-full transition-all z-20"
             >
               <X size={20} />
             </button>
@@ -151,15 +151,15 @@ export default function LeadModal() {
                   <div className="w-20 h-20 mx-auto rounded-full bg-electric-sapphire/15 border border-electric-sapphire/30 flex items-center justify-center">
                     <CheckCircle2 className="text-electric-sapphire" size={40} />
                   </div>
-                  <h3 className="text-2xl font-bold text-white">Form submitted</h3>
-                  <p className="text-gray-400 text-sm">Your details have been sent successfully.</p>
+                  <h3 className="text-2xl font-bold text-deep-navy">Form submitted</h3>
+                  <p className="text-deep-navy/80 text-sm">Your details have been sent successfully.</p>
                 </div>
               ) : (
               <>
               <div className="text-center space-y-2 mb-8">
                 <span className="text-electric-sapphire text-xs font-black uppercase tracking-[0.2em]">Welcome to Juno BizHub</span>
-                <h2 className="text-2xl md:text-3xl font-bold text-white">Let's Start Your Journey</h2>
-                <p className="text-gray-400 text-sm font-light">Enter your details to receive a personalized consultation.</p>
+                <h2 className="text-2xl md:text-3xl font-bold text-deep-navy">Let's Start Your Journey</h2>
+                <p className="text-deep-navy/80 text-sm font-light">Enter your details to receive a personalized consultation.</p>
               </div>
 
               {/* ✅ SECURITY: Display validation errors */}
@@ -173,39 +173,39 @@ export default function LeadModal() {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="space-y-1">
                   <div className="relative group">
-                    <User className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 group-focus-within:text-electric-sapphire transition-colors" size={18} />
+                    <User className="absolute left-4 top-1/2 -translate-y-1/2 text-deep-navy/70 group-focus-within:text-electric-sapphire transition-colors" size={18} />
                     <input
                       ref={nameRef}
                       type="text"
                       placeholder="Full Name"
                       required
-                      className="w-full bg-white/5 border border-white/10 rounded-xl py-3 pl-12 pr-4 text-white placeholder:text-gray-600 focus:outline-none focus:border-electric-sapphire/50 focus:bg-white/10 transition-all text-sm font-medium"
+                      className="w-full bg-deep-navy/5 border border-deep-navy/10 rounded-xl py-3 pl-12 pr-4 text-deep-navy placeholder:text-gray-600 focus:outline-none focus:border-electric-sapphire/50 focus:bg-white/10 transition-all text-sm font-medium"
                     />
                   </div>
                 </div>
 
                 <div className="space-y-1">
                   <div className="relative group">
-                    <Phone className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 group-focus-within:text-electric-sapphire transition-colors" size={18} />
+                    <Phone className="absolute left-4 top-1/2 -translate-y-1/2 text-deep-navy/70 group-focus-within:text-electric-sapphire transition-colors" size={18} />
                     <input
                       ref={phoneRef}
                       type="tel"
                       placeholder="Phone Number"
                       required
-                      className="w-full bg-white/5 border border-white/10 rounded-xl py-3 pl-12 pr-4 text-white placeholder:text-gray-600 focus:outline-none focus:border-electric-sapphire/50 focus:bg-white/10 transition-all text-sm font-medium"
+                      className="w-full bg-deep-navy/5 border border-deep-navy/10 rounded-xl py-3 pl-12 pr-4 text-deep-navy placeholder:text-gray-600 focus:outline-none focus:border-electric-sapphire/50 focus:bg-white/10 transition-all text-sm font-medium"
                     />
                   </div>
                 </div>
 
                 <div className="space-y-1">
                   <div className="relative group">
-                    <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 group-focus-within:text-electric-sapphire transition-colors" size={18} />
+                    <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-deep-navy/70 group-focus-within:text-electric-sapphire transition-colors" size={18} />
                     <input
                       ref={emailRef}
                       type="email"
                       placeholder="Email Address"
                       required
-                      className="w-full bg-white/5 border border-white/10 rounded-xl py-3 pl-12 pr-4 text-white placeholder:text-gray-600 focus:outline-none focus:border-electric-sapphire/50 focus:bg-white/10 transition-all text-sm font-medium"
+                      className="w-full bg-deep-navy/5 border border-deep-navy/10 rounded-xl py-3 pl-12 pr-4 text-deep-navy placeholder:text-gray-600 focus:outline-none focus:border-electric-sapphire/50 focus:bg-white/10 transition-all text-sm font-medium"
                     />
                   </div>
                 </div>

@@ -251,7 +251,7 @@ const CostCalculatorPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#030303] text-white selection:bg-electric-sapphire/30">
+    <div className="min-h-screen bg-white text-deep-navy selection:bg-electric-sapphire/30">
       <Navbar />
       
       <main className="pt-32 pb-20 px-4">
@@ -274,10 +274,10 @@ const CostCalculatorPage = () => {
           {/* Progress Bar */}
           <div className="mb-12 space-y-4">
              <div className="flex justify-between items-end">
-                <span className="text-[10px] text-gray-500 font-black uppercase tracking-widest leading-none">Step {currentStep + 1} of {steps.length + 1}</span>
+                <span className="text-[10px] text-deep-navy/70 font-black uppercase tracking-widest leading-none">Step {currentStep + 1} of {steps.length + 1}</span>
                 <span className="text-electric-sapphire font-black text-sm">{Math.round(progress)}%</span>
              </div>
-             <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
+             <div className="h-1.5 w-full bg-deep-navy/5 rounded-full overflow-hidden">
                 <motion.div 
                   initial={{ width: 0 }}
                   animate={{ width: `${progress}%` }}
@@ -287,7 +287,7 @@ const CostCalculatorPage = () => {
           </div>
 
           {/* Calculator Body */}
-          <div className="bg-[#0a0a0a] min-h-[500px] rounded-[48px] border border-white/5 p-8 md:p-16 relative overflow-hidden flex flex-col justify-center">
+          <div className="bg-white/40 min-h-[500px] rounded-[48px] border border-deep-navy/10 p-8 md:p-16 relative overflow-hidden flex flex-col justify-center">
              <div className="absolute top-0 right-0 w-96 h-96 bg-electric-sapphire/5 blur-[100px] rounded-full -mr-48 -mt-48"></div>
              
              <AnimatePresence mode="wait">
@@ -300,9 +300,9 @@ const CostCalculatorPage = () => {
                     className="space-y-10 relative z-10"
                   >
                     <div className="space-y-2">
-                       <h2 className="text-2xl md:text-4xl font-black text-white leading-tight uppercase">{steps[currentStep].question}</h2>
+                       <h2 className="text-2xl md:text-4xl font-black text-deep-navy leading-tight uppercase">{steps[currentStep].question}</h2>
                        {steps[currentStep].description && (
-                         <p className="text-gray-400 font-light leading-relaxed max-w-2xl">{steps[currentStep].description}</p>
+                         <p className="text-deep-navy/80 font-light leading-relaxed max-w-2xl">{steps[currentStep].description}</p>
                        )}
                     </div>
 
@@ -317,9 +317,9 @@ const CostCalculatorPage = () => {
                                          steps[currentStep].id === 6 ? 'timeline' :
                                          steps[currentStep].id === 7 ? 'jurisdiction' :
                                          steps[currentStep].id === 8 ? 'isUAE' : 'dependants', opt.value)}
-                             className="flex items-center gap-6 p-6 rounded-3xl border border-white/5 bg-white/5 hover:bg-electric-sapphire hover:text-black hover:border-electric-sapphire transition-all duration-300 group text-left"
+                             className="flex items-center gap-6 p-6 rounded-3xl border border-deep-navy/10 bg-deep-navy/5 hover:bg-electric-sapphire hover:text-black hover:border-electric-sapphire transition-all duration-300 group text-left"
                            >
-                              <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-electric-sapphire group-hover:bg-black/10 group-hover:text-black transition-colors">
+                              <div className="w-12 h-12 rounded-2xl bg-deep-navy/5 flex items-center justify-center text-electric-sapphire group-hover:bg-black/10 group-hover:text-black transition-colors">
                                  {opt.icon}
                               </div>
                               <span className="font-black uppercase tracking-tight text-lg">{opt.label}</span>
@@ -339,9 +339,9 @@ const CostCalculatorPage = () => {
                               onChange={(e) => setFormData((prev: any) => ({ ...prev, [steps[currentStep].field as string]: parseInt(e.target.value) }))}
                               className="flex-1 accent-electric-sapphire h-1 bg-white/10 rounded-full appearance-none cursor-pointer"
                             />
-                            <div className="w-24 h-24 bg-white/5 rounded-3xl border border-white/10 flex flex-col items-center justify-center">
+                            <div className="w-24 h-24 bg-deep-navy/5 rounded-3xl border border-deep-navy/10 flex flex-col items-center justify-center">
                                <span className="text-4xl font-black text-electric-sapphire leading-none">{formData[steps[currentStep].field as string]}</span>
-                               <span className="text-[10px] font-bold text-gray-500 uppercase mt-1">Total</span>
+                               <span className="text-[10px] font-bold text-deep-navy/70 uppercase mt-1">Total</span>
                             </div>
                          </div>
                          <button onClick={handleNext} className="btn-premium w-full !rounded-2xl py-5 !text-base">
@@ -355,18 +355,18 @@ const CostCalculatorPage = () => {
                          <select 
                            value={formData.nationality}
                            onChange={(e) => handleSelect('nationality', e.target.value)}
-                           className="w-full bg-white/5 border border-white/10 rounded-2xl p-6 text-lg font-medium focus:border-electric-sapphire/50 outline-none appearance-none cursor-pointer"
+                           className="w-full bg-deep-navy/5 border border-deep-navy/10 rounded-2xl p-6 text-lg font-medium focus:border-electric-sapphire/50 outline-none appearance-none cursor-pointer"
                          >
                             <option value="">Select Nationality</option>
                             {steps[currentStep].options?.map((opt: any, i: number) => (
-                              <option key={i} value={opt.value} className="bg-[#0a0a0a] text-white">{opt.label}</option>
+                              <option key={i} value={opt.value} className="bg-white/40 text-deep-navy">{opt.label}</option>
                             ))}
                          </select>
                       </div>
                     )}
 
                     {currentStep > 0 && (
-                      <button onClick={handleBack} className="flex items-center gap-2 text-gray-500 hover:text-electric-sapphire transition-colors text-xs font-black uppercase tracking-[0.2em]">
+                      <button onClick={handleBack} className="flex items-center gap-2 text-deep-navy/70 hover:text-electric-sapphire transition-colors text-xs font-black uppercase tracking-[0.2em]">
                         <ChevronLeft size={14} /> Previous Question
                       </button>
                     )}
@@ -382,48 +382,48 @@ const CostCalculatorPage = () => {
                        <div className="w-20 h-20 bg-electric-sapphire rounded-full flex items-center justify-center mx-auto mb-6 text-black">
                           <CheckCircle2 size={40} />
                        </div>
-                       <h2 className="text-3xl md:text-5xl font-black text-white leading-tight uppercase">Your Proposal is Ready!</h2>
-                       <p className="text-gray-400 font-light max-w-lg mx-auto">To receive your detailed business setup estimate and jurisdictional analysis, please provide your coordinate details below.</p>
+                       <h2 className="text-3xl md:text-5xl font-black text-deep-navy leading-tight uppercase">Your Proposal is Ready!</h2>
+                       <p className="text-deep-navy/80 font-light max-w-lg mx-auto">To receive your detailed business setup estimate and jurisdictional analysis, please provide your coordinate details below.</p>
                     </div>
 
                     <form onSubmit={handleFinalSubmit} className="grid md:grid-cols-2 gap-6">
                        <div className="space-y-2">
-                          <label className="text-[10px] font-black uppercase tracking-widest text-gray-500 ml-2">First Name</label>
+                          <label className="text-[10px] font-black uppercase tracking-widest text-deep-navy/70 ml-2">First Name</label>
                           <input 
                             required
                             type="text" 
                             placeholder="John"
-                            className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-electric-sapphire/50 transition-all"
+                            className="w-full bg-deep-navy/5 border border-deep-navy/10 rounded-2xl px-6 py-4 outline-none focus:border-electric-sapphire/50 transition-all"
                             onChange={(e) => setFormData((prev: any) => ({ ...prev, firstname: e.target.value }))}
                           />
                        </div>
                        <div className="space-y-2">
-                          <label className="text-[10px] font-black uppercase tracking-widest text-gray-500 ml-2">Last Name</label>
+                          <label className="text-[10px] font-black uppercase tracking-widest text-deep-navy/70 ml-2">Last Name</label>
                           <input 
                             required
                             type="text" 
                             placeholder="Doe"
-                            className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-electric-sapphire/50 transition-all"
+                            className="w-full bg-deep-navy/5 border border-deep-navy/10 rounded-2xl px-6 py-4 outline-none focus:border-electric-sapphire/50 transition-all"
                             onChange={(e) => setFormData((prev: any) => ({ ...prev, lastname: e.target.value }))}
                           />
                        </div>
                        <div className="space-y-2">
-                          <label className="text-[10px] font-black uppercase tracking-widest text-gray-500 ml-2">Email Address</label>
+                          <label className="text-[10px] font-black uppercase tracking-widest text-deep-navy/70 ml-2">Email Address</label>
                           <input 
                             required
                             type="email" 
                             placeholder="john@example.com"
-                            className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-electric-sapphire/50 transition-all font-medium"
+                            className="w-full bg-deep-navy/5 border border-deep-navy/10 rounded-2xl px-6 py-4 outline-none focus:border-electric-sapphire/50 transition-all font-medium"
                             onChange={(e) => setFormData((prev: any) => ({ ...prev, email: e.target.value }))}
                           />
                        </div>
                        <div className="space-y-2">
-                          <label className="text-[10px] font-black uppercase tracking-widest text-gray-500 ml-2">Phone Number</label>
+                          <label className="text-[10px] font-black uppercase tracking-widest text-deep-navy/70 ml-2">Phone Number</label>
                           <input 
                             required
                             type="tel" 
                             placeholder="+971"
-                            className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-electric-sapphire/50 transition-all"
+                            className="w-full bg-deep-navy/5 border border-deep-navy/10 rounded-2xl px-6 py-4 outline-none focus:border-electric-sapphire/50 transition-all"
                             onChange={(e) => setFormData((prev: any) => ({ ...prev, number: e.target.value }))}
                           />
                        </div>
@@ -465,8 +465,8 @@ const CostCalculatorPage = () => {
                 <div key={idx} className="flex gap-4 items-start">
                    <div className="mt-1">{p.icon}</div>
                    <div>
-                      <h4 className="text-white font-black uppercase text-xs tracking-widest mb-2">{p.t}</h4>
-                      <p className="text-gray-500 text-xs leading-relaxed font-medium">{p.d}</p>
+                      <h4 className="text-deep-navy font-black uppercase text-xs tracking-widest mb-2">{p.t}</h4>
+                      <p className="text-deep-navy/70 text-xs leading-relaxed font-medium">{p.d}</p>
                    </div>
                 </div>
              ))}
@@ -487,15 +487,15 @@ const CostCalculatorPage = () => {
               <motion.div 
                 initial={{ scale: 0.9, y: 30 }}
                 animate={{ scale: 1, y: 0 }}
-                className="bg-[#0a0a0a] border border-electric-sapphire/20 p-12 rounded-[56px] max-w-2xl w-full text-center space-y-10 relative z-10 shadow-[0_50px_100px_rgba(0,0,0,0.8)]"
+                className="bg-white/40 border border-electric-sapphire/20 p-12 rounded-[56px] max-w-2xl w-full text-center space-y-10 relative z-10 shadow-[0_50px_100px_rgba(0,0,0,0.8)]"
               >
                   <div className="w-32 h-32 bg-green-400 shadow-[0_0_50px_rgba(74,222,128,0.35)] rounded-full flex items-center justify-center mx-auto scale-110">
                     <CheckCircle2 className="text-black" size={64} />
                  </div>
                   <div className="space-y-4">
-                    <h3 className="text-4xl md:text-5xl font-black text-white tracking-tighter uppercase">Form Submitted</h3>
-                    <p className="text-xl text-gray-400 font-light leading-relaxed">
-                     Thank you, <span className="text-white font-medium">{formData.firstname}</span>. Your details have been sent successfully.
+                    <h3 className="text-4xl md:text-5xl font-black text-deep-navy tracking-tighter uppercase">Form Submitted</h3>
+                    <p className="text-xl text-deep-navy/80 font-light leading-relaxed">
+                     Thank you, <span className="text-deep-navy font-medium">{formData.firstname}</span>. Your details have been sent successfully.
                     </p>
                   </div>
                   <div className="bg-green-500/10 p-6 rounded-3xl border border-green-400/20">

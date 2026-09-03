@@ -44,7 +44,7 @@ const MobileBottomNav = () => {
         initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.1 }}
-        className="max-w-md mx-auto bg-black/80 backdrop-blur-2xl border border-white/10 rounded-[28px] shadow-[0_20px_50px_rgba(0,0,0,0.5)] flex items-center justify-around py-3 px-2"
+        className="max-w-md mx-auto bg-black/80 backdrop-blur-2xl border border-deep-navy/10 rounded-[28px] shadow-[0_20px_50px_rgba(0,0,0,0.5)] flex items-center justify-around py-3 px-2"
       >
         {navItems.map((item) => {
           const Icon = item.icon;
@@ -59,20 +59,20 @@ const MobileBottomNav = () => {
                   rel="noopener noreferrer"
                   className="flex flex-col items-center gap-1 min-w-[64px] relative active:scale-95 transition-all"
                 >
-                  <div className={`p-2 rounded-2xl transition-colors ${item.name === 'WhatsApp' ? 'text-[#25D366]' : 'text-gray-300'}`}>
+                  <div className={`p-2 rounded-2xl transition-colors ${item.name === 'WhatsApp' ? 'text-[#25D366]' : 'text-deep-navy/80'}`}>
                     <Icon className="w-6 h-6" />
                   </div>
-                  <span className="text-[10px] font-black uppercase tracking-widest text-gray-400">{item.name}</span>
+                  <span className="text-[10px] font-black uppercase tracking-widest text-deep-navy/80">{item.name}</span>
                 </a>
               ) : (
                 <Link 
                   href={item.href}
                   className="flex flex-col items-center gap-1 min-w-[64px] relative active:scale-95 transition-all"
                 >
-                  <div className={`p-2 rounded-2xl transition-all ${isActive ? 'bg-electric-sapphire text-black shadow-[0_0_20px_rgba(84,101,255,0.4)]' : 'text-gray-300'}`}>
+                  <div className={`p-2 rounded-2xl transition-all ${isActive ? 'bg-electric-sapphire text-black shadow-[0_0_20px_rgba(84,101,255,0.4)]' : 'text-deep-navy/80'}`}>
                     <Icon className="w-6 h-6" />
                   </div>
-                  <span className={`text-[10px] font-black uppercase tracking-widest transition-colors ${isActive ? 'text-electric-sapphire' : 'text-gray-400'}`}>{item.name}</span>
+                  <span className={`text-[10px] font-black uppercase tracking-widest transition-colors ${isActive ? 'text-electric-sapphire' : 'text-deep-navy/80'}`}>{item.name}</span>
                   
                   {isActive && (
                     <motion.div 

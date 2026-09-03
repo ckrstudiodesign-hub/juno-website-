@@ -83,7 +83,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   };
 
   return (
-    <div className="bg-[#030303] text-white min-h-screen pb-32 pt-28">
+    <div className="bg-white text-deep-navy min-h-screen pb-32 pt-28">
       <SchemaMarkup type="BlogPosting" data={articleSchema} />
       <SchemaMarkup type="BreadcrumbList" data={breadcrumbSchema} />
       
@@ -101,22 +101,22 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
               {post.meta.category}
             </span>
           </div>
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-black mb-8 leading-[1.1] tracking-tighter text-white">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-black mb-8 leading-[1.1] tracking-tighter text-deep-navy">
             {post.meta.title}
           </h1>
           
-          <div className="flex flex-wrap items-center gap-8 py-6 border-y border-white/10">
+          <div className="flex flex-wrap items-center gap-8 py-6 border-y border-deep-navy/10">
             <div className="flex items-center gap-4">
               <div className="relative w-12 h-12 rounded-full overflow-hidden border border-white/20">
                 <Image src={post.meta.author.image} alt={post.meta.author.name} fill className="object-cover" />
               </div>
               <div>
-                <p className="text-white text-sm font-bold">{post.meta.author.name}</p>
-                <p className="text-gray-500 text-[10px] uppercase tracking-widest">{post.meta.author.role}</p>
+                <p className="text-deep-navy text-sm font-bold">{post.meta.author.name}</p>
+                <p className="text-deep-navy/70 text-[10px] uppercase tracking-widest">{post.meta.author.role}</p>
               </div>
             </div>
             
-            <div className="flex items-center gap-6 text-gray-400 text-sm font-medium">
+            <div className="flex items-center gap-6 text-deep-navy/80 text-sm font-medium">
               <span className="flex items-center gap-2"><Calendar size={16} className="text-electric-sapphire" /> {format(parseISO(post.meta.date), 'MMMM d, yyyy')}</span>
               <span className="flex items-center gap-2"><Clock size={16} className="text-electric-sapphire" /> {post.meta.readingTime}</span>
             </div>
@@ -124,20 +124,20 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         </header>
 
         {/* Featured Image */}
-        <div className="relative w-full aspect-[21/9] rounded-3xl overflow-hidden mb-16 shadow-2xl border border-white/5">
+        <div className="relative w-full aspect-[21/9] rounded-3xl overflow-hidden mb-16 shadow-2xl border border-deep-navy/10">
            <Image src={post.meta.image} alt={post.meta.title} fill className="object-cover" priority />
         </div>
 
         {/* Content */}
-        <div className="prose prose-invert prose-lg prose-gold max-w-none prose-headings:font-black prose-headings:tracking-tight prose-a:text-electric-sapphire hover:prose-a:text-white prose-img:rounded-3xl">
+        <div className="prose prose-invert prose-lg prose-gold max-w-none prose-headings:font-black prose-headings:tracking-tight prose-a:text-electric-sapphire hover:prose-a:text-deep-navy prose-img:rounded-3xl">
           <MDXRemote source={post.content} />
         </div>
         
         {/* Tags */}
         {post.meta.tags && (
-          <div className="mt-16 pt-8 border-t border-white/10 flex flex-wrap gap-3">
+          <div className="mt-16 pt-8 border-t border-deep-navy/10 flex flex-wrap gap-3">
             {post.meta.tags.map(tag => (
-              <span key={tag} className="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-xs font-bold text-gray-400 uppercase tracking-widest">
+              <span key={tag} className="px-4 py-2 bg-deep-navy/5 border border-deep-navy/10 rounded-full text-xs font-bold text-deep-navy/80 uppercase tracking-widest">
                 #{tag}
               </span>
             ))}
@@ -148,22 +148,22 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 
       {/* Related Posts */}
       {relatedPosts.length > 0 && (
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-32 pt-20 border-t border-white/5">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-32 pt-20 border-t border-deep-navy/10">
           <div className="flex items-center gap-6 mb-12">
             <div className="w-12 h-px bg-electric-sapphire"></div>
-            <h2 className="text-2xl md:text-4xl font-black text-white uppercase tracking-tight">Related Insights</h2>
+            <h2 className="text-2xl md:text-4xl font-black text-deep-navy uppercase tracking-tight">Related Insights</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {relatedPosts.map((rp) => (
                <Link key={rp.slug} href={`/blog/${rp.slug}`} className="group block">
-                <article className="bg-[#0a0a0a] rounded-3xl overflow-hidden border border-white/5 hover:border-electric-sapphire/30 transition-colors shadow-2xl h-full flex flex-col">
+                <article className="bg-white/40 rounded-3xl overflow-hidden border border-deep-navy/10 hover:border-electric-sapphire/30 transition-colors shadow-2xl h-full flex flex-col">
                   <div className="relative h-48 w-full overflow-hidden">
                     <Image src={rp.image} alt={rp.title} fill className="object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
                   </div>
                   <div className="p-6 flex-1 flex flex-col">
                     <span className="text-electric-sapphire text-[10px] font-black uppercase tracking-widest mb-3 block">{rp.category}</span>
-                    <h3 className="text-lg font-bold text-white group-hover:text-electric-sapphire transition-colors mb-4 line-clamp-2">{rp.title}</h3>
-                    <div className="mt-auto flex items-center gap-2 text-gray-500 text-xs font-medium">
+                    <h3 className="text-lg font-bold text-deep-navy group-hover:text-electric-sapphire transition-colors mb-4 line-clamp-2">{rp.title}</h3>
+                    <div className="mt-auto flex items-center gap-2 text-deep-navy/70 text-xs font-medium">
                        <Clock size={12} className="text-electric-sapphire" /> {rp.readingTime}
                     </div>
                   </div>
