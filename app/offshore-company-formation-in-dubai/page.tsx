@@ -15,14 +15,15 @@ export default function OffshoreOverview() {
         "Quick and simple setup",
         "Asset protection across the globe",
         "100% foreign ownership and shares",
-        "Zero corporate income tax law",
-        "Succession planning and confidentiality",
-        "Multi-currency bank accounts for international transactions",
-        "No requirement for a physical office",
-        "Anonymity for investment privacy"
+        "Favorable corporate tax environment",
+        "Asset protection structures",
+        "100% repatriation of profits",
+        "Multi-currency bank account eligibility",
+        "High level of confidentiality for corporate structuring",
+        "No requirement for a physical office"
       ]}
       executiveSummary={{
-        summary: "An Offshore Company in the UAE is a legal entity designed to operate outside its registered jurisdiction. It serves primarily as a holding company or a vehicle for international trading, offering maximum asset protection and financial anonymity.",
+        summary: "An Offshore Company in the UAE is a legal entity designed to operate outside its registered jurisdiction. It serves primarily as a holding company or a vehicle for international trading, offering maximum asset protection and privacy.",
         keyFacts: [
           "100% Foreign Ownership",
           "0% Corporate Tax",

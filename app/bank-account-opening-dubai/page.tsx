@@ -19,7 +19,7 @@ export default function BankAccountServices() {
         "Zero-balance and low-minimum balance account advisory",
         "Assistance with online banking and digital transition",
         "Guidance on credit facilities and trade finance",
-        "High success rate for complex corporate structures"
+        "Expert guidance for complex corporate structures"
       ]}
       sections={[
         {

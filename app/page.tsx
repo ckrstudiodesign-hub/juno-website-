@@ -29,6 +29,9 @@ const WhyChooseUs = dynamic(() => import('@/components/home/WhyChooseUs'));
 const Testimonials = dynamic(() => import('@/components/home/Testimonials'));
 const FAQ = dynamic(() => import('@/components/home/FAQ'));
 const LocationMap = dynamic(() => import('@/components/home/LocationMap'));
+const StructureFinder = dynamic(() => import('@/components/home/StructureFinder'));
+const FreeZoneComparison = dynamic(() => import('@/components/home/FreeZoneComparison'));
+const RecommendationsHub = dynamic(() => import('@/components/home/RecommendationsHub'));
 const CostCalculator = dynamic(() => import('@/components/home/CostCalculator'));
 const PhotoShowcase = dynamic(() => import('@/components/home/PhotoShowcase'));
 const ParallaxBand = dynamic(() => import('@/components/home/ParallaxBand'));
@@ -53,6 +56,9 @@ export default function Home() {
       <Testimonials />
       <FAQ />
       <LocationMap />
+      <StructureFinder />
+      <FreeZoneComparison />
+      <RecommendationsHub />
       <CostCalculator />
     </div>
   );

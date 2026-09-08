@@ -184,7 +184,7 @@ const ServicePage = ({
                 <div className="grid md:grid-cols-3 gap-6">
                    {[
                      { t: "Elite Banking", d: "Direct introductions to premier UAE banks including multi-currency account setup support." },
-                     { t: "Tax Optimization", d: "Strategic corporate tax and VAT structural planning for maximum efficiency." },
+                     { t: "Tax Compliance", d: "Strategic corporate tax and VAT planning supported by appropriately qualified professionals." },
                      { t: "Concierge Pro", d: "End-to-end visa processing and government liaison services for your entire team." }
                    ].map((item, i) => (
                      <div key={i} className="glass p-8 rounded-3xl space-y-4 border-electric-sapphire/10">

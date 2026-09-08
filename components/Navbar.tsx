@@ -21,44 +21,65 @@ const Navbar = () => {
 
   const menuItems = [
     {
-      title: 'Mainland',
+      title: 'Business Setup',
       links: [
-        { name: 'Overview', href: '/mainland-company-formation-in-dubai' },
+        { name: 'Mainland Company Formation', href: '/mainland-company-formation-in-dubai' },
         { name: 'LLC Formation', href: '/llc-company-formation-in-dubai' },
         { name: 'Professional License', href: '/professional-license-main-land-civil-company' },
         { name: 'Branch Office', href: '/branch-representative-office-in-main-land' },
+        { name: 'Offshore Company Formation', href: '/offshore-company-formation-in-dubai' },
       ]
     },
     {
-      title: 'Free Zone',
+      title: 'Free Zones',
       links: [
         { name: 'Overview', href: '/dubai-free-zone-company-overview' },
         { name: 'IFZA', href: '/ifza-dubai-business-set-up' },
         { name: 'DMCC', href: '/dmcc-free-zone-company-setup' },
+        { name: 'JAFZA', href: '/jafza-company-formation' },
+        { name: 'Meydan', href: '/meydan-free-zone' },
+        { name: 'SPC', href: '/spc-free-zone-setup' },
+      ]
+    },
+    {
+      title: 'Corporate Services',
+      links: [
+        { name: 'PRO Services', href: '/pro-services-dubai' },
+        { name: 'Golden Visas', href: '/golden-visa-uae' },
+        { name: 'UAE Will', href: '/uae-wills-service' },
+        { name: 'Document Attestation', href: '/document-attestation-services' },
+        { name: 'Legal Translation', href: '/legal-translation-dubai' },
+        { name: 'ISO Certification', href: '/iso-certification-dubai' },
+      ]
+    },
+    {
+      title: 'Tax & Accounting',
+      links: [
+        { name: 'Corporate Tax', href: '/corporate-tax-uae' },
+        { name: 'VAT Consultancy', href: '/vat-consultancy-uae' },
+        { name: 'Bookkeeping & Accounting', href: '/bookkeeping-and-accounting-services' },
       ]
     },
     {
       title: 'Banking',
       links: [
-        { name: 'Bank Account Services', href: '/bank-account-opening-dubai' },
+        { name: 'Corporate Bank Account', href: '/bank-account-opening-dubai' },
+        { name: 'Personal Bank Account', href: '/personal-bank-account-services' },
+        { name: 'Offshore Banking', href: '/offshore-banking-services' },
+        { name: 'Trade Finance', href: '/trade-finance-services' },
       ]
     },
     {
-      title: 'Value Added',
-      links: [
-        { name: 'UAE Will', href: '/uae-wills-service' },
-        { name: 'Golden Visas', href: '/golden-visa-uae' },
-        { name: 'PRO Services', href: '/pro-services-dubai' },
-        { name: 'Corporate Tax', href: '/corporate-tax-uae' },
-      ]
-    },
-    {
-      title: 'Contact Us',
+      title: 'About',
       links: [
         { name: 'About Us', href: '/about-us' },
         { name: 'Cost Calculator', href: '/cost-calculator' },
-        { name: 'Contact', href: '/contact' },
-        { name: 'Insights & Blog', href: '/blog' },
+      ]
+    },
+    {
+      title: 'Insights',
+      links: [
+        { name: 'Blog & News', href: '/blog' },
       ]
     }
   ];
@@ -92,9 +113,6 @@ const Navbar = () => {
 
         {/* Center/Right Links - McKinsey Style */}
         <div className="hidden lg:flex items-end h-full pt-4 pb-0 gap-8">
-           <div className="relative h-full flex flex-col justify-end pb-4 border-b-4 border-[#00B4D8]">
-              <Link href="/about-us" className="text-[15px] font-medium leading-none hover:text-[#00B4D8]">Overview</Link>
-           </div>
            
            {menuItems.map((item) => (
              <div 
@@ -129,6 +147,11 @@ const Navbar = () => {
                 </AnimatePresence>
              </div>
            ))}
+           <div className="h-full flex items-center ml-4">
+             <Link href="/contact" className="px-6 py-2.5 bg-electric-sapphire text-white text-[13px] font-bold uppercase tracking-widest rounded-full hover:bg-black transition-colors shadow-lg hover:shadow-xl hover:-translate-y-0.5 transform duration-200">
+               Book a consultation
+             </Link>
+           </div>
         </div>
       </div>
 
@@ -212,6 +235,11 @@ const Navbar = () => {
                        </AnimatePresence>
                     </div>
                  ))}
+                 <div className="px-6 sm:px-8 pt-6 pb-8 mt-auto border-t border-gray-200">
+                    <Link href="/contact" onClick={() => setIsOpen(false)} className="w-full flex justify-center items-center px-6 py-3 bg-electric-sapphire text-white text-[15px] font-bold uppercase tracking-widest rounded-full hover:bg-black transition-colors shadow-lg hover:shadow-xl hover:-translate-y-0.5 transform duration-200">
+                      Book a consultation
+                    </Link>
+                 </div>
               </div>
             </motion.div>
 

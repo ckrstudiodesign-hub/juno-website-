@@ -27,7 +27,7 @@ export default function UAEWills() {
         {
           title: "Why a Will is Essential",
           content: [
-            "A registered Will is the only legal instrument that guarantees your Dubai assets are distributed according to your wishes, not local Sharia Law defaults.",
+            "A registered Will is the only legal instrument that ensures your Dubai assets are distributed according to your wishes, not local Sharia Law defaults.",
             "Without a Will, bank accounts are often frozen immediately, and guardianship of minors can become a legal uncertainty. A Will provides the ultimate 'peace of mind' and financial security for your family."
           ]
         },
