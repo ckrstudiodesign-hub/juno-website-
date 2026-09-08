@@ -58,7 +58,7 @@ const OurServicesAccordion = () => {
   return (
     <section className="section-padding relative overflow-hidden bg-white" id="our-services">
       {/* Background Decorative Elements */}
-      <div className="absolute top-0 right-1/4 w-1/3 h-[500px] bg-electric-sapphire/5 blur-[120px] rounded-full opacity-50 pointer-events-none" />
+      <div className="absolute top-0 right-1/4 w-1/3 h-[500px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-electric-sapphire/10 to-transparent rounded-full opacity-50 pointer-events-none" />
       
       <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">

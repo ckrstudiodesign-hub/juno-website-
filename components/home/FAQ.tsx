@@ -49,7 +49,7 @@ const faqSchema = {
 const FAQ = () => {
   return (
     <section className="py-10 bg-white relative overflow-hidden" id="faq">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-electric-sapphire/5 blur-[150px] rounded-full opacity-50 pointer-events-none"></div>
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-electric-sapphire/10 to-transparent rounded-full opacity-50 pointer-events-none"></div>
       <div className="max-w-4xl mx-auto px-4 relative z-10">
         <div className="text-center mb-12 space-y-4">
           <span className="text-electric-sapphire font-black tracking-[0.4em] uppercase text-xs block">FAQ</span>

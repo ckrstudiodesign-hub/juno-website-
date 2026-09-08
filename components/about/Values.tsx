@@ -35,7 +35,7 @@ const Values = () => {
 
   return (
     <section className="section-padding bg-[#050505] relative overflow-hidden">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-electric-sapphire/5 blur-[150px] rounded-full"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-electric-sapphire/10 to-transparent rounded-full"></div>
       
       <div className="max-w-7xl mx-auto px-4 relative z-10 text-center mb-20">
         <h2 className="text-electric-sapphire font-bold tracking-[0.3em] uppercase text-sm mb-4">The Golden Standard</h2>

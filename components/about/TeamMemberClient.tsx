@@ -20,7 +20,7 @@ const TeamMemberClient = ({ member }: { member: TeamMember }) => {
     <main className="min-h-screen bg-background text-deep-navy relative overflow-hidden font-serif">
       {/* Decorative background elements */}
       <div className="absolute top-0 right-0 w-[50%] h-full bg-white/40 -skew-x-12 translate-x-32 z-0 hidden lg:block"></div>
-      <div className="absolute top-1/2 left-0 w-96 h-96 bg-electric-sapphire/5 blur-[120px] rounded-full -ml-48 pointer-events-none"></div>
+      <div className="absolute top-1/2 left-0 w-96 h-96 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-electric-sapphire/10 to-transparent rounded-full -ml-48 pointer-events-none"></div>
       
       {/* Navigation */}
       <nav className="absolute top-32 left-10 z-20">

@@ -95,8 +95,8 @@ const ClientReviews = () => {
   return (
     <section className="relative py-20 md:py-32 overflow-hidden bg-white">
       {/* Decorative Background */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-electric-sapphire/5 blur-[120px] rounded-full -ml-48 -mt-48"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-electric-sapphire/5 blur-[120px] rounded-full -mr-48 -mb-48"></div>
+      <div className="absolute top-0 left-0 w-96 h-96 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-electric-sapphire/10 to-transparent rounded-full -ml-48 -mt-48"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-electric-sapphire/10 to-transparent rounded-full -mr-48 -mb-48"></div>
 
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         {/* Section Header */}

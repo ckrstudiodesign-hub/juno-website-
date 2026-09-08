@@ -10,7 +10,7 @@ import { teamMembers } from '@/lib/team-data';
 const Team = () => {
   return (
     <section id="team" className="section-padding bg-white relative overflow-hidden">
-      <div className="absolute top-1/2 right-0 w-96 h-96 bg-electric-sapphire/5 blur-[120px] rounded-full -mr-48 pointer-events-none"></div>
+      <div className="absolute top-1/2 right-0 w-96 h-96 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-electric-sapphire/10 to-transparent rounded-full -mr-48 pointer-events-none"></div>
       
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         <div className="text-center mb-16 md:mb-24 space-y-4">

@@ -120,8 +120,8 @@ const StructureFinder = () => {
   return (
     <section className="py-20 md:py-32 bg-gray-50 relative overflow-hidden">
       {/* Background elements */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-electric-sapphire/5 blur-[120px] rounded-full pointer-events-none -translate-y-1/2 translate-x-1/3"></div>
-      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#00B4D8]/5 blur-[120px] rounded-full pointer-events-none translate-y-1/2 -translate-x-1/3"></div>
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-electric-sapphire/10 to-transparent rounded-full pointer-events-none -translate-y-1/2 translate-x-1/3"></div>
+      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#00B4D8]/10 to-transparent rounded-full pointer-events-none translate-y-1/2 -translate-x-1/3"></div>
 
       <div className="max-w-4xl mx-auto px-4 relative z-10">
         <div className="text-center mb-16">

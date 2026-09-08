@@ -48,7 +48,7 @@ export default function RecommendationsHub() {
             viewport={{ once: true }}
             className="col-span-1 md:col-span-2 bg-deep-navy rounded-3xl p-8 md:p-12 text-white relative overflow-hidden group"
           >
-             <div className="absolute top-0 right-0 w-64 h-64 bg-electric-sapphire/30 blur-[80px] rounded-full group-hover:bg-electric-sapphire/50 transition-colors duration-700"></div>
+             <div className="absolute top-0 right-0 w-64 h-64 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-electric-sapphire/20 to-transparent rounded-full transition-colors duration-700"></div>
              <Calculator className="w-12 h-12 text-electric-sapphire mb-6" />
              <h3 className="text-2xl font-black uppercase tracking-tight mb-4">UAE Tax Hub</h3>
              <p className="text-white/70 mb-8 max-w-md font-light leading-relaxed">
