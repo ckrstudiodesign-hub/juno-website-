@@ -85,7 +85,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-[100] transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-200' : 'bg-transparent'}`}>
+    <nav className={`fixed top-0 left-0 w-full z-[100] transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-sm' : 'bg-white/90 backdrop-blur-sm shadow-sm'}`}>
       <div className="w-full px-4 sm:px-8 h-20 flex items-center justify-between text-deep-navy border-b border-gray-200">
         
         {/* Left Side: Hamburger & Logo */}
