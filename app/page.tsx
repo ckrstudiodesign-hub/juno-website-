@@ -1,6 +1,8 @@
 import React from 'react';
 import type { Metadata } from 'next';
-import dynamic from 'next/dynamic';// ========================================
+import dynamic from 'next/dynamic';
+
+// ========================================
 // Designed & Developed by CKR Creatives
 // Juno BizHub Corporate Services Providers Website
 // ========================================
@@ -35,11 +37,13 @@ const RecommendationsHub = dynamic(() => import('@/components/home/Recommendatio
 const CostCalculator = dynamic(() => import('@/components/home/CostCalculator'));
 const PhotoShowcase = dynamic(() => import('@/components/home/PhotoShowcase'));
 const ParallaxBand = dynamic(() => import('@/components/home/ParallaxBand'));
+const EntryPopup = dynamic(() => import('@/components/global/EntryPopup'), { ssr: false });
 
 export default function Home() {
   return (
     <div className="flex flex-col w-full bg-transparent overflow-x-hidden relative">
       <GlobalBackground />
+      <EntryPopup />
       <Hero />
       <ServicesTicker />
       <ServicesOrbit />

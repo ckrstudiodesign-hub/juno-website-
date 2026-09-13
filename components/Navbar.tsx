@@ -4,7 +4,33 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown, Search, ArrowRight } from 'lucide-react';
+import { ChevronDown, Search, ArrowRight } from 'lucide-react';
+
+const WaveHamburger = ({ isOpen, onClick }: { isOpen: boolean, onClick: () => void }) => {
+  return (
+    <button 
+      onClick={onClick}
+      className="relative w-10 h-10 flex flex-col items-center justify-center gap-[6px] p-1 hover:bg-gray-100 rounded transition-colors"
+      aria-label="Toggle Menu"
+    >
+      <motion.div
+        animate={isOpen ? { y: 8, rotate: 45, backgroundColor: "#00B4D8" } : { y: 0, rotate: 0, backgroundColor: "#03045E" }}
+        transition={{ duration: 0.5, type: "spring", bounce: 0.4 }}
+        className="w-7 h-[2px] rounded-full origin-center"
+      />
+      <motion.div
+        animate={isOpen ? { opacity: 0, x: 15, backgroundColor: "#0077B6" } : { opacity: 1, x: 0, backgroundColor: "#03045E" }}
+        transition={{ duration: 0.5, type: "spring", bounce: 0.4, delay: 0.05 }}
+        className="w-7 h-[2px] rounded-full"
+      />
+      <motion.div
+        animate={isOpen ? { y: -8, rotate: -45, backgroundColor: "#00B4D8" } : { y: 0, rotate: 0, backgroundColor: "#03045E" }}
+        transition={{ duration: 0.5, type: "spring", bounce: 0.4, delay: 0.1 }}
+        className="w-7 h-[2px] rounded-full origin-center"
+      />
+    </button>
+  );
+};
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,6 +44,18 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Prevent background scrolling when mobile menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
 
   const menuItems = [
     {
@@ -85,17 +123,12 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-[100] transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-sm' : 'bg-white/90 backdrop-blur-sm shadow-sm'}`}>
-      <div className="w-full px-4 sm:px-8 h-20 flex items-center justify-between text-deep-navy border-b border-gray-200">
+    <nav className={`fixed top-0 left-0 w-full z-[120] transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-sm' : 'bg-white/90 backdrop-blur-sm shadow-sm'}`}>
+      <div className="relative z-[130] w-full px-4 sm:px-8 h-20 flex items-center justify-between text-deep-navy border-b border-gray-200">
         
         {/* Left Side: Hamburger & Logo */}
         <div className="flex items-center gap-6">
-          <button 
-            onClick={() => setIsOpen(true)}
-            className="p-1 hover:bg-gray-100 rounded transition-colors"
-          >
-            <Menu className="w-8 h-8" strokeWidth={1.5} />
-          </button>
+          <WaveHamburger isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
           <Link href="/" className="flex items-center gap-3">
              <div className="relative w-12 h-12 flex-shrink-0">
                 <Image src="/logo.png" alt="Juno BizHub Logo" fill className="object-contain" />
@@ -124,20 +157,20 @@ const Navbar = () => {
                 <span className="text-[15px] font-medium leading-none">{item.title}</span>
                 
                 <AnimatePresence>
-                  {activeDropdown === item.title && (
+                  {!isOpen && activeDropdown === item.title && (
                     <motion.div
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 10 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute top-full left-0 mt-0 w-64 bg-white text-[#00284F] shadow-xl py-2"
+                      className="absolute top-full left-0 mt-0 w-72 bg-white shadow-2xl py-3 rounded-b-xl border border-gray-100 z-[150]"
                     >
                       {item.links.map((link) => (
                         <Link
                           key={link.href}
                           href={link.href}
                           onClick={() => setActiveDropdown(null)}
-                          className="flex items-center justify-between px-6 py-3 text-sm hover:bg-gray-100 transition-colors"
+                          className="flex items-center justify-between px-6 py-2.5 text-[15px] font-medium text-slate-700 hover:text-electric-sapphire hover:bg-blue-50/50 transition-colors"
                         >
                           {link.name}
                         </Link>
@@ -148,9 +181,12 @@ const Navbar = () => {
              </div>
            ))}
            <div className="h-full flex items-center ml-4">
-             <Link href="/contact" className="px-6 py-2.5 bg-electric-sapphire text-white text-[13px] font-bold uppercase tracking-widest rounded-full hover:bg-black transition-colors shadow-lg hover:shadow-xl hover:-translate-y-0.5 transform duration-200">
+             <button 
+               onClick={() => window.dispatchEvent(new Event('openEntryPopup'))} 
+               className="px-6 py-2.5 bg-electric-sapphire text-white text-[13px] font-bold uppercase tracking-widest rounded-full hover:bg-black transition-colors shadow-lg hover:shadow-xl hover:-translate-y-0.5 transform duration-200"
+             >
                Book a consultation
-             </Link>
+             </button>
            </div>
         </div>
       </div>
@@ -170,31 +206,8 @@ const Navbar = () => {
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
               transition={{ type: "tween", duration: 0.3, ease: "easeOut" }}
-              className="w-full sm:w-[350px] md:w-[400px] h-full bg-gray-50 text-deep-navy flex flex-col flex-shrink-0 relative z-20 shadow-2xl border-r border-gray-200"
+              className="w-full sm:w-[350px] md:w-[400px] h-full bg-gray-50 text-deep-navy flex flex-col flex-shrink-0 relative z-20 shadow-2xl pt-20 border-r border-gray-200"
             >
-              {/* Header */}
-              <div className="flex items-center p-6 sm:p-8 gap-6 border-b border-gray-200">
-                <button 
-                  onClick={() => setIsOpen(false)}
-                  className="p-1 hover:bg-gray-200 rounded transition-colors"
-                >
-                  <X className="w-8 h-8 font-light" strokeWidth={1} />
-                </button>
-                <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center gap-3">
-                   <div className="relative w-10 h-10 flex-shrink-0">
-                      <Image src="/logo.png" alt="Juno BizHub Logo" fill className="object-contain" />
-                   </div>
-                   <div className="flex flex-col">
-                      <span className="text-xl font-serif font-normal tracking-tight leading-none">
-                        Juno BizHub
-                      </span>
-                      <span className="text-[8px] font-sans uppercase tracking-[0.1em] text-deep-navy/70 mt-1">
-                        Corporate Services Providers
-                      </span>
-                    </div>
-                </Link>
-              </div>
-
               {/* Navigation Items */}
               <div className="flex-1 overflow-y-auto py-6">
                  {menuItems.map((item) => (
@@ -236,9 +249,15 @@ const Navbar = () => {
                     </div>
                  ))}
                  <div className="px-6 sm:px-8 pt-6 pb-8 mt-auto border-t border-gray-200">
-                    <Link href="/contact" onClick={() => setIsOpen(false)} className="w-full flex justify-center items-center px-6 py-3 bg-electric-sapphire text-white text-[15px] font-bold uppercase tracking-widest rounded-full hover:bg-black transition-colors shadow-lg hover:shadow-xl hover:-translate-y-0.5 transform duration-200">
+                    <button 
+                      onClick={() => {
+                        setIsOpen(false);
+                        window.dispatchEvent(new Event('openEntryPopup'));
+                      }}
+                      className="w-full flex justify-center items-center px-6 py-3 bg-electric-sapphire text-white text-[15px] font-bold uppercase tracking-widest rounded-full hover:bg-black transition-colors shadow-lg hover:shadow-xl hover:-translate-y-0.5 transform duration-200"
+                    >
                       Book a consultation
-                    </Link>
+                    </button>
                  </div>
               </div>
             </motion.div>
@@ -248,7 +267,7 @@ const Navbar = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="hidden sm:block flex-1 h-full bg-white relative z-10 overflow-y-auto"
+              className="hidden sm:block flex-1 h-full bg-white relative z-10 overflow-y-auto pt-20"
             >
               {activeDropdown && (
                 <div className="p-12 md:p-24 max-w-5xl">
@@ -269,6 +288,52 @@ const Navbar = () => {
                        </Link>
                      ))}
                    </div>
+                   
+                   {(() => {
+                     const getCategoryContent = (title: string) => {
+                       switch (title) {
+                         case 'Business Setup':
+                           return { img: '/images/hero-bg.jpg', title: 'Launch Your Legacy', desc: 'Expert mainland and offshore business setup solutions across the UAE.' };
+                         case 'Free Zones':
+                           return { img: '/images/nav-stock.jpg', title: 'Tax-Free Growth', desc: 'Discover the perfect free zone jurisdiction for your specific business activity.' };
+                         case 'Corporate Services':
+                           return { img: '/images/hero-bg.jpg', title: 'Expert Corporate Services', desc: 'Elevate your business in the UAE with our premium setup and corporate solutions.' };
+                         case 'Tax & Accounting':
+                           return { img: '/images/nav-stock.jpg', title: 'Financial Clarity', desc: 'Stay compliant with our expert corporate tax, VAT, and bookkeeping services.' };
+                         case 'Banking':
+                           return { img: '/images/hero-bg.jpg', title: 'Banking Connections', desc: 'Leverage our network to secure corporate and personal bank accounts quickly.' };
+                         case 'About':
+                           return { img: '/images/nav-stock.jpg', title: 'About Juno BizHub', desc: 'Your trusted partner in navigating the UAE corporate landscape.' };
+                         case 'Insights':
+                           return { img: '/images/hero-bg.jpg', title: 'Market Insights', desc: 'Stay informed with the latest news, regulations, and business trends.' };
+                         default:
+                           return { img: '/images/nav-stock.jpg', title: 'Expert Corporate Services', desc: 'Elevate your business in the UAE with our premium setup and corporate solutions.' };
+                       }
+                     };
+                     
+                     const content = getCategoryContent(activeDropdown);
+                     
+                     return (
+                       <motion.div 
+                         key={activeDropdown} // forces re-render/animation on category change
+                         initial={{ opacity: 0, y: 20 }}
+                         animate={{ opacity: 1, y: 0 }}
+                         transition={{ duration: 0.4 }}
+                         className="mt-20 relative w-full h-[320px] rounded-2xl overflow-hidden shadow-xl border border-gray-100 group"
+                       >
+                         <Image 
+                           src={content.img} 
+                           alt={content.title} 
+                           fill 
+                           className="object-cover group-hover:scale-105 transition-transform duration-1000 ease-out" 
+                         />
+                         <div className="absolute inset-0 bg-gradient-to-t from-[#03045E]/90 via-[#03045E]/40 to-transparent flex flex-col justify-end p-10">
+                           <h3 className="text-white text-3xl font-serif font-bold mb-3 tracking-tight">{content.title}</h3>
+                           <p className="text-blue-50 text-[15px] max-w-md font-sans">{content.desc}</p>
+                         </div>
+                       </motion.div>
+                     );
+                   })()}
                 </div>
               )}
             </motion.div>
