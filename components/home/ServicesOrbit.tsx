@@ -221,7 +221,7 @@ const ServicesOrbit = () => {
             backgroundImage: 'repeating-linear-gradient(45deg, rgba(0, 119, 182, 0.04) 0px, rgba(0, 119, 182, 0.04) 1px, transparent 1px, transparent 16px)'
           }}
         />
-        <div className="absolute top-[10%] md:top-[15%] inset-0 w-full flex items-center opacity-30">
+        <div className="hidden md:flex absolute top-[10%] md:top-[15%] inset-0 w-full items-center opacity-30">
           <motion.div
             animate={{ x: ['100%', '-100%'] }}
             transition={{ duration: 45, repeat: Infinity, ease: 'linear' }}
@@ -254,9 +254,9 @@ const ServicesOrbit = () => {
           </div>
 
           {/* ── Solar System & Details ── */}
-          <div className="flex flex-col items-center w-full mt-4 md:mt-8">
+          <div className="flex flex-col items-center w-full mt-8 md:mt-12">
             {/* Solar system (Scaled down to make it smaller) */}
-            <div className="flex justify-center transform scale-[0.65] sm:scale-[0.75] md:scale-[0.8] origin-center mb-8 md:mb-12">
+            <div className="flex justify-center transform scale-[0.7] sm:scale-[0.8] origin-center mb-8 md:mb-12">
               <div
                 className="juno-solar relative"
                 onMouseEnter={() => setIsHovered(true)}
@@ -449,21 +449,21 @@ const ServicesOrbit = () => {
                     transition={{ duration: 0.3, ease: 'easeOut' }}
                     className="max-w-2xl text-center"
                   >
-                    <div className="lg:hidden mb-6">
-                      <h3 className="md:hidden text-lg md:text-[17px] font-black uppercase tracking-tight text-gray-900 mb-3">
+                    <div className="lg:hidden mb-5">
+                      <h3 className="md:hidden text-[17px] font-black uppercase tracking-tight text-deep-navy mb-2">
                         {active.title}
                       </h3>
-                      <p className="text-gray-600 text-sm md:text-[13px] font-medium leading-relaxed">
+                      <p className="text-deep-navy/70 text-xs md:text-[13px] font-medium leading-relaxed max-w-sm mx-auto">
                         {active.description}
                       </p>
                     </div>
 
-                    <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
+                    <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
                       {active.links.map((link) => (
                         <Link
                           key={link.href}
                           href={link.href}
-                          className="px-4 py-2 rounded-full border border-black/10 bg-white text-[11px] font-bold uppercase tracking-wider text-gray-700 hover:text-black hover:bg-gray-50 hover:border-black/20 transition-all shadow-sm"
+                          className="px-3 py-1.5 md:px-4 md:py-2 rounded-full border border-electric-sapphire/20 bg-white/70 backdrop-blur-sm text-[9px] md:text-[11px] font-bold uppercase tracking-widest text-deep-navy hover:text-white hover:bg-electric-sapphire hover:border-electric-sapphire transition-all shadow-sm"
                         >
                           {link.label}
                         </Link>
@@ -472,7 +472,7 @@ const ServicesOrbit = () => {
 
                     <Link
                       href={active.href}
-                      className="md:hidden inline-flex items-center gap-2 mt-5 text-[#0077B6] font-bold uppercase tracking-widest text-xs"
+                      className="md:hidden inline-flex items-center gap-2 mt-5 text-electric-sapphire font-black uppercase tracking-widest text-[10px]"
                     >
                       Explore Category <ArrowRight className="w-4 h-4" />
                     </Link>
