@@ -45,34 +45,34 @@ const PhotoShowcase = () => (
         </h2>
       </Reveal>
 
-      <Stagger className="grid gap-6 md:gap-8 md:grid-cols-3" stagger={0.14} amount={0.15}>
+      <Stagger className="grid gap-2 sm:gap-4 md:gap-8 grid-cols-3" stagger={0.14} amount={0.15}>
         {shots.map((shot) => (
           <StaggerItem key={shot.src}>
             <Link
               href={shot.href}
-              className="group block relative rounded-[32px] overflow-hidden shadow-[0_24px_60px_-30px_rgba(3,4,94,0.5)] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] hover:-translate-y-3 hover:shadow-[0_40px_100px_-20px_rgba(0,119,182,0.4)] focus:outline-none focus-visible:ring-4 focus-visible:ring-electric-sapphire/40"
+              className="group block relative rounded-[16px] md:rounded-[32px] overflow-hidden shadow-[0_24px_60px_-30px_rgba(3,4,94,0.5)] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] hover:-translate-y-1 md:hover:-translate-y-3 hover:shadow-[0_40px_100px_-20px_rgba(0,119,182,0.4)] focus:outline-none focus-visible:ring-4 focus-visible:ring-electric-sapphire/40"
             >
               <ParallaxImage
                 src={shot.src}
                 alt={shot.alt}
                 strength={shot.strength}
-                sizes="(max-width: 768px) 100vw, 33vw"
-                className="h-[380px] md:h-[520px]"
+                sizes="33vw"
+                className="h-[140px] sm:h-[220px] md:h-[520px]"
                 imageClassName="object-cover transition-transform duration-[1500ms] ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-[1.12]"
                 overlay={
-                  <div className="absolute inset-0 bg-gradient-to-t from-deep-navy via-deep-navy/40 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-deep-navy/90 via-deep-navy/40 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]" />
                 }
               />
 
-              <div className="absolute inset-x-0 bottom-0 p-7 md:p-9 transform transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:-translate-y-2">
-                <h3 className="text-white font-black uppercase tracking-tight text-xl md:text-2xl">
+              <div className="absolute inset-x-0 bottom-0 p-3 sm:p-5 md:p-9 transform transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:-translate-y-1 md:group-hover:-translate-y-2">
+                <h3 className="text-white font-black uppercase tracking-tight text-[9px] sm:text-[14px] md:text-2xl leading-none">
                   {shot.label}
                 </h3>
-                <p className="text-white/85 text-[13px] font-medium leading-snug mt-2 max-w-[26ch] transition-opacity duration-700 group-hover:text-white">
+                <p className="text-white/85 text-[7px] sm:text-[10px] md:text-[13px] font-medium leading-[1.1] md:leading-snug mt-1.5 md:mt-2 max-w-[26ch] transition-opacity duration-700 group-hover:text-white line-clamp-2 md:line-clamp-none">
                   {shot.caption}
                 </p>
-                <span className="inline-flex items-center gap-2 mt-4 text-[10px] font-black uppercase tracking-[0.25em] text-white/80 group-hover:text-white group-hover:gap-4 transition-all duration-500">
-                  Explore <ArrowRight className="w-3.5 h-3.5" />
+                <span className="inline-flex items-center gap-1 md:gap-2 mt-1.5 md:mt-4 text-[6px] sm:text-[8px] md:text-[10px] font-black uppercase tracking-widest md:tracking-[0.25em] text-white/80 group-hover:text-white group-hover:gap-1.5 md:group-hover:gap-4 transition-all duration-500">
+                  <span className="hidden sm:inline">Explore</span> <ArrowRight className="w-2 h-2 md:w-3.5 md:h-3.5" />
                 </span>
               </div>
             </Link>
