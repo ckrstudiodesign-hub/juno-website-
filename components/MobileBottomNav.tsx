@@ -59,20 +59,20 @@ const MobileBottomNav = () => {
                   rel="noopener noreferrer"
                   className="flex flex-col items-center gap-1 min-w-[64px] relative active:scale-95 transition-all"
                 >
-                  <div className={`p-2 rounded-2xl transition-colors ${item.name === 'WhatsApp' ? 'text-[#25D366]' : 'text-deep-navy/80'}`}>
+                  <div className={`p-2 rounded-2xl transition-colors ${item.name === 'WhatsApp' ? 'text-[#25D366]' : 'text-white/80'}`}>
                     <Icon className="w-6 h-6" />
                   </div>
-                  <span className="text-[10px] font-black uppercase tracking-widest text-deep-navy/80">{item.name}</span>
+                  <span className="text-[10px] font-black uppercase tracking-widest text-white/80">{item.name}</span>
                 </a>
               ) : (
                 <Link 
                   href={item.href}
                   className="flex flex-col items-center gap-1 min-w-[64px] relative active:scale-95 transition-all"
                 >
-                  <div className={`p-2 rounded-2xl transition-all ${isActive ? 'bg-electric-sapphire text-black shadow-[0_0_20px_rgba(84,101,255,0.4)]' : 'text-deep-navy/80'}`}>
+                  <div className={`p-2 rounded-2xl transition-all ${isActive ? 'bg-electric-sapphire text-black shadow-[0_0_20px_rgba(84,101,255,0.4)]' : 'text-white/80'}`}>
                     <Icon className="w-6 h-6" />
                   </div>
-                  <span className={`text-[10px] font-black uppercase tracking-widest transition-colors ${isActive ? 'text-electric-sapphire' : 'text-deep-navy/80'}`}>{item.name}</span>
+                  <span className={`text-[10px] font-black uppercase tracking-widest transition-colors ${isActive ? 'text-electric-sapphire' : 'text-white/80'}`}>{item.name}</span>
                   
                   {isActive && (
                     <motion.div 

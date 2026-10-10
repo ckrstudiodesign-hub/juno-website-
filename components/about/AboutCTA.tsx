@@ -6,12 +6,12 @@ import { ArrowRight } from 'lucide-react';
 
 const AboutCTA = () => {
   return (
-    <section className="py-24 bg-gray-50 border-t border-gray-200">
-      <div className="max-w-4xl mx-auto text-center space-y-10 px-4">
-         <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#03045E] leading-tight">
-           Experience the <br /><span className="text-[#0077B6]">Juno BizHub</span> Journey
+    <section className="py-16 md:py-24 bg-gray-50 border-t border-gray-200">
+      <div className="max-w-4xl mx-auto text-center space-y-6 md:space-y-10 px-4">
+         <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-[#03045E] leading-tight">
+           Experience the <br className="hidden sm:block" /><span className="text-[#0077B6]">Juno BizHub</span> Journey
          </h2>
-         <p className="text-xl text-gray-600 font-light leading-relaxed max-w-2xl mx-auto">
+         <p className="text-lg md:text-xl text-gray-600 font-light leading-relaxed max-w-2xl mx-auto">
            Join the ranks of successful international businesses that started their UAE journey with us.
          </p>
          <div className="flex justify-center pt-4">

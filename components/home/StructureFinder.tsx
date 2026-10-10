@@ -136,18 +136,18 @@ const StructureFinder = () => {
   };
 
   return (
-    <section className="py-20 md:py-32 bg-gray-50 relative overflow-hidden">
+    <section className="py-16 md:py-32 bg-gray-50 relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-electric-sapphire/10 to-transparent rounded-full pointer-events-none -translate-y-1/2 translate-x-1/3"></div>
       <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#00B4D8]/10 to-transparent rounded-full pointer-events-none translate-y-1/2 -translate-x-1/3"></div>
 
       <div className="max-w-4xl mx-auto px-4 relative z-10">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 md:mb-16">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-electric-sapphire/10 text-electric-sapphire font-black tracking-widest text-[10px] uppercase mb-6"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-electric-sapphire/10 text-electric-sapphire font-black tracking-widest text-[10px] uppercase mb-4 md:mb-6"
           >
              Interactive Assessment
           </motion.div>
@@ -156,7 +156,7 @@ const StructureFinder = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl font-black text-deep-navy tracking-tighter uppercase leading-none mb-6"
+            className="text-4xl md:text-5xl font-black text-deep-navy tracking-tighter uppercase leading-none mb-4 md:mb-6"
           >
             UAE Business <span className="text-electric-sapphire">Structure Finder</span>
           </motion.h2>
@@ -165,13 +165,13 @@ const StructureFinder = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-deep-navy/70 text-lg font-light max-w-2xl mx-auto"
+            className="text-deep-navy/70 text-base md:text-lg font-light max-w-2xl mx-auto"
           >
             Answer a few quick questions to discover which UAE corporate structure aligns best with your strategic goals.
           </motion.p>
         </div>
 
-        <div className="bg-white rounded-[40px] shadow-2xl border border-gray-100 p-8 md:p-12 min-h-[400px] relative overflow-hidden">
+        <div className="bg-white rounded-[32px] md:rounded-[40px] shadow-2xl border border-gray-100 p-6 sm:p-8 md:p-12 min-h-[400px] relative overflow-hidden">
           <AnimatePresence mode="wait">
             {!isFinished ? (
               <motion.div

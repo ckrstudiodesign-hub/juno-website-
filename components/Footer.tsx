@@ -12,13 +12,13 @@ const Footer = () => {
   };
 
   return (
-    <footer id="contact" className="bg-white pt-20 md:pt-32 lg:pt-40 pb-12 relative overflow-hidden">
+    <footer id="contact" className="bg-white pt-16 md:pt-32 lg:pt-40 pb-12 relative overflow-hidden">
       {/* Decorative Light */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-electric-sapphire/5 blur-[150px] rounded-full opacity-50"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-24">
-          <div className="lg:col-span-4 space-y-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 md:gap-16 mb-16 md:mb-24">
+          <div className="lg:col-span-4 space-y-6 md:space-y-10">
              <Link href="/" className="group flex items-center gap-4">
               <div className="relative w-20 h-20 overflow-hidden rounded-2xl transition-all group-hover:scale-105">
                 <Image 

@@ -165,7 +165,7 @@ export default function CostCalculator() {
         </div>
 
         {/* Calculator Card */}
-        <div className="bg-white min-h-[500px] rounded-[40px] shadow-[0_20px_60px_rgba(0,0,0,0.1)] border border-gray-100 p-6 md:p-12 relative overflow-hidden flex flex-col justify-center">
+        <div className="bg-white min-h-[500px] rounded-[40px] shadow-[0_20px_60px_rgba(0,0,0,0.1)] border border-gray-100 p-6 pb-20 md:p-12 relative overflow-hidden flex flex-col justify-center">
           
           {/* Decorative Blur */}
           <div className="absolute top-0 right-0 w-96 h-96 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#0077B6]/10 to-transparent rounded-full -mr-48 -mt-48 pointer-events-none" />
@@ -356,7 +356,7 @@ export default function CostCalculator() {
                       <p className="text-gray-500 text-sm font-medium mb-8">Enter your details below to unlock your custom setup estimate.</p>
                       
                       <form onSubmit={handleSubmit} className="space-y-4 text-left">
-                        <div className="grid grid-cols-2 gap-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                           <input 
                             type="text" 
                             required

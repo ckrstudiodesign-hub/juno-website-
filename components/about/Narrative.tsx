@@ -15,17 +15,17 @@ const Narrative = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="space-y-8"
+            className="space-y-6 md:space-y-8"
           >
             <div className="space-y-4">
               <span className="text-[#0077B6] font-bold tracking-[0.3em] uppercase text-sm">Our Positioning</span>
-              <h2 className="text-4xl md:text-5xl font-black text-[#03045E] leading-tight">
-                One Trusted Point <br />of <span className="text-[#00B4D8]">Contact</span>
+              <h2 className="text-3xl md:text-5xl font-black text-[#03045E] leading-tight">
+                One Trusted Point <br className="hidden sm:block" />of <span className="text-[#00B4D8]">Contact</span>
               </h2>
               <div className="w-16 h-1.5 bg-[#0077B6] rounded-full"></div>
             </div>
             
-            <div className="space-y-6 text-gray-600 text-lg leading-relaxed font-light text-justify">
+            <div className="space-y-4 md:space-y-6 text-gray-600 text-base md:text-lg leading-relaxed font-light text-justify">
               <p>
                 Juno BizHub is a UAE-based Corporate Service Provider focused on making business establishment and ongoing corporate administration simpler, clearer and more efficient.
               </p>
@@ -40,8 +40,8 @@ const Narrative = () => {
               </p>
             </div>
 
-            <div className="pt-4">
-               <Link href="/contact" className="inline-flex items-center justify-center bg-[#03045E] hover:bg-black text-white px-8 py-4 rounded-xl font-bold uppercase tracking-widest text-sm transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+            <div className="pt-2 md:pt-4">
+               <Link href="/contact" className="inline-flex items-center justify-center w-full sm:w-auto bg-[#03045E] hover:bg-black text-white px-8 py-4 rounded-xl font-bold uppercase tracking-widest text-sm transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
                  Partner With Us
                </Link>
             </div>

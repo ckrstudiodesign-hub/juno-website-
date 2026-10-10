@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const About = () => {
   return (
-    <section className="bg-transparent py-24 relative overflow-hidden" id="about">
+    <section className="bg-transparent py-16 md:py-24 relative overflow-hidden" id="about">
       {/* Decorative corner crosshairs (like the screenshot) */}
       <div className="absolute top-12 left-12 w-4 h-4 border-t border-l border-gray-300 opacity-50 hidden lg:block"></div>
       <div className="absolute top-12 right-12 w-4 h-4 border-t border-r border-gray-300 opacity-50 hidden lg:block"></div>
@@ -29,7 +29,7 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 border border-gray-200 bg-white rounded-[32px] overflow-hidden shadow-sm">
           
           {/* Col 1: Text */}
-          <div className="p-8 sm:p-12 border-b lg:border-b-0 lg:border-r border-gray-200 flex flex-col h-full bg-gray-50/30">
+          <div className="p-6 sm:p-8 md:p-12 border-b lg:border-b-0 lg:border-r border-gray-200 flex flex-col h-full bg-gray-50/30">
             <h3 className="text-xl font-bold text-deep-navy mb-8 flex items-center gap-3">
               <div className="relative w-8 h-8 flex-shrink-0">
                 <Image src="/logo.png" alt="Juno BizHub Logo" fill className="object-contain" />
@@ -52,7 +52,7 @@ const About = () => {
           </div>
 
           {/* Col 2: Image */}
-          <div className="border-b lg:border-b-0 lg:border-r border-gray-200 relative min-h-[400px] lg:min-h-full">
+          <div className="border-b lg:border-b-0 lg:border-r border-gray-200 relative min-h-[300px] sm:min-h-[400px] lg:min-h-full">
             <video 
               src="/juno%20videos/dubai%20video.mp4" 
               autoPlay 
@@ -74,7 +74,7 @@ const About = () => {
           {/* Col 3: 2x2 Grid of Points */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 bg-gray-50/50">
             {/* Item 1 */}
-            <div className="p-8 sm:p-10 border-b sm:border-r lg:border-r-0 xl:border-r border-gray-200 flex flex-col justify-center">
+            <div className="p-6 sm:p-8 lg:p-10 border-b sm:border-r lg:border-r-0 xl:border-r border-gray-200 flex flex-col justify-center">
               <div className="text-gray-400 font-medium text-[10px] tracking-[0.2em] uppercase mb-4">Clarity</div>
               <h4 className="text-deep-navy text-xl sm:text-2xl font-light leading-[1.2] tracking-tight">
                 We simplify UAE setup options, requirements, documentation and timelines.
@@ -82,7 +82,7 @@ const About = () => {
             </div>
             
             {/* Item 2 */}
-            <div className="p-8 sm:p-10 border-b border-gray-200 flex flex-col justify-center">
+            <div className="p-6 sm:p-8 lg:p-10 border-b border-gray-200 flex flex-col justify-center">
               <div className="text-gray-400 font-medium text-[10px] tracking-[0.2em] uppercase mb-4">Coordination</div>
               <h4 className="text-deep-navy text-xl sm:text-2xl font-light leading-[1.2] tracking-tight">
                 We coordinate the multiple steps involved in formation, visas, and banking.
@@ -90,7 +90,7 @@ const About = () => {
             </div>
 
             {/* Item 3 */}
-            <div className="p-8 sm:p-10 border-b sm:border-b-0 sm:border-r lg:border-r-0 xl:border-r border-gray-200 flex flex-col justify-center">
+            <div className="p-6 sm:p-8 lg:p-10 border-b sm:border-b-0 sm:border-r lg:border-r-0 xl:border-r border-gray-200 flex flex-col justify-center">
               <div className="text-gray-400 font-medium text-[10px] tracking-[0.2em] uppercase mb-4">Responsiveness</div>
               <h4 className="text-deep-navy text-xl sm:text-2xl font-light leading-[1.2] tracking-tight">
                 A single point of contact helps clients move faster and reduces back-and-forth.
@@ -98,7 +98,7 @@ const About = () => {
             </div>
 
             {/* Item 4 */}
-            <div className="p-8 sm:p-10 flex flex-col justify-center">
+            <div className="p-6 sm:p-8 lg:p-10 flex flex-col justify-center">
               <div className="text-gray-400 font-medium text-[10px] tracking-[0.2em] uppercase mb-4">Long-Term Support</div>
               <h4 className="text-deep-navy text-xl sm:text-2xl font-light leading-[1.2] tracking-tight">
                 We build relationships beyond incorporation through ongoing corporate support.

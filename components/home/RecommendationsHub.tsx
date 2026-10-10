@@ -7,9 +7,9 @@ import Link from 'next/link';
 
 export default function RecommendationsHub() {
   return (
-    <section className="py-24 bg-gray-50 relative overflow-hidden border-t border-gray-200">
+    <section className="py-16 md:py-24 bg-gray-50 relative overflow-hidden border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 md:mb-16">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -23,7 +23,7 @@ export default function RecommendationsHub() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl font-black text-deep-navy tracking-tighter uppercase leading-none mb-6"
+            className="text-4xl md:text-5xl font-black text-deep-navy tracking-tighter uppercase leading-none mb-4 md:mb-6"
           >
             Corporate <span className="text-electric-sapphire">Excellence Hub</span>
           </motion.h2>
@@ -32,7 +32,7 @@ export default function RecommendationsHub() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-deep-navy/70 text-lg font-light max-w-2xl mx-auto"
+            className="text-deep-navy/70 text-base md:text-lg font-light max-w-2xl mx-auto"
           >
             Access our authoritative resources covering taxation, compliance, market insights, and essential downloads for your UAE business.
           </motion.p>
@@ -46,7 +46,7 @@ export default function RecommendationsHub() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="col-span-1 md:col-span-2 bg-deep-navy rounded-3xl p-8 md:p-12 text-white relative overflow-hidden group"
+            className="col-span-1 md:col-span-2 bg-deep-navy rounded-3xl p-6 md:p-12 text-white relative overflow-hidden group"
           >
              <div className="absolute top-0 right-0 w-64 h-64 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-electric-sapphire/20 to-transparent rounded-full transition-colors duration-700"></div>
              <Calculator className="w-12 h-12 text-electric-sapphire mb-6" />
@@ -65,7 +65,7 @@ export default function RecommendationsHub() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="bg-electric-sapphire rounded-3xl p-8 text-white flex flex-col justify-between group hover:bg-[#009bc2] transition-colors duration-300"
+            className="bg-electric-sapphire rounded-3xl p-6 md:p-8 text-white flex flex-col justify-between group hover:bg-[#009bc2] transition-colors duration-300"
           >
              <div>
                <FileBarChart className="w-10 h-10 mb-6 text-white/80" />
@@ -85,7 +85,7 @@ export default function RecommendationsHub() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="bg-white rounded-3xl p-8 border border-gray-100 shadow-xl group hover:border-electric-sapphire transition-colors"
+            className="bg-white rounded-3xl p-6 md:p-8 border border-gray-100 shadow-xl group hover:border-electric-sapphire transition-colors"
           >
              <ShieldCheck className="w-10 h-10 mb-6 text-deep-navy group-hover:text-electric-sapphire transition-colors" />
              <h3 className="text-xl font-black text-deep-navy uppercase tracking-tight mb-3">AML & UBO Compliance</h3>
@@ -103,7 +103,7 @@ export default function RecommendationsHub() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
-            className="bg-white rounded-3xl p-8 border border-gray-100 shadow-xl group hover:border-electric-sapphire transition-colors"
+            className="bg-white rounded-3xl p-6 md:p-8 border border-gray-100 shadow-xl group hover:border-electric-sapphire transition-colors"
           >
              <Download className="w-10 h-10 mb-6 text-deep-navy group-hover:text-electric-sapphire transition-colors" />
              <h3 className="text-xl font-black text-deep-navy uppercase tracking-tight mb-3">Download Centre</h3>
@@ -123,7 +123,7 @@ export default function RecommendationsHub() {
             transition={{ delay: 0.4 }}
             className="col-span-1 md:col-span-2 lg:col-span-1 bg-white rounded-3xl border border-gray-100 shadow-xl overflow-hidden flex flex-col sm:flex-row lg:flex-col"
           >
-             <div className="flex-1 p-8 border-b sm:border-b-0 sm:border-r lg:border-r-0 lg:border-b border-gray-100 group hover:bg-gray-50 transition-colors">
+             <div className="flex-1 p-6 md:p-8 border-b sm:border-b-0 sm:border-r lg:border-r-0 lg:border-b border-gray-100 group hover:bg-gray-50 transition-colors">
                 <BookOpen className="w-8 h-8 mb-4 text-electric-sapphire" />
                 <h3 className="text-lg font-black text-deep-navy uppercase tracking-tight mb-2">Market Insights</h3>
                 <p className="text-gray-500 text-xs font-light leading-relaxed mb-4">
@@ -133,7 +133,7 @@ export default function RecommendationsHub() {
                   Read Articles <ArrowUpRight className="w-3 h-3" />
                 </Link>
              </div>
-             <div className="flex-1 p-8 group hover:bg-gray-50 transition-colors">
+             <div className="flex-1 p-6 md:p-8 group hover:bg-gray-50 transition-colors">
                 <FileText className="w-8 h-8 mb-4 text-electric-sapphire" />
                 <h3 className="text-lg font-black text-deep-navy uppercase tracking-tight mb-2">Client Case Studies</h3>
                 <p className="text-gray-500 text-xs font-light leading-relaxed mb-4">

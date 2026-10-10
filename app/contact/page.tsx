@@ -66,21 +66,21 @@ const ContactPage = () => {
   return (
     <div className="flex flex-col w-full bg-white overflow-x-hidden pt-20">
       {/* Hero Header */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
+      <section className="relative py-16 md:py-32 overflow-hidden">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-electric-sapphire/5 blur-[120px] rounded-full -mr-40"></div>
         <div className="max-w-7xl mx-auto px-4 relative z-10 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-6"
+            className="space-y-4 md:space-y-6"
           >
             <span className="text-electric-sapphire font-black tracking-[0.5em] uppercase text-xs">Get In Touch</span>
-            <h1 className="text-5xl md:text-8xl font-black text-deep-navy leading-tight tracking-tighter">
-              Let's Start Your <br />
+            <h1 className="text-4xl sm:text-5xl md:text-8xl font-black text-deep-navy leading-tight tracking-tighter">
+              Let's Start Your <br className="hidden sm:block" />
               <span className="text-gradient-primary">UAE Journey</span>
             </h1>
-            <p className="text-xl text-deep-navy/80 max-w-2xl mx-auto font-light leading-relaxed">
+            <p className="text-lg md:text-xl text-deep-navy/80 max-w-2xl mx-auto font-light leading-relaxed px-4">
               Our consultants are ready to assist you with elite business setup solutions. Connect with us to architect your corporate future.
             </p>
           </motion.div>
@@ -88,15 +88,15 @@ const ContactPage = () => {
       </section>
 
       {/* Main Content */}
-      <section className="pb-32 relative">
+      <section className="pb-20 md:pb-32 relative">
         <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <div className="grid lg:grid-cols-12 gap-16 md:gap-24">
+          <div className="grid lg:grid-cols-12 gap-12 md:gap-24">
             
             {/* Contact Information */}
-            <div className="lg:col-span-5 space-y-12">
-              <div className="space-y-8">
-                <h3 className="text-3xl font-black text-deep-navy">Direct <span className="text-electric-sapphire">Contact</span></h3>
-                <p className="text-deep-navy/80 font-light">Visit our headquarters in the heart of Dubai or reach out through our digital channels.</p>
+            <div className="lg:col-span-5 space-y-10 md:space-y-12">
+              <div className="space-y-4 md:space-y-8">
+                <h3 className="text-2xl sm:text-3xl font-black text-deep-navy">Direct <span className="text-electric-sapphire">Contact</span></h3>
+                <p className="text-deep-navy/80 font-light text-base md:text-lg">Visit our headquarters in the heart of Dubai or reach out through our digital channels.</p>
               </div>
 
               <div className="space-y-8">
@@ -150,13 +150,13 @@ const ContactPage = () => {
 
             {/* Contact Form */}
             <div className="lg:col-span-7">
-              <div className="bg-white p-8 md:p-12 rounded-[48px] shadow-2xl relative overflow-hidden group">
+              <div className="bg-white p-6 sm:p-8 md:p-12 rounded-[2rem] sm:rounded-[3rem] shadow-2xl relative overflow-hidden group">
                 {/* Decorative Pattern inside form */}
                 <div className="absolute top-0 right-0 w-64 h-64 bg-electric-sapphire/5 blur-3xl rounded-full -mr-32 -mt-32"></div>
                 
-                <div className="relative z-10 space-y-8">
+                <div className="relative z-10 space-y-6 md:space-y-8">
                   <div className="space-y-2">
-                    <h3 className="text-3xl font-black text-black">Inquiry <span className="text-electric-sapphire">Form</span></h3>
+                    <h3 className="text-2xl sm:text-3xl font-black text-black">Inquiry <span className="text-electric-sapphire">Form</span></h3>
                     <p className="text-deep-navy/70 text-sm">Fill out the details below and our experts will contact you shortly.</p>
                   </div>
 
