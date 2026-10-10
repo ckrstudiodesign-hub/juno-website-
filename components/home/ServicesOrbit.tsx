@@ -221,7 +221,7 @@ const ServicesOrbit = () => {
             backgroundImage: 'repeating-linear-gradient(45deg, rgba(0, 119, 182, 0.04) 0px, rgba(0, 119, 182, 0.04) 1px, transparent 1px, transparent 16px)'
           }}
         />
-        <div className="absolute top-[5%] md:top-[10%] inset-0 w-full flex items-center opacity-80">
+        <div className="absolute top-[10%] md:top-[15%] inset-0 w-full flex items-center opacity-30">
           <motion.div
             animate={{ x: ['100%', '-100%'] }}
             transition={{ duration: 45, repeat: Infinity, ease: 'linear' }}
@@ -254,9 +254,9 @@ const ServicesOrbit = () => {
           </div>
 
           {/* ── Solar System & Details ── */}
-          <div className="flex flex-col items-center w-full">
+          <div className="flex flex-col items-center w-full mt-4 md:mt-8">
             {/* Solar system (Scaled down to make it smaller) */}
-            <div className="flex justify-center transform scale-[0.65] sm:scale-[0.75] md:scale-[0.8] origin-center mt-[-100px] md:mt-[-80px] mb-[-40px] md:mb-[-40px]">
+            <div className="flex justify-center transform scale-[0.65] sm:scale-[0.75] md:scale-[0.8] origin-center mb-8 md:mb-12">
               <div
                 className="juno-solar relative"
                 onMouseEnter={() => setIsHovered(true)}
@@ -438,7 +438,7 @@ const ServicesOrbit = () => {
             </div>
 
             {/* ── Detail strip under the system ── */}
-            <div className="-mt-6 md:-mt-10 min-h-[84px] md:min-h-[96px] flex items-start justify-center relative z-20">
+            <div className="mt-4 md:mt-8 min-h-[84px] md:min-h-[96px] flex items-start justify-center relative z-20 w-full px-4">
               <AnimatePresence mode="wait">
                 {active ? (
                   <motion.div
@@ -449,16 +449,16 @@ const ServicesOrbit = () => {
                     transition={{ duration: 0.3, ease: 'easeOut' }}
                     className="max-w-2xl text-center"
                   >
-                    <div className="lg:hidden mb-5">
-                      <h3 className="md:hidden text-[17px] font-black uppercase tracking-tight text-gray-900 mb-2">
+                    <div className="lg:hidden mb-6">
+                      <h3 className="md:hidden text-lg md:text-[17px] font-black uppercase tracking-tight text-gray-900 mb-3">
                         {active.title}
                       </h3>
-                      <p className="text-gray-600 text-[13px] font-medium leading-relaxed">
+                      <p className="text-gray-600 text-sm md:text-[13px] font-medium leading-relaxed">
                         {active.description}
                       </p>
                     </div>
 
-                    <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
+                    <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
                       {active.links.map((link) => (
                         <Link
                           key={link.href}
