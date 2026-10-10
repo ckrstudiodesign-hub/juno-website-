@@ -19,6 +19,7 @@ import SchemaMarkup, { GlobalSchemas } from "@/components/seo/SchemaMarkup";
 import Analytics from "@/components/Analytics";
 import ScrollProgress from "@/components/global/ScrollProgress";
 import DisableServiceWorker from "@/components/DisableServiceWorker";
+import SuccessPopup from "@/components/global/SuccessPopup";
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 
@@ -51,6 +52,7 @@ export default function RootLayout({
         <Navbar />
         <MobileBottomNav />
         <WhatsAppFloat />
+        <SuccessPopup />
         <main className="min-h-screen">
           {children}
         </main>

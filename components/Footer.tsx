@@ -90,7 +90,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <p className="text-deep-navy font-bold mb-1">Visit Our Office</p>
-                  <p className="text-deep-navy/70 leading-relaxed font-light">106 Sheikh Zayed Rd - Trade Center First - Dubai, Aspin Commercial Tower</p>
+                  <p className="text-deep-navy/70 leading-relaxed font-light">Office 24, Floor 26,<br/>Aspin Commercial Tower,<br/>Sheikh Zayed Road,<br/>Near Financial Centre Metro Station,<br/>Dubai, UAE</p>
                 </div>
               </div>
 
@@ -114,7 +114,7 @@ const Footer = () => {
                 <div>
                   <p className="text-deep-navy font-bold mb-1">Email Inquiry</p>
                   <div className="flex flex-col gap-1">
-                    <a href="mailto:info.junobh@gmail.com" className="text-deep-navy/70 hover:text-electric-sapphire transition-colors">info.junobh@gmail.com</a>
+                    <a href="mailto:info@junobizhub.ae" className="text-deep-navy/70 hover:text-electric-sapphire transition-colors">info@junobizhub.ae</a>
                     <Link href="/contact" className="text-deep-navy/70 hover:text-electric-sapphire transition-colors italic">Send Secure Message</Link>
                   </div>
                 </div>

@@ -22,14 +22,19 @@ const faqs = [
       'Yes. We assist with corporate bank account preparation, documentation, and introductions to suitable banking partners based on your profile and activity.',
   },
   {
-    question: 'Do you handle VAT, PRO, and visa services too?',
+    question: 'Do you support post-incorporation services like accounting, tax, visas, and regulatory compliance?',
     answer:
-      'Yes. Our services include VAT consultancy, PRO services, visa support, document attestation, and related corporate services across the UAE.',
+      'Yes. Juno BizHub provides complete corporate lifecycle support across the UAE. Beyond business setup, we manage accounting and bookkeeping, VAT and Corporate Tax filings, AML/goAML compliance, visa and PRO processing, and ongoing regulatory approvals to keep your company fully compliant.',
   },
   {
     question: 'How do I contact Juno BizHub for a consultation?',
     answer:
       'You can use the contact form, WhatsApp, or the email inquiry section on the site. We respond with consultation guidance tailored to your business goals.',
+  },
+  {
+    question: 'What happens after I get my trade license?',
+    answer:
+      'Receiving your trade license is just the beginning. At Juno BizHub, we offer comprehensive post-incorporation support including visa processing, bank account opening assistance, accounting and bookkeeping, corporate tax registration, and ongoing compliance management to ensure your business operates smoothly.',
   },
 ];
 

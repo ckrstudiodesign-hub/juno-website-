@@ -129,7 +129,7 @@ export default function RecommendationsHub() {
                 <p className="text-gray-500 text-xs font-light leading-relaxed mb-4">
                   Short, current articles based on official UAE sources to guide your strategy.
                 </p>
-                <Link href="/blog" className="inline-flex items-center gap-1 font-bold uppercase tracking-widest text-[10px] text-deep-navy hover:text-electric-sapphire transition-colors">
+                <Link href="/insights" className="inline-flex items-center gap-1 font-bold uppercase tracking-widest text-[10px] text-deep-navy hover:text-electric-sapphire transition-colors">
                   Read Articles <ArrowUpRight className="w-3 h-3" />
                 </Link>
              </div>

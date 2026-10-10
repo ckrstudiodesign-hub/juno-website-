@@ -8,7 +8,7 @@ const SocialSidebar = () => {
   const socials = [
     {
       name: 'WhatsApp',
-      href: 'https://wa.me/971541290038',
+      href: 'https://wa.me/971566850911',
       color: '#25D366',
       icon: (
         <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current">
@@ -54,7 +54,7 @@ const SocialSidebar = () => {
     },
     {
       name: 'Gmail',
-      href: 'https://mail.google.com/mail/?view=cm&fs=1&to=junobizhub295%40gmail.com',
+      href: 'mailto:info@junobizhub.ae',
       color: '#DB4437',
       icon: <Mail size={20} strokeWidth={2.5} />
     }

@@ -5,6 +5,8 @@ import AboutHero from '@/components/about/AboutHero';
 import Narrative from '@/components/about/Narrative';
 import Values from '@/components/about/Values';
 import AboutVision from '@/components/about/AboutVision';
+import BrandPhilosophy from '@/components/about/BrandPhilosophy';
+import Framework4S from '@/components/about/Framework4S';
 import AboutStats from '@/components/about/AboutStats';
 import AboutCTA from '@/components/about/AboutCTA';
 
@@ -16,6 +18,8 @@ export default function AboutUs() {
       <Narrative />
       <Values />
       <AboutVision />
+      <BrandPhilosophy />
+      <Framework4S />
       <AboutStats />
       <AboutCTA />
     </div>

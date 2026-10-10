@@ -11,7 +11,7 @@ import NewsletterSubscribe from '@/components/blog/NewsletterSubscribe';
 export const metadata = constructMetadata({
   title: 'Blog & Insights | UAE Business Setup',
   description: 'Read the latest insights, news, and expert advice on business setup, company formation, visas, and corporate services in Dubai and the UAE.',
-  canonicalUrl: '/blog',
+  canonicalUrl: '/insights',
 });
 
 // Revalidate this page every hour (3600 seconds) to support scheduled publishing
@@ -24,7 +24,7 @@ export default function BlogIndex() {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.junobizhub.com' },
-      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.junobizhub.com/blog' },
+      { '@type': 'ListItem', position: 2, name: 'Insights', item: 'https://www.junobizhub.com/insights' },
     ],
   };
 
@@ -47,7 +47,7 @@ export default function BlogIndex() {
       <section className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {posts.map((post) => (
-            <Link key={post.meta.slug} href={`/blog/${post.meta.slug}`} className="group block h-full">
+            <Link key={post.meta.slug} href={`/insights/${post.meta.slug}`} className="group block h-full">
               <article className="bg-white/40 rounded-3xl overflow-hidden border border-deep-navy/10 hover:border-electric-sapphire/30 transition-colors h-full flex flex-col shadow-2xl shadow-black/50">
                 {/* Image */}
                 <div className="relative h-64 w-full overflow-hidden">

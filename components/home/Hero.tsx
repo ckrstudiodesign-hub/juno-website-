@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const Hero = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -58,7 +59,7 @@ const Hero = () => {
             aria-hidden="true"
             tabIndex={-1}
           >
-            <source src="/juno%20videos/dubai%20juno.mp4" type="video/mp4" />
+            <source src="/juno%20videos/hero.mp4" type="video/mp4" />
           </video>
 
           {/* Scrim: keeps the white copy legible over moving footage. Heaviest on the
@@ -114,12 +115,12 @@ const Hero = () => {
                   }}
                   className="pt-4 flex flex-wrap gap-4"
                 >
-                  <button className="bg-white text-[#608A9F] px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg">
-                    Start Your Journey
-                  </button>
-                  <button className="bg-transparent border border-white/30 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-colors">
-                    Our Services
-                  </button>
+                  <Link href="/contact" className="bg-white text-[#608A9F] px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg uppercase tracking-wider text-sm">
+                    START YOUR JOURNEY
+                  </Link>
+                  <Link href="/services" className="bg-transparent border border-white/30 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-colors uppercase tracking-wider text-sm">
+                    OUR SERVICES
+                  </Link>
                 </motion.div>
               </motion.div>
             </div>

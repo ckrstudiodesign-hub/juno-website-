@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Building2, Globe2, Briefcase, FileSignature, Landmark, ArrowRight, Orbit } from 'lucide-react';
+import { Building2, Globe2, Briefcase, FileSignature, Landmark, ArrowRight, Orbit, Ship, Compass } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import Link from 'next/link';
 
@@ -36,10 +36,12 @@ const services: Service[] = [
     big: true,
     bgImage: '/images/mainland_new.jpg',
     links: [
-      { label: 'Mainland Overview', href: '/mainland-company-formation-in-dubai' },
-      { label: 'LLC Formation', href: '/llc-company-formation-in-dubai' },
+      { label: 'Mainland Company', href: '/mainland-company-formation-in-dubai' },
+      { label: 'PJSC Formation', href: '/services' },
       { label: 'Professional License', href: '/professional-license-main-land-civil-company' },
       { label: 'Branch Office', href: '/branch-representative-office-in-main-land' },
+      { label: 'Public Listing', href: '/services' },
+      { label: 'Sub-Authority Permissions', href: '/services' },
     ],
   },
   {
@@ -53,31 +55,33 @@ const services: Service[] = [
     big: true,
     bgImage: '/images/freezone_new.jpg',
     links: [
-      { label: 'Free Zone Overview', href: '/dubai-free-zone-company-overview' },
-      { label: 'IFZA', href: '/ifza-dubai-business-set-up' },
-      { label: 'Meydan', href: '/meydan-free-zone' },
-      { label: 'DMCC', href: '/dmcc-free-zone-company-setup' },
+      { label: 'SHAMS', href: '/services' },
       { label: 'RAKEZ', href: '/rakez-company-formation' },
-      { label: 'SPC Free Zone', href: '/spc-free-zone-setup' },
-      { label: 'DIFC', href: '/difc-company-setup' },
+      { label: 'Fujairah FZ', href: '/fujairah-free-zone-company-formation' },
+      { label: 'Ajman FZ', href: '/services' },
+      { label: 'ADGM — Abu Dhabi', href: '/services' },
+      { label: 'Over 50 Other Free Zones', href: '/dubai-free-zone-company-overview' },
     ],
   },
   {
     id: 'corporate',
     title: 'Corporate Services',
     icon: Briefcase,
-    description: 'Compliance, tax and back-office support that keeps your licence in good standing.',
+    description: 'Licence renewals, document updates, shareholder changes, UBO coordination, and administrative assistance.',
     href: '/services',
     orbit: 1,
     angle: 18,
     bgImage: '/images/core_compliance.jpg',
     links: [
+      { label: 'License Renewals', href: '/services' },
+      { label: 'UBO Coordination', href: '/services' },
+      { label: 'Shareholder Changes', href: '/services' },
+      { label: 'Document Updates', href: '/services' },
+      { label: 'Administrative Assistance', href: '/services' },
       { label: 'PRO Services', href: '/pro-services-dubai' },
-      { label: 'VAT Consultancy', href: '/vat-consultancy-uae' },
-      { label: 'Corporate Tax', href: '/corporate-tax-uae' },
-      { label: 'Bookkeeping', href: '/bookkeeping-and-accounting-services' },
       { label: 'Legal Translation', href: '/legal-translation-dubai' },
-      { label: 'ISO Certification', href: '/iso-certification-dubai' },
+      { label: 'AML Compliance', href: '/services' },
+      { label: 'Business Advisory', href: '/services' },
     ],
   },
   {
@@ -90,7 +94,10 @@ const services: Service[] = [
     angle: 142,
     bgImage: '/images/core_pro.jpg',
     links: [
+      { label: 'Freelancer Visa', href: '/services' },
       { label: 'Golden Visa', href: '/golden-visa-uae' },
+      { label: 'Investor Visa', href: '/services' },
+      { label: 'Employee Visa', href: '/services' },
       { label: 'UAE Wills', href: '/uae-wills-service' },
       { label: 'Document Attestation', href: '/document-attestation-services' },
     ],
@@ -105,10 +112,45 @@ const services: Service[] = [
     angle: 262,
     bgImage: '/images/core_banking.jpg',
     links: [
-      { label: 'Corporate Banking', href: '/bank-account-opening-dubai' },
+      { label: 'Corporate Banking Assistance', href: '/bank-account-opening-dubai' },
       { label: 'Personal Banking', href: '/personal-bank-account-services' },
       { label: 'Offshore Accounts', href: '/offshore-banking-services' },
       { label: 'Trade Finance', href: '/trade-finance-services' },
+      { label: 'Emirates Islamic Bank', href: '/services' },
+      { label: 'RAK Bank', href: '/services' },
+      { label: 'HSBC UAE', href: '/services' },
+      { label: 'Standard Chartered', href: '/services' },
+    ],
+  },
+  {
+    id: 'offshore',
+    title: 'Offshore Company',
+    icon: Ship,
+    description: 'Establish your business offshore with full confidentiality and asset protection.',
+    href: '/offshore-company-formation-in-dubai',
+    orbit: 0,
+    angle: 228,
+    bgImage: '/images/mainland_new.jpg',
+    links: [
+      { label: 'Offshore Setup', href: '/offshore-company-formation-in-dubai' },
+      { label: 'JAFZA Offshore', href: '/jafza-offshore-company-setup' },
+      { label: 'RAK Offshore', href: '/rak-offshore-company-formation' },
+      { label: 'Ajman Offshore', href: '/ajman-offshore-company-setup' },
+    ],
+  },
+  {
+    id: 'advisory',
+    title: 'Strategic Business Advisory',
+    icon: Compass,
+    description: 'Expert guidance for scaling, restructuring, and long-term corporate strategy in the UAE.',
+    href: '/services',
+    orbit: 1,
+    angle: 350,
+    bgImage: '/images/core_compliance.jpg',
+    links: [
+      { label: 'Business Strategy', href: '/services' },
+      { label: 'Market Entry', href: '/services' },
+      { label: 'Restructuring', href: '/services' },
     ],
   },
 ];

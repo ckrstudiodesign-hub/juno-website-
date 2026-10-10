@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Star, Building2, Clock, Award, ShieldCheck } from 'lucide-react';
+import { submitToWeb3Forms } from '@/lib/web3forms';
 
 const HeroLanding = () => {
   return (
@@ -83,7 +84,37 @@ const HeroLanding = () => {
                 <p className="text-gray-600 text-sm">Fill in your details and an expert will call you back shortly.</p>
               </div>
 
-              <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+              <form className="space-y-4" onSubmit={async (e) => {
+                  e.preventDefault(); 
+                  const target = e.target as any;
+                  const name = target[0].value;
+                  const email = target[1].value;
+                  const phone = target[2].value;
+                  const service = target[3].value;
+                  const btn = target[4];
+                  const originalText = btn.innerText;
+                  btn.innerText = 'SENDING...';
+                  btn.disabled = true;
+                  try {
+                    await submitToWeb3Forms({
+                      accessKey: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || '0d636ff5-c591-41c6-b8a6-12606869bb88',
+                      name,
+                      email,
+                      phone,
+                      subject: 'New Quote Request from Landing Page Hero',
+                      message: `New Lead Request.\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nService: ${service}`,
+                      extra: { formType: 'hero-landing' }
+                    });
+                    window.dispatchEvent(new CustomEvent('showSuccessPopup'));
+                  } catch (err) {
+                    alert('Error submitting form. Please try again.');
+                  } finally {
+                    if (btn) {
+                      btn.innerText = originalText;
+                      btn.disabled = false;
+                    }
+                  }
+                }}>
                 <div>
                   <input 
                     type="text" 
@@ -100,14 +131,11 @@ const HeroLanding = () => {
                     required
                   />
                 </div>
-                <div className="flex">
-                  <span className="inline-flex items-center px-4 rounded-l-lg border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">
-                    +971
-                  </span>
+                <div>
                   <input 
                     type="tel" 
-                    placeholder="Phone Number" 
-                    className="w-full px-4 py-3.5 rounded-r-lg border border-gray-300 focus:border-[#0077B6] focus:ring-1 focus:ring-[#0077B6] outline-none transition-colors text-gray-800"
+                    placeholder="Phone Number (e.g. +971 50...)" 
+                    className="w-full px-4 py-3.5 rounded-lg border border-gray-300 focus:border-[#0077B6] focus:ring-1 focus:ring-[#0077B6] outline-none transition-colors text-gray-800"
                     required
                   />
                 </div>
@@ -128,7 +156,7 @@ const HeroLanding = () => {
 
                 <button 
                   type="submit" 
-                  className="w-full bg-[#E63946] hover:bg-[#D62828] text-white font-bold text-lg py-4 rounded-lg shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5"
+                  className="w-full bg-[#0077B6] hover:bg-[#005f92] text-white font-bold text-lg py-4 rounded-lg shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5"
                 >
                   GET A QUOTE
                 </button>

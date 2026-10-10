@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Building2, Globe2, Landmark, CheckCircle2, RotateCcw, User, Phone, Mail } from 'lucide-react';
+import { submitToWeb3Forms } from '@/lib/web3forms';
 import Link from 'next/link';
 
 type StructureType = 'Mainland' | 'Free Zone' | 'Offshore';
@@ -66,14 +67,31 @@ const StructureFinder = () => {
     }
   };
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
+    const target = e.target as any;
+    const name = target[0].value;
+    const phone = target[1].value;
+    const email = target[2].value || 'no-email@provided.com';
+
+    try {
+      await submitToWeb3Forms({
+        accessKey: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || '0d636ff5-c591-41c6-b8a6-12606869bb88',
+        name,
+        email,
+        phone,
+        subject: 'New Structure Finder Request',
+        message: `New Lead Request.\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nRecommended Structure: ${getRecommendation()}`,
+        extra: { formType: 'structure-finder' }
+      });
       setIsFormSubmitted(true);
-    }, 1000);
+      window.dispatchEvent(new CustomEvent('showSuccessPopup'));
+    } catch (err) {
+      alert('Error submitting form. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const resetFinder = () => {

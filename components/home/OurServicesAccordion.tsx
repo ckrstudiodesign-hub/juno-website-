@@ -11,7 +11,7 @@ const services = [
     title: 'Mainland Formation',
     icon: Building2,
     description: 'Launch your business in the UAE mainland with full ownership and direct access to the local market.',
-    links: ['Mainland Overview', 'LLC Formation', 'Professional License', 'Branch Office'],
+    links: ['Mainland Company', 'PJSC Formation', 'Professional License', 'Branch Office', 'Public Listing', 'Sub-Authority Permissions'],
     href: '/services'
   },
   {
@@ -19,15 +19,15 @@ const services = [
     title: 'Free Zone Setup',
     icon: Globe2,
     description: 'Benefit from tax exemptions and 100% foreign ownership in UAE\'s premier Free Zones.',
-    links: ['Free Zone Overview', 'IFZA', 'MEYDAN', 'DMCC', 'RAKEZ', 'SPC Free Zone', 'DIFC'],
+    links: ['SHAMS', 'RAKEZ', 'Fujairah FZ', 'Ajman FZ', 'ADGM — Abu Dhabi', 'Over 50 Other Free Zones'],
     href: '/services'
   },
   {
     id: 'corporate',
-    title: 'Corporate Services',
+    title: 'Corporate Compliance',
     icon: Briefcase,
-    description: 'Comprehensive corporate services to support your business growth and compliance.',
-    links: ['Bank Account Opening', 'PRO Services', 'VAT Consultancy', 'Corporate Tax', 'Bookkeeping', 'Legal Translation'],
+    description: 'Licence renewals, document updates, shareholder changes, UBO coordination, and administrative assistance.',
+    links: ['License Renewals', 'UBO Coordination', 'Shareholder Changes', 'Document Updates', 'Administrative Assistance', 'PRO Services', 'Legal Translation', 'AML Compliance', 'Business Advisory'],
     href: '/services'
   },
   {
@@ -35,7 +35,7 @@ const services = [
     title: 'Residency & Visas',
     icon: FileSignature,
     description: 'Expert assistance with Golden Visas and residency permits for you and your employees.',
-    links: ['Golden Visa', 'UAE Will', 'Document Attestation'],
+    links: ['Freelancer Visa', 'Golden Visa', 'Investor Visa', 'Employee Visa', 'UAE Wills', 'Document Attestation'],
     href: '/services'
   },
   {
@@ -43,7 +43,7 @@ const services = [
     title: 'Banking Solutions',
     icon: Landmark,
     description: 'Strategic partnerships with leading UAE banks to facilitate seamless account opening and financial operations.',
-    links: ['Corporate Banking', 'Personal Banking', 'Offshore Accounts', 'Trade Finance'],
+    links: ['Corporate Banking Assistance', 'Personal Banking', 'Offshore Accounts', 'Trade Finance', 'Emirates Islamic Bank', 'RAK Bank', 'HSBC UAE', 'Standard Chartered'],
     href: '/services'
   }
 ];

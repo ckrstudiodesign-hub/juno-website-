@@ -77,7 +77,7 @@ const ServiceContactForm = ({
     setStatus('sending');
 
     try {
-      const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+      const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || '0d636ff5-c591-41c6-b8a6-12606869bb88';
       if (!accessKey) {
         setValidationError('Form is not configured. Please try again later.');
         setStatus('error');
@@ -110,6 +110,7 @@ const ServiceContactForm = ({
         if (phoneRef.current) phoneRef.current.value = '';
         if (messageRef.current) messageRef.current.value = '';
         setValidationError('');
+        window.dispatchEvent(new CustomEvent('showSuccessPopup'));
         setTimeout(() => setStatus('idle'), 2000);
     } catch (error) {
       console.error('Error submitting form:', error);
@@ -121,12 +122,14 @@ const ServiceContactForm = ({
 
   if (status === 'success') {
     return (
-      <div className="bg-white p-8 rounded-[32px] border border-electric-sapphire/20 text-center space-y-4">
+      <div className="bg-white p-8 rounded-[32px] border border-[#0077B6]/20 text-center space-y-4">
         <div className="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mx-auto border border-green-200">
           <CheckCircle2 className="text-green-600" size={28} />
         </div>
-        <h4 className="text-xl font-black text-black">Form submitted</h4>
-        <p className="text-deep-navy/70 text-sm">Your request was sent successfully.</p>
+        <h4 className="text-xl font-black text-black">Your request is submitted. We will contact you soon.</h4>
+        <p className="text-gray-600 text-sm leading-relaxed">
+          You can also reach out to us on WhatsApp at <a href="https://wa.me/971566850911" target="_blank" rel="noopener noreferrer" className="text-[#25D366] font-bold hover:underline">+971 56 685 0911</a> or <a href="https://wa.me/971541290038" target="_blank" rel="noopener noreferrer" className="text-[#25D366] font-bold hover:underline">+971 54 129 0038</a>, or email us at <a href="mailto:info@junobizhub.ae" className="text-[#0077B6] font-bold hover:underline">info@junobizhub.ae</a>.
+        </p>
       </div>
     );
   }

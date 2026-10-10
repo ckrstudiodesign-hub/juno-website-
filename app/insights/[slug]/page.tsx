@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       title: post.meta.title,
       description: post.meta.excerpt,
       image: post.meta.image,
-      canonicalUrl: `/blog/${post.meta.slug}`,
+      canonicalUrl: `/insights/${post.meta.slug}`,
       type: 'article',
       keywords: post.meta.keywords,
     });
@@ -44,7 +44,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 
   const relatedPosts = getRelatedPosts(post.meta, 3);
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.junobizhub.com';
-  const fullUrl = `${siteUrl}/blog/${post.meta.slug}`;
+  const fullUrl = `${siteUrl}/insights/${post.meta.slug}`;
 
   // JSON-LD Schemas
   const articleSchema = {
@@ -77,7 +77,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
-      { '@type': 'ListItem', position: 2, name: 'Blog', item: `${siteUrl}/blog` },
+      { '@type': 'ListItem', position: 2, name: 'Insights', item: `${siteUrl}/insights` },
       { '@type': 'ListItem', position: 3, name: post.meta.title, item: fullUrl },
     ],
   };
@@ -90,7 +90,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Back Link */}
-        <Link href="/blog" className="inline-flex items-center gap-2 text-electric-sapphire text-[10px] font-black tracking-[0.4em] uppercase mb-12 hover:gap-4 transition-all opacity-60 hover:opacity-100">
+        <Link href="/insights" className="inline-flex items-center gap-2 text-electric-sapphire text-[10px] font-black tracking-[0.4em] uppercase mb-12 hover:gap-4 transition-all opacity-60 hover:opacity-100">
           <ChevronLeft size={14} /> Back to Insights
         </Link>
 
@@ -155,7 +155,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {relatedPosts.map((rp) => (
-               <Link key={rp.slug} href={`/blog/${rp.slug}`} className="group block">
+               <Link key={rp.slug} href={`/insights/${rp.slug}`} className="group block">
                 <article className="bg-white/40 rounded-3xl overflow-hidden border border-deep-navy/10 hover:border-electric-sapphire/30 transition-colors shadow-2xl h-full flex flex-col">
                   <div className="relative h-48 w-full overflow-hidden">
                     <Image src={rp.image} alt={rp.title} fill className="object-cover opacity-80 group-hover:opacity-100 transition-opacity" />

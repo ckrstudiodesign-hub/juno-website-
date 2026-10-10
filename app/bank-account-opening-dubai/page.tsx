@@ -3,7 +3,7 @@ import ServicePage from '@/components/ServicePage';
 export default function BankAccountServices() {
   return (
     <ServicePage
-      title="Bank Account Services"
+      title="Corporate Banking Assistance"
       subtitle="Elite Corporate Banking Introductions"
       heroImage="/images/mainland.png"
       description={[
@@ -26,13 +26,15 @@ export default function BankAccountServices() {
           title: "Our Banking Partners",
           content: "We work closely with the most reputable financial institutions in the UAE to provide seamless integration for our clients:",
           list: [
-            { name: "Emirates NBD", logo: "/banks/emirates-nbd.svg" },
-            { name: "Mashreq Bank", logo: "/banks/mashreq-bank.svg" },
-            { name: "Dubai Islamic Bank (DIB)", logo: "/banks/dubai-islamic-bank.png" },
-            { name: "Commercial Bank of Dubai (CBD)", logo: "/banks/commercial-bank-of-dubai.svg" },
-            { name: "First Abu Dhabi Bank (FAB)", logo: "/banks/first-abu-dhabi-bank.svg" },
-            { name: "ADCB", logo: "/banks/adcb.png" },
-            { name: "Wio Bank (Digital-first)", logo: "/banks/wio-bank.jpeg" }
+            { name: "Emirates NBD", logo: "/banks/nbd%20logo.jpeg" },
+            { name: "First Abu Dhabi Bank (FAB)", logo: "/banks/fab%20logo.png" },
+            { name: "Abu Dhabi Commercial Bank (ADCB)", logo: "/banks/adcb.png" },
+            { name: "Mashreq", logo: "/banks/mashreq-bank.svg" },
+            { name: "Dubai Islamic Bank (DIB)", logo: "/banks/Dib.jpg" },
+            { name: "Emirates Islamic Bank", logo: "https://www.google.com/s2/favicons?domain=emiratesislamic.ae&sz=128" },
+            { name: "Rak bank", logo: "https://www.google.com/s2/favicons?domain=rakbank.ae&sz=128" },
+            { name: "HSBC UAE", logo: "https://www.google.com/s2/favicons?domain=hsbc.ae&sz=128" },
+            { name: "Standard Chartered", logo: "https://www.google.com/s2/favicons?domain=sc.com&sz=128" }
           ]
         },
         {

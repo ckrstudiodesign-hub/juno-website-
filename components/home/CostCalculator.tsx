@@ -8,6 +8,7 @@ import {
   CheckCircle2, ArrowRight, ArrowLeft, 
   User, Mail, Phone, Calculator, CheckCircle
 } from 'lucide-react';
+import { submitToWeb3Forms } from '@/lib/web3forms';
 
 type StepName = 'activity' | 'jurisdiction' | 'visas' | 'office' | 'result';
 
@@ -35,7 +36,7 @@ const BACKGROUND_IMAGES = [
 ];
 
 export default function CostCalculator() {
-  const [step, setStep] = useState<number>(1);
+  const [step, setStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [bgIndex, setBgIndex] = useState(0);
@@ -78,14 +79,35 @@ export default function CostCalculator() {
     return base.toLocaleString();
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
+    const target = e.target as any;
+    const fname = target[0].value;
+    const lname = target[1].value;
+    const phone = target[2].value;
+    const email = target[3].value;
+    const company = target[4].value;
+    const activity = target[5].value;
+    const message = target[6].value;
+
+    try {
+      await submitToWeb3Forms({
+        accessKey: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || '0d636ff5-c591-41c6-b8a6-12606869bb88',
+        name: `${fname} ${lname}`,
+        email,
+        phone,
+        subject: 'New Cost Estimate Request',
+        message: `New Cost Estimate Request.\n\nName: ${fname} ${lname}\nEmail: ${email}\nPhone: ${phone}\nCompany: ${company}\nActivity: ${activity}\n\nSelections:\n- Jurisdiction: ${answers.jurisdiction}\n- Visas: ${answers.visas}\n- Office: ${answers.office}\n\nMessage:\n${message}`,
+        extra: { formType: 'cost-calculator-home', ...answers }
+      });
       setIsSuccess(true);
-    }, 1500);
+      window.dispatchEvent(new CustomEvent('showSuccessPopup'));
+    } catch (err) {
+      alert('Error submitting form. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -164,17 +186,21 @@ export default function CostCalculator() {
                   <h3 className="text-2xl md:text-3xl font-black text-gray-900 uppercase">What is your primary business activity?</h3>
                 </div>
                 
-                <div className="grid md:grid-cols-2 gap-4">
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
                   {[
-                    { title: 'Commercial / Trading', icon: Briefcase },
-                    { title: 'Professional / Services', icon: Landmark },
-                    { title: 'Industrial', icon: Building2 },
-                    { title: 'E-Commerce', icon: Globe },
+                    { title: 'Consultancies & Tech', icon: Briefcase },
+                    { title: 'Trading & E-Commerce', icon: Globe },
+                    { title: 'Food & Beverage (F&B)', icon: Landmark },
+                    { title: 'Healthcare, Beauty & Wellness', icon: User },
+                    { title: 'Contracting & Real Estate', icon: Building2 },
+                    { title: 'Industrial & Manufacturing', icon: Building2 },
+                    { title: 'Financial, Crypto & Holdings', icon: Landmark },
+                    { title: 'Tourism, Media & Events', icon: Globe },
                   ].map((item) => (
                     <button
                       key={item.title}
                       onClick={() => handleSelect('activity', item.title)}
-                      className={`flex flex-col items-center md:flex-row md:items-start gap-4 p-6 rounded-3xl border-2 transition-all duration-300 text-center md:text-left group
+                      className={`flex flex-col items-center gap-3 p-4 rounded-3xl border-2 transition-all duration-300 text-center group
                         ${answers.activity === item.title 
                           ? 'border-[#0077B6] bg-[#0077B6]/5' 
                           : 'border-gray-100 bg-gray-50 hover:border-[#0077B6]/30 hover:bg-white hover:shadow-lg'
@@ -184,7 +210,7 @@ export default function CostCalculator() {
                         ${answers.activity === item.title ? 'bg-[#0077B6] text-white' : 'bg-white text-[#0077B6] shadow-sm group-hover:bg-[#0077B6] group-hover:text-white'}`}>
                         <item.icon className="w-6 h-6" />
                       </div>
-                      <span className="font-bold text-gray-900 mt-2 md:mt-3">{item.title}</span>
+                      <span className="font-bold text-gray-900 text-sm mt-1">{item.title}</span>
                     </button>
                   ))}
                 </div>
@@ -330,36 +356,52 @@ export default function CostCalculator() {
                       <p className="text-gray-500 text-sm font-medium mb-8">Enter your details below to unlock your custom setup estimate.</p>
                       
                       <form onSubmit={handleSubmit} className="space-y-4 text-left">
-                        <div className="relative">
-                          <User className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+                        <div className="grid grid-cols-2 gap-4">
                           <input 
                             type="text" 
                             required
-                            placeholder="Full Name" 
-                            className="w-full pl-12 pr-4 py-4 bg-white border border-gray-200 rounded-2xl outline-none focus:border-[#0077B6] focus:ring-2 focus:ring-[#0077B6]/20 transition-all font-medium text-gray-900"
+                            placeholder="First Name" 
+                            className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl outline-none focus:border-[#0077B6] focus:ring-2 focus:ring-[#0077B6]/20 transition-all font-medium text-gray-900"
                           />
-                        </div>
-                        <div className="relative">
-                          <Phone className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
                           <input 
-                            type="tel" 
+                            type="text" 
                             required
-                            placeholder="Phone Number" 
-                            className="w-full pl-12 pr-4 py-4 bg-white border border-gray-200 rounded-2xl outline-none focus:border-[#0077B6] focus:ring-2 focus:ring-[#0077B6]/20 transition-all font-medium text-gray-900"
+                            placeholder="Last Name" 
+                            className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl outline-none focus:border-[#0077B6] focus:ring-2 focus:ring-[#0077B6]/20 transition-all font-medium text-gray-900"
                           />
                         </div>
-                        <div className="relative">
-                          <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
-                          <input 
-                            type="email" 
-                            placeholder="Email Address (Optional)" 
-                            className="w-full pl-12 pr-4 py-4 bg-white border border-gray-200 rounded-2xl outline-none focus:border-[#0077B6] focus:ring-2 focus:ring-[#0077B6]/20 transition-all font-medium text-gray-900"
-                          />
-                        </div>
+                        <input 
+                          type="tel" 
+                          required
+                          placeholder="Phone Number (e.g. +44, +91, +971)" 
+                          className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl outline-none focus:border-[#0077B6] focus:ring-2 focus:ring-[#0077B6]/20 transition-all font-medium text-gray-900"
+                        />
+                        <input 
+                          type="email" 
+                          required
+                          placeholder="you@example.com" 
+                          className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl outline-none focus:border-[#0077B6] focus:ring-2 focus:ring-[#0077B6]/20 transition-all font-medium text-gray-900"
+                        />
+                        <input 
+                          type="text" 
+                          placeholder="Company / Business Name" 
+                          className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl outline-none focus:border-[#0077B6] focus:ring-2 focus:ring-[#0077B6]/20 transition-all font-medium text-gray-900"
+                        />
+                        <input 
+                          type="text" 
+                          placeholder="Business Activity" 
+                          defaultValue={answers.activity}
+                          className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl outline-none focus:border-[#0077B6] focus:ring-2 focus:ring-[#0077B6]/20 transition-all font-medium text-gray-900"
+                        />
+                        <textarea
+                          placeholder="Message"
+                          rows={3}
+                          className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl outline-none focus:border-[#0077B6] focus:ring-2 focus:ring-[#0077B6]/20 transition-all font-medium text-gray-900 resize-none"
+                        ></textarea>
                         <button 
                           type="submit" 
                           disabled={isSubmitting}
-                          className="w-full btn-premium !rounded-2xl !py-4 flex items-center justify-center gap-2 mt-4"
+                          className="w-full btn-premium !rounded-xl !py-4 flex items-center justify-center gap-2 mt-4"
                         >
                           {isSubmitting ? (
                             <div className="w-6 h-6 border-2 border-white/30 border-t-white rounded-full animate-spin" />
@@ -444,6 +486,76 @@ export default function CostCalculator() {
             </div>
           )}
 
+        </div>
+        
+        {/* Comparison Matrix */}
+        <div className="mt-16 bg-white rounded-[32px] p-8 shadow-sm border border-gray-100">
+          <h3 className="text-2xl font-black text-gray-900 uppercase mb-8 text-center">Business Activity Comparison Matrix</h3>
+          <div className="overflow-x-auto">
+            <table className="w-full text-left min-w-[600px]">
+              <thead>
+                <tr className="border-b border-gray-200">
+                  <th className="py-4 font-bold text-gray-900">Category</th>
+                  <th className="py-4 font-bold text-gray-900">Approval Difficulty</th>
+                  <th className="py-4 font-bold text-gray-900">Premises Required</th>
+                  <th className="py-4 font-bold text-gray-900">Relative Setup Cost</th>
+                </tr>
+              </thead>
+              <tbody className="text-sm">
+                <tr className="border-b border-gray-100">
+                  <td className="py-4 font-semibold text-gray-800">Consultancies & Tech</td>
+                  <td className="py-4 text-gray-600">Low</td>
+                  <td className="py-4 text-gray-600">Virtual / Flexi-Desk</td>
+                  <td className="py-4 text-gray-600">$</td>
+                </tr>
+                <tr className="border-b border-gray-100">
+                  <td className="py-4 font-semibold text-gray-800">Commercial Trading</td>
+                  <td className="py-4 text-gray-600">Low to Moderate</td>
+                  <td className="py-4 text-gray-600">Office / Warehouse depending on activity</td>
+                  <td className="py-4 text-gray-600">$$</td>
+                </tr>
+                <tr className="border-b border-gray-100">
+                  <td className="py-4 font-semibold text-gray-800">Food & Beverage</td>
+                  <td className="py-4 text-gray-600">High</td>
+                  <td className="py-4 text-gray-600">Retail / Commercial Kitchen</td>
+                  <td className="py-4 text-gray-600">$$$</td>
+                </tr>
+                <tr className="border-b border-gray-100">
+                  <td className="py-4 font-semibold text-gray-800">Healthcare & Beauty</td>
+                  <td className="py-4 text-gray-600">High</td>
+                  <td className="py-4 text-gray-600">Specialized premises</td>
+                  <td className="py-4 text-gray-600">$$$</td>
+                </tr>
+                <tr className="border-b border-gray-100">
+                  <td className="py-4 font-semibold text-gray-800">Contracting & Real Estate</td>
+                  <td className="py-4 text-gray-600">High</td>
+                  <td className="py-4 text-gray-600">Physical Office / Activity-specific premises</td>
+                  <td className="py-4 text-gray-600">$$$</td>
+                </tr>
+                <tr className="border-b border-gray-100">
+                  <td className="py-4 font-semibold text-gray-800">Industrial & Manufacturing</td>
+                  <td className="py-4 text-gray-600">Very High</td>
+                  <td className="py-4 text-gray-600">Factory / Industrial Premises</td>
+                  <td className="py-4 text-gray-600">$$$$</td>
+                </tr>
+                <tr className="border-b border-gray-100">
+                  <td className="py-4 font-semibold text-gray-800">Financial & Crypto</td>
+                  <td className="py-4 text-gray-600">Extremely High / Regulated</td>
+                  <td className="py-4 text-gray-600">Activity-specific premises</td>
+                  <td className="py-4 text-gray-600">$$$$$</td>
+                </tr>
+                <tr>
+                  <td className="py-4 font-semibold text-gray-800">Tourism & Media</td>
+                  <td className="py-4 text-gray-600">Moderate to High</td>
+                  <td className="py-4 text-gray-600">Commercial / activity-specific premises</td>
+                  <td className="py-4 text-gray-600">$$$</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs text-gray-400 mt-6 italic">
+            Indicative planning guidance only. Actual costs, approvals, premises requirements and timelines vary by business activity, jurisdiction, authority and individual circumstances. Contact Juno BizHub for a tailored assessment.
+          </p>
         </div>
       </div>
     </section>

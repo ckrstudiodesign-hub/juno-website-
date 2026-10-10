@@ -68,10 +68,10 @@ export default function PrivacyPolicyPage() {
                 <h3>2. Who We Are</h3>
                 <p>
                   <strong>Company name:</strong> Juno BizHub Corporate Services Providers LLC<br />
-                  <strong>Office address:</strong> 106 Sheikh Zayed Rd - Trade Center First - Dubai, Aspin Commercial Tower,
+                  <strong>Office address:</strong> Office 24, Floor 26, Aspin Commercial Tower, Sheikh Zayed Road, Near Financial Centre Metro Station, Dubai, UAE,
                   Business Bay Metro Station, Dubai, United Arab Emirates<br />
                   <strong>Website:</strong> <a href="https://junobizhub.com" className="text-electric-sapphire">https://junobizhub.com</a><br />
-                  <strong>Contact email:</strong> <a href="mailto:info.junobh@gmail.com" className="text-electric-sapphire">info.junobh@gmail.com</a><br />
+                  <strong>Contact email:</strong> <a href="mailto:info@junobizhub.ae" className="text-electric-sapphire">info@junobizhub.ae</a><br />
                   <strong>Contact number:</strong> <a href="tel:+971 54 129 0038" className="text-electric-sapphire">+971 54 129 0038</a>
                 </p>
                 <p>
@@ -235,7 +235,7 @@ export default function PrivacyPolicyPage() {
                     </div>
                     <div>
                       <p className="font-bold">Office</p>
-                      <p className="text-sm text-gray-700">106 Sheikh Zayed Rd - Trade Center First - Dubai, Aspin Commercial Tower</p>
+                      <p className="text-sm text-gray-700">Office 24, Floor 26, Aspin Commercial Tower, Sheikh Zayed Road, Near Financial Centre Metro Station, Dubai, UAE</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -244,7 +244,7 @@ export default function PrivacyPolicyPage() {
                     </div>
                     <div>
                       <p className="font-bold">Email</p>
-                      <p className="text-sm text-gray-700"><a href="mailto:info.junobh@gmail.com" className="text-electric-sapphire">info.junobh@gmail.com</a></p>
+                      <p className="text-sm text-gray-700"><a href="mailto:info@junobizhub.ae" className="text-electric-sapphire">info@junobizhub.ae</a></p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">

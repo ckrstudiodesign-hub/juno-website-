@@ -2,7 +2,7 @@
 
 import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Clock, Send, MessageSquare, CheckCircle2 } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Send, MessageSquare, CheckCircle2, ChevronDown } from 'lucide-react';
 import { submitToWeb3Forms } from '@/lib/web3forms';
 
 const ContactPage = () => {
@@ -19,7 +19,7 @@ const ContactPage = () => {
     setSubmitStatus('submitting');
 
     try {
-      const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+      const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || '0d636ff5-c591-41c6-b8a6-12606869bb88';
       if (!accessKey) {
         setSubmitStatus('error');
         setTimeout(() => setSubmitStatus('idle'), 2000);
@@ -52,6 +52,8 @@ const ContactPage = () => {
         if (phoneRef.current) phoneRef.current.value = '';
         if (serviceRef.current) serviceRef.current.value = 'Mainland Setup';
         if (messageRef.current) messageRef.current.value = '';
+        
+        window.dispatchEvent(new CustomEvent('showSuccessPopup'));
         
         setTimeout(() => setSubmitStatus('idle'), 2000);
     } catch (error) {
@@ -104,7 +106,7 @@ const ContactPage = () => {
                   </div>
                   <div className="space-y-1">
                     <p className="text-deep-navy font-black uppercase text-xs tracking-widest opacity-50">Headquarters</p>
-                    <p className="text-deep-navy text-lg font-medium">106 Sheikh Zayed Rd - Trade Center First - Dubai, Aspin Commercial Tower</p>
+                    <p className="text-deep-navy text-lg font-medium">Office 24, Floor 26, Aspin Commercial Tower, Sheikh Zayed Road, Near Financial Centre Metro Station, Dubai, UAE</p>
                   </div>
                 </div>
 
@@ -125,7 +127,7 @@ const ContactPage = () => {
                   </div>
                   <div className="space-y-1">
                     <p className="text-deep-navy font-black uppercase text-xs tracking-widest opacity-50">Email Us</p>
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=junobizhub295%40gmail.com" target="_blank" rel="noopener noreferrer" className="text-deep-navy text-lg font-medium hover:text-electric-sapphire transition-colors italic">info.junobh@gmail.com</a>
+                    <a href="mailto:info@junobizhub.ae" className="text-deep-navy text-lg font-medium hover:text-electric-sapphire transition-colors italic">info@junobizhub.ae</a>
                   </div>
                 </div>
 
@@ -187,25 +189,28 @@ const ContactPage = () => {
                         <label className="text-xs font-black uppercase tracking-widest text-black/40 ml-2">Phone Number</label>
                         <input 
                           ref={phoneRef}
-                          type="tel" 
-                          placeholder="+971" 
+                          type="tel"
+                          placeholder="Phone Number (e.g. +971 50...)" 
                           required
                           className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 text-black focus:outline-none focus:border-electric-sapphire/50 transition-all font-medium"
                         />
                       </div>
                       <div className="space-y-2">
                         <label className="text-xs font-black uppercase tracking-widest text-black/40 ml-2">Service Type</label>
-                        <select 
-                          ref={serviceRef}
-                          defaultValue="Mainland Setup"
-                          className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 text-black focus:outline-none focus:border-electric-sapphire/50 transition-all font-medium appearance-none"
-                        >
-                          <option>Mainland Setup</option>
-                          <option>Free Zone Setup</option>
-                          <option>Offshore Setup</option>
-                          <option>Banking Assistance</option>
-                          <option>Other Consultations</option>
-                        </select>
+                        <div className="relative">
+                          <select 
+                            ref={serviceRef}
+                            defaultValue="Mainland Setup"
+                            className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-6 py-4 text-black focus:outline-none focus:border-electric-sapphire/50 transition-all font-medium appearance-none cursor-pointer"
+                          >
+                            <option>Mainland Setup</option>
+                            <option>Free Zone Setup</option>
+                            <option>Offshore Setup</option>
+                            <option>Banking Assistance</option>
+                            <option>Other Consultations</option>
+                          </select>
+                          <ChevronDown className="absolute right-6 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" size={20} />
+                        </div>
                       </div>
                     </div>
 
@@ -225,8 +230,10 @@ const ContactPage = () => {
                           <CheckCircle2 className="text-green-600" size={28} />
                         </div>
                         <div>
-                          <div className="font-black text-base text-green-700">Form submitted</div>
-                          <div className="text-green-600">Thank you! We'll contact you shortly.</div>
+                          <div className="font-black text-base text-green-700">Your request is submitted. We will contact you soon.</div>
+                          <div className="text-gray-600 mt-2 font-normal leading-relaxed">
+                            You can also reach out to us on WhatsApp at <a href="https://wa.me/971566850911" target="_blank" rel="noopener noreferrer" className="text-[#25D366] font-bold hover:underline">+971 56 685 0911</a> or <a href="https://wa.me/971541290038" target="_blank" rel="noopener noreferrer" className="text-[#25D366] font-bold hover:underline">+971 54 129 0038</a>, or email us at <a href="mailto:info@junobizhub.ae" className="text-[#0077B6] font-bold hover:underline">info@junobizhub.ae</a>.
+                          </div>
                         </div>
                       </div>
                     )}
@@ -257,8 +264,8 @@ const ContactPage = () => {
       <section className="bg-white py-1 relative">
         <div className="h-[420px] w-full relative overflow-hidden">
           <iframe
-            title="Juno BizHub Location - 106 Sheikh Zayed Rd - Trade Center First - Dubai, Aspin Commercial Tower"
-            src="https://www.google.com/maps?q=Sheikh+Zayed+Road+Dubai+UAE&output=embed"
+            title="Juno BizHub Location - Office 24, Floor 26, Aspin Commercial Tower, Sheikh Zayed Road, Near Financial Centre Metro Station, Dubai, UAE"
+            src="https://www.google.com/maps?q=Aspin+Commercial+Tower+Dubai&z=16&output=embed"
             width="100%"
             height="100%"
             style={{ border: 0 }}
@@ -269,9 +276,9 @@ const ContactPage = () => {
           />
 
           <div className="absolute left-4 bottom-4 md:left-8 md:bottom-8 bg-black/80 backdrop-blur-sm rounded-2xl px-4 py-3 border border-deep-navy/10">
-            <p className="text-deep-navy font-black uppercase tracking-[0.2em] text-[10px] md:text-xs">106 Sheikh Zayed Rd - Trade Center First - Dubai, Aspin Commercial Tower</p>
+            <p className="text-white font-black uppercase tracking-[0.2em] text-[10px] md:text-xs">Office 24, Floor 26, Aspin Commercial Tower, Sheikh Zayed Road, Near Financial Centre Metro Station, Dubai, UAE</p>
             <a
-              href="https://www.google.com/maps/search/?api=1&query=Sheikh+Zayed+Road+Dubai+UAE"
+              href="https://share.google/D7vXAY3lmRRJu2UDN"
               target="_blank"
               rel="noopener noreferrer"
               className="text-electric-sapphire text-xs md:text-sm font-semibold hover:text-electric-sapphire/80 transition-colors"

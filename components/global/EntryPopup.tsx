@@ -2,8 +2,9 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X } from 'lucide-react';
+import { X, ChevronDown } from 'lucide-react';
 import Image from 'next/image';
+import { submitToWeb3Forms } from '@/lib/web3forms';
 
 const EntryPopup = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -80,10 +81,6 @@ const EntryPopup = () => {
                   <p className="text-blue-100 text-sm leading-relaxed mb-6">
                     Set up your UAE business with confidence. Get expert advice and a clear roadmap for your mainland, free zone, or offshore company formation.
                   </p>
-                  
-                  <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm p-3 rounded-lg w-fit border border-white/20">
-                    <span className="text-white font-bold text-sm">Join 15,000+ Companies</span>
-                  </div>
                 </div>
               </div>
 
@@ -94,7 +91,38 @@ const EntryPopup = () => {
                 <h4 className="text-2xl font-bold text-[#03045E] mb-2">Get a Free Quote</h4>
                 <p className="text-gray-500 text-sm mb-6">Fill in your details and an expert will call you back shortly.</p>
 
-                <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); setIsOpen(false); }}>
+                <form className="space-y-4" onSubmit={async (e) => { 
+                  e.preventDefault(); 
+                  const target = e.target as any;
+                  const name = target[0].value;
+                  const email = target[1].value;
+                  const phone = target[2].value;
+                  const service = target[3].value;
+                  const btn = target[4];
+                  const originalText = btn.innerText;
+                  btn.innerText = 'SENDING...';
+                  btn.disabled = true;
+                  try {
+                    await submitToWeb3Forms({
+                      accessKey: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || '0d636ff5-c591-41c6-b8a6-12606869bb88',
+                      name,
+                      email,
+                      phone,
+                      subject: 'New Quote Request from Entry Popup',
+                      message: `New Lead Request.\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nService: ${service}`,
+                      extra: { formType: 'entry-popup' }
+                    });
+                    window.dispatchEvent(new CustomEvent('showSuccessPopup'));
+                    setIsOpen(false); 
+                  } catch (err) {
+                    alert('Error submitting form. Please try again.');
+                  } finally {
+                    if (btn) {
+                      btn.innerText = originalText;
+                      btn.disabled = false;
+                    }
+                  }
+                }}>
                   <div>
                     <input 
                       type="text" 
@@ -111,31 +139,31 @@ const EntryPopup = () => {
                       required
                     />
                   </div>
-                  <div className="flex">
-                    <span className="inline-flex items-center px-4 rounded-l-lg border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">
-                      +971
-                    </span>
+                  <div>
                     <input 
                       type="tel" 
-                      placeholder="Phone Number" 
-                      className="w-full px-4 py-3 rounded-r-lg border border-gray-300 focus:border-[#0077B6] focus:ring-1 focus:ring-[#0077B6] outline-none transition-colors text-gray-800"
+                      placeholder="Phone Number (e.g. +971 50...)" 
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#0077B6] focus:ring-1 focus:ring-[#0077B6] outline-none transition-colors text-gray-800"
                       required
                     />
                   </div>
-                  <div>
-                    <select defaultValue="" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#0077B6] focus:ring-1 focus:ring-[#0077B6] outline-none transition-colors text-gray-500 bg-white appearance-none">
+                  <div className="relative">
+                    <select defaultValue="" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#0077B6] focus:ring-1 focus:ring-[#0077B6] outline-none transition-colors text-gray-500 bg-white appearance-none cursor-pointer">
                       <option value="" disabled>Select a Service</option>
                       <option value="Business Setup">Business Setup</option>
                       <option value="Free Zones">Free Zones</option>
                       <option value="Corporate Services">Corporate Services</option>
                       <option value="Tax & Accounting">Tax & Accounting</option>
                       <option value="Banking">Banking</option>
+                      <option value="AML compliance">AML compliance</option>
+                      <option value="License Renewal">License Renewal</option>
                     </select>
+                    <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" size={16} />
                   </div>
                   
                   <button 
                     type="submit" 
-                    className="w-full bg-[#E63946] hover:bg-[#D62828] text-white font-bold text-lg py-4 rounded-lg shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5 mt-2"
+                    className="w-full bg-[#0077B6] hover:bg-[#005f92] text-white font-bold text-lg py-4 rounded-lg shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5 mt-2"
                   >
                     GET A QUOTE
                   </button>

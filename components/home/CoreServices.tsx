@@ -54,13 +54,13 @@ const CoreServices = () => {
     },
     {
       title: "Corporate Compliance & Ongoing Support",
-      desc: "Licence renewals, document updates, shareholder changes, UBO coordination, and administrative assistance.",
+      desc: "Juno BizHub supports businesses beyond incorporation by helping coordinate ongoing corporate administration, renewals, regulatory requirements and compliance processes throughout the business lifecycle.",
       img: "/images/core_compliance.jpg",
       link: "/services",
       icon: <Shield className="text-electric-sapphire mb-4" />
     },
     {
-      title: "Accounting, VAT & Tax Coordination",
+      title: "ACCOUNTING, VAT, TAX & AML COMPLIANCE",
       desc: "Bookkeeping, VAT/Corporate Tax registration, management reporting, and specialist referrals.",
       img: "/images/core_accounting.jpg",
       link: "/bookkeeping-and-accounting-services",

@@ -157,15 +157,15 @@ const ServicePage = ({
                          return (
                           <div key={i} className="bg-deep-navy/5 p-6 rounded-3xl flex items-center gap-6 hover:bg-white/10 transition-all border border-deep-navy/10 hover:border-electric-sapphire/30 group">
                             {logo ? (
-                              <div className="w-16 h-12 relative shrink-0 grayscale group-hover:grayscale-0 transition-all opacity-80 group-hover:opacity-100">
-                                <Image src={logo} alt={name} fill className="object-contain object-left" />
+                              <div className="w-20 h-16 relative shrink-0 transition-all">
+                                <Image src={logo} alt={name} fill className="object-contain object-left" unoptimized />
                               </div>
                             ) : (
                               <div className="w-6 h-6 bg-electric-sapphire/10 rounded-full flex items-center justify-center shrink-0 group-hover:bg-electric-sapphire transition-colors">
                                 <CheckCircle2 className="text-electric-sapphire group-hover:text-black w-4 h-4 transition-colors" />
                               </div>
                             )}
-                            <span className={`text-deep-navy/80 font-medium text-sm leading-relaxed ${logo ? 'font-bold text-deep-navy' : ''}`}>{name}</span>
+                            <span className={`text-deep-navy font-bold text-base leading-relaxed`}>{name}</span>
                           </div>
                          );
                       })}

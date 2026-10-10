@@ -202,7 +202,7 @@ const CostCalculatorPage = () => {
     setSubmissionError('');
     
     try {
-      const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+      const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || '0d636ff5-c591-41c6-b8a6-12606869bb88';
       if (!accessKey) {
         setSubmissionError('Form is not configured. Please try again later.');
         setIsFinalizing(false);
@@ -470,6 +470,146 @@ const CostCalculatorPage = () => {
                    </div>
                 </div>
              ))}
+          </div>
+        </div>
+
+        {/* Cost Comparison Table */}
+        <div className="mt-32 w-full max-w-7xl mx-auto">
+          <div className="mb-12">
+            <span className="text-electric-sapphire font-bold tracking-[0.3em] uppercase text-sm mb-4 block">At a Glance</span>
+            <h3 className="text-3xl md:text-5xl font-black text-deep-navy uppercase tracking-tighter">Activity Cost Comparison</h3>
+          </div>
+          <div className="overflow-x-auto bg-white rounded-[2rem] border border-deep-navy/10 shadow-[0_10px_30px_rgba(0,0,0,0.05)]">
+            <table className="w-full text-left border-collapse">
+              <thead>
+                <tr className="bg-deep-navy/5 text-deep-navy uppercase text-xs tracking-widest">
+                  <th className="p-6 font-black border-b border-deep-navy/10">Activity Category</th>
+                  <th className="p-6 font-black border-b border-deep-navy/10">Approval Difficulty</th>
+                  <th className="p-6 font-black border-b border-deep-navy/10">Premises Required</th>
+                  <th className="p-6 font-black border-b border-deep-navy/10 text-center">Relative Setup Cost</th>
+                </tr>
+              </thead>
+              <tbody className="text-sm font-medium text-deep-navy/80">
+                {[
+                  { cat: "1. Consultancies & Tech", diff: "Instant / No NOC", prem: "Virtual / Flexi-Desk", cost: "$" },
+                  { cat: "2. Commercial Trading", diff: "Low / Customs Only", prem: "Office or Warehouse", cost: "$$" },
+                  { cat: "3. Food & Beverage (F&B)", diff: "High (Municipality)", prem: "Retail / Commercial Kitchen", cost: "$$$" },
+                  { cat: "4. Healthcare & Beauty", diff: "High (DHA / Health Dept)", prem: "Specialized Clinical/Salon", cost: "$$$" },
+                  { cat: "5. Contracting & Real Estate", diff: "High (Engineering/RERA)", prem: "Physical Office", cost: "$$$" },
+                  { cat: "6. Industrial & Manufacturing", diff: "Very High (Civil Defense)", prem: "Factory / Industrial Plot", cost: "$$$$" },
+                  { cat: "7. Financial & Crypto", diff: "Extremely High (VARA/CBUAE)", prem: "Regulated Commercial Office", cost: "$$$$$" },
+                  { cat: "8. Tourism & Media", diff: "Moderate (DET/Media Council)", prem: "Commercial Office", cost: "$$$" }
+                ].map((row, i) => (
+                  <tr key={i} className="hover:bg-electric-sapphire/5 transition-colors border-b border-deep-navy/5 last:border-0">
+                    <td className="p-6 font-bold text-deep-navy whitespace-nowrap">{row.cat}</td>
+                    <td className="p-6">{row.diff}</td>
+                    <td className="p-6">{row.prem}</td>
+                    <td className="p-6 text-center font-black text-electric-sapphire text-lg tracking-widest">{row.cost}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* Cost Drivers & Requirements Section */}
+        <div className="mt-32 w-full text-left max-w-7xl mx-auto">
+          <div className="mb-12">
+            <span className="text-electric-sapphire font-bold tracking-[0.3em] uppercase text-sm mb-4 block">Detailed Insights</span>
+            <h3 className="text-3xl md:text-5xl font-black text-deep-navy uppercase tracking-tighter">Cost Drivers & Approvals by Activity</h3>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            {[
+              {
+                title: "1. Professional Consultancies & Digital Services",
+                activities: "Management Consulting, IT & Software, Marketing/PR, HR, Graphic Design, Legal Advisory, Accounting.",
+                costDrivers: ["Flexi-desk / Virtual Office eligible (lowest Ejari rent).", "Fast-track processing with zero external government approvals."],
+                approvals: "None (standard DET / Free Zone approval only).",
+                budget: "Low"
+              },
+              {
+                title: "2. Commercial Trading, E-Commerce & Retail",
+                activities: "General Trading, Goods-Specific Trading (Garments, Electronics, Auto Parts), E-Commerce, Import/Export, Wholesale.",
+                costDrivers: ["Customs Code registration (~AED 1,000–1,500).", "Foreign Trade Name fee (~AED 2,000 for non-Arabic names).", "Warehouse or retail shop Ejari depending on inventory size."],
+                approvals: "Dubai Customs (post-issuance).",
+                budget: "Moderate"
+              },
+              {
+                title: "3. Food, Beverage & Cloud Kitchens",
+                activities: "Restaurants, Cafes, Food Trucks, Cloud Kitchens, Catering, Foodstuff Trading.",
+                costDrivers: ["Layout blueprint approvals & physical site inspections.", "Specialized shop/kitchen fit-out costs & grease trap installations.", "Staff Occupational Health Screenings & Food Handler Permits."],
+                approvals: "Dubai Municipality (Food Safety Department).",
+                budget: "High (Operational & Fit-Out heavy)"
+              },
+              {
+                title: "4. Healthcare, Beauty & Personal Care",
+                activities: "Medical Clinics, Pharmacies, Beauty Salons, Spas, Gyms, Fitness Studios.",
+                costDrivers: ["Degree attestations, professional exams, and licensed medical staff.", "Strict spatial and equipment compliance rules for premises.", "Specialized disposal and health department permits."],
+                approvals: "Dubai Health Authority (DHA) / Ministry of Health (MOH) / Health & Safety Department.",
+                budget: "High"
+              },
+              {
+                title: "5. Contracting, Engineering & Real Estate",
+                activities: "General Building Contracting, Civil Works, Interior Fit-Out, Real Estate Brokerage, Property Management, Maintenance.",
+                costDrivers: ["Mandatory professional engineering exams & classification levels.", "High labor quota requirements and MOHRE bank guarantees.", "RERA broker registration and exam fees."],
+                approvals: "Dubai Municipality (Engineering Dept) / RERA (Real Estate Regulatory Authority).",
+                budget: "High"
+              },
+              {
+                title: "6. Industrial, Manufacturing & Heavy Logistics",
+                activities: "Factories, Assembly Plants, Packaging, Material Processing, Freight Forwarding, Heavy Transport.",
+                costDrivers: ["Large operational footprint required (Industrial Plot or Commercial Warehouse Ejari).", "High power/utility allocations and safety compliance."],
+                approvals: "UAE Civil Defense, Ministry of Industry and Advanced Technology (MoIAT), Environmental Authorities.",
+                budget: "Very High"
+              },
+              {
+                title: "7. Financial Services, Crypto & Investment Holdings",
+                activities: "Crypto/Digital Assets, Investment Holdings, SPVs, Asset Management, Proprietary Trading, Payment Gateways.",
+                costDrivers: ["High minimum paid-up capital requirements.", "Heavy Anti-Money Laundering (AML/CFT) compliance setup and audits.", "Specialized legal structuring and escrow accounts."],
+                approvals: "VARA (Virtual Assets Regulatory Authority) / Central Bank of the UAE / DFSA / ADGM.",
+                budget: "Highest Regulatory Tier"
+              },
+              {
+                title: "8. Tourism, Media & Event Management",
+                activities: "Travel Agencies, Tour Operators, Film/TV Production, Photography, Event Management, Publishing, Holiday Homes.",
+                costDrivers: ["Specialized activity permits and ticketing platform integrations.", "Mandatory bank guarantees for inbound/outbound travel operators.", "Filming location permits and media distribution clearances."],
+                approvals: "Department of Economy and Tourism (DET Tourism division) / UAE Media Council.",
+                budget: "Moderate to High"
+              }
+            ].map((item, idx) => (
+              <div key={idx} className="bg-white p-8 rounded-[2rem] border border-deep-navy/10 shadow-[0_10px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_40px_rgba(0,119,182,0.1)] transition-all flex flex-col gap-4">
+                <h4 className="text-xl font-black text-deep-navy uppercase">{item.title}</h4>
+                
+                <div className="bg-deep-navy/5 p-4 rounded-xl">
+                  <span className="font-bold text-xs uppercase tracking-widest text-deep-navy/60 block mb-1">Budget Level</span>
+                  <span className="font-black text-electric-sapphire text-lg">{item.budget}</span>
+                </div>
+
+                <div className="space-y-4 text-sm mt-2">
+                  <div>
+                    <span className="font-bold text-deep-navy block mb-1">Activities Included:</span>
+                    <p className="text-deep-navy/70 leading-relaxed">{item.activities}</p>
+                  </div>
+                  
+                  <div>
+                    <span className="font-bold text-deep-navy block mb-2">Primary Cost Drivers:</span>
+                    <ul className="space-y-2">
+                      {item.costDrivers.map((driver, i) => (
+                        <li key={i} className="flex gap-2 text-deep-navy/70 leading-relaxed items-start">
+                          <CheckCircle2 className="text-electric-sapphire shrink-0 w-4 h-4 mt-0.5" />
+                          <span>{driver}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div>
+                    <span className="font-bold text-deep-navy block mb-1">External Approvals Needed:</span>
+                    <p className="text-deep-navy/70 leading-relaxed">{item.approvals}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </main>

@@ -54,8 +54,7 @@ const pillars: Pillar[] = [
     title: 'Vision',
     icon: Target,
     quote:
-      'To become a trusted UAE corporate services partner recognised for practical advice, transparent execution and long-term client relationships.',
-    footnote: 'Where business formation meets banking excellence',
+      'To redefine business setup in the UAE through clarity, speed, and enduring client partnership.',
     offsetClass: '',
   },
   {
@@ -63,7 +62,7 @@ const pillars: Pillar[] = [
     title: 'Mission',
     icon: Eye,
     quote:
-      'To simplify business establishment and corporate administration by combining local knowledge, structured processes and responsive client service.',
+      'To build the UAE’s most trusted business setup advisory, where corporate compliance meets effortless execution and lasting partnership.',
     offsetClass: 'lg:mt-20',
   },
 ];

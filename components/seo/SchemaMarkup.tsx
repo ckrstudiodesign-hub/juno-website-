@@ -70,7 +70,7 @@ export const GlobalSchemas = {
     image: `${SITE_URL}/golden-logo.png`,
     url: SITE_URL,
     telephone: '+971 54 129 0038',
-    email: 'info.junobh@gmail.com',
+    email: 'info@junobizhub.ae',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Dubai',

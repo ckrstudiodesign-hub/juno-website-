@@ -35,7 +35,7 @@ export default function LocationMap() {
             <div className="rounded-3xl border border-black/10 bg-gray-50 p-6 shadow-sm max-w-xl">
               <p className="text-xs font-black uppercase tracking-[0.3em] text-[#0077B6] mb-3">Coordinates</p>
               <p className="text-gray-900 font-black text-lg">25.193375, 55.260395</p>
-              <p className="text-gray-500 text-sm mt-2 font-medium">106 Sheikh Zayed Rd - Trade Center First - Dubai, Aspin Commercial Tower</p>
+              <p className="text-gray-500 text-sm mt-2 font-medium">Office 24, Floor 26, Aspin Commercial Tower, Sheikh Zayed Road, Near Financial Centre Metro Station, Dubai, UAE</p>
             </div>
           </div>
 
@@ -54,9 +54,7 @@ export default function LocationMap() {
               />
 
               <div className="absolute left-4 bottom-4 md:left-8 md:bottom-8 bg-white/95 backdrop-blur-md rounded-2xl px-5 py-4 border border-black/10 shadow-xl max-w-sm">
-                <p className="text-gray-900 font-black uppercase tracking-[0.2em] text-[10px] md:text-xs leading-relaxed">
-                  106 Sheikh Zayed Rd - Trade Center First - Dubai, Aspin Commercial Tower
-                </p>
+                  Office 24, Floor 26, Aspin Commercial Tower, Sheikh Zayed Road, Near Financial Centre Metro Station, Dubai, UAE
                 <a
                   href="https://share.google/D7vXAY3lmRRJu2UDN"
                   target="_blank"

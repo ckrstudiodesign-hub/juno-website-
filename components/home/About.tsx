@@ -31,12 +31,8 @@ const About = () => {
           {/* Col 1: Text */}
           <div className="p-8 sm:p-12 border-b lg:border-b-0 lg:border-r border-gray-200 flex flex-col h-full bg-gray-50/30">
             <h3 className="text-xl font-bold text-deep-navy mb-8 flex items-center gap-3">
-              {/* Simple geometric logo placeholder */}
-              <div className="w-6 h-6 bg-[#001730] flex grid-cols-2 grid-rows-2 gap-[2px] p-[2px]">
-                 <div className="bg-[#00B4D8] w-full h-full"></div>
-                 <div className="bg-white w-full h-full"></div>
-                 <div className="bg-white w-full h-full"></div>
-                 <div className="bg-[#00B4D8] w-full h-full"></div>
+              <div className="relative w-8 h-8 flex-shrink-0">
+                <Image src="/logo.png" alt="Juno BizHub Logo" fill className="object-contain" />
               </div>
               Juno BizHub
             </h3>
@@ -57,23 +53,21 @@ const About = () => {
 
           {/* Col 2: Image */}
           <div className="border-b lg:border-b-0 lg:border-r border-gray-200 relative min-h-[400px] lg:min-h-full">
-            <Image 
-              src="/juno team/suresh HOCS.jpeg" 
-              alt="Suresh Kanjya - Head of Corporate Services" 
-              fill
-              className="object-cover"
+            <video 
+              src="/juno%20videos/dubai%20video.mp4" 
+              autoPlay 
+              loop 
+              muted 
+              playsInline 
+              className="absolute inset-0 w-full h-full object-cover"
             />
-            
-            {/* Live Advisory Badge */}
-            <div className="absolute top-6 left-6 px-3 py-1.5 bg-black/30 backdrop-blur-md rounded-md border border-white/10 flex items-center gap-2">
-              <div className="w-1.5 h-1.5 rounded-full bg-[#00B4D8] animate-pulse"></div>
-              <span className="text-white text-[10px] font-semibold tracking-wider uppercase">Live Advisory</span>
-            </div>
 
             {/* Overlay Text */}
             <div className="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-black/90 via-black/40 to-transparent">
-              <h4 className="text-white font-bold text-lg mb-1">Suresh Kanjya</h4>
-              <p className="text-gray-300 text-xs tracking-wide">Head of Corporate Services</p>
+              <h4 className="text-white font-bold text-lg mb-1 uppercase tracking-wide">In the Heart of Dubai</h4>
+              <p className="text-gray-300 text-sm tracking-wide leading-relaxed">
+                We are located in the heart of Dubai, at Aspin Commercial Tower, Sheikh Zayed Road.
+              </p>
             </div>
           </div>
 

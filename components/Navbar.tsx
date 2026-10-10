@@ -117,7 +117,7 @@ const Navbar = () => {
     {
       title: 'Insights',
       links: [
-        { name: 'Blog & News', href: '/blog' },
+        { name: 'Blog & News', href: '/insights' },
       ]
     }
   ];

@@ -73,7 +73,7 @@ export default function LeadModal() {
     setIsSubmitting(true);
 
     try {
-      const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+      const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || '0d636ff5-c591-41c6-b8a6-12606869bb88';
       if (!accessKey) {
         setError('Form is not configured. Please try again later.');
         return;
@@ -96,6 +96,7 @@ export default function LeadModal() {
       });
 
         setIsSuccess(true);
+        window.dispatchEvent(new CustomEvent('showSuccessPopup'));
         setTimeout(() => {
           setIsSuccess(false);
           setIsOpen(false);
@@ -151,8 +152,10 @@ export default function LeadModal() {
                   <div className="w-20 h-20 mx-auto rounded-full bg-electric-sapphire/15 border border-electric-sapphire/30 flex items-center justify-center">
                     <CheckCircle2 className="text-electric-sapphire" size={40} />
                   </div>
-                  <h3 className="text-2xl font-bold text-deep-navy">Form submitted</h3>
-                  <p className="text-deep-navy/80 text-sm">Your details have been sent successfully.</p>
+                  <h3 className="text-2xl font-bold text-deep-navy">Your request is submitted. We will contact you soon.</h3>
+                  <p className="text-deep-navy/80 text-sm leading-relaxed">
+                    You can also reach out to us on WhatsApp at <a href="https://wa.me/971566850911" target="_blank" rel="noopener noreferrer" className="text-[#25D366] font-bold hover:underline">+971 56 685 0911</a> or <a href="https://wa.me/971541290038" target="_blank" rel="noopener noreferrer" className="text-[#25D366] font-bold hover:underline">+971 54 129 0038</a>, or email us at <a href="mailto:info@junobizhub.ae" className="text-[#0077B6] font-bold hover:underline">info@junobizhub.ae</a>.
+                  </p>
                 </div>
               ) : (
               <>

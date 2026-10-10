@@ -8,22 +8,22 @@ const AboutVision = () => {
     <section id="mission" className="section-padding bg-white">
       <div className="max-w-7xl mx-auto px-4">
          <div className="grid lg:grid-cols-2 gap-12">
-            <div className="glass-card p-16 rounded-[48px] border border-electric-sapphire/10 space-y-8">
-               <div className="w-16 h-16 bg-electric-sapphire/10 rounded-2xl flex items-center justify-center">
-                  <Eye className="text-electric-sapphire w-8 h-8" />
+            <div className="bg-gray-50/50 p-12 md:p-16 rounded-[3rem] border border-gray-100 hover:border-[#0077B6]/30 transition-all hover:shadow-xl group space-y-8">
+               <div className="w-20 h-20 bg-white shadow-md rounded-2xl flex items-center justify-center group-hover:-translate-y-2 transition-transform duration-300">
+                  <Eye className="text-[#0077B6] w-10 h-10" />
                </div>
-               <h3 className="text-4xl font-black text-deep-navy">Our Vision</h3>
-               <p className="text-xl text-deep-navy/80 font-light leading-relaxed italic">
-                 "To become a trusted UAE corporate services partner recognised for practical advice, transparent execution and long-term client relationships."
+               <h3 className="text-4xl font-black text-[#03045E]">Our Vision</h3>
+               <p className="text-xl text-gray-600 font-light leading-relaxed italic border-l-4 border-[#00B4D8] pl-6">
+                 "To be the leading and most trusted corporate services provider in the UAE, empowering global entrepreneurs and corporations to thrive in a dynamic economy."
                </p>
             </div>
-            <div className="glass-card p-16 rounded-[48px] border border-electric-sapphire/10 space-y-8">
-               <div className="w-16 h-16 bg-electric-sapphire/10 rounded-2xl flex items-center justify-center">
-                  <Landmark className="text-electric-sapphire w-8 h-8" />
+            <div className="bg-gray-50/50 p-12 md:p-16 rounded-[3rem] border border-gray-100 hover:border-[#0077B6]/30 transition-all hover:shadow-xl group space-y-8">
+               <div className="w-20 h-20 bg-white shadow-md rounded-2xl flex items-center justify-center group-hover:-translate-y-2 transition-transform duration-300">
+                  <Landmark className="text-[#0077B6] w-10 h-10" />
                </div>
-               <h3 className="text-4xl font-black text-deep-navy">Our Mission</h3>
-               <p className="text-xl text-deep-navy/80 font-light leading-relaxed italic">
-                 "To simplify business establishment and corporate administration by combining local knowledge, structured processes and responsive client service."
+               <h3 className="text-4xl font-black text-[#03045E]">Our Mission</h3>
+               <p className="text-xl text-gray-600 font-light leading-relaxed italic border-l-4 border-[#00B4D8] pl-6">
+                 "To simplify and accelerate business success in the UAE by providing expert, tailored, and comprehensive corporate solutions."
                </p>
             </div>
          </div>
