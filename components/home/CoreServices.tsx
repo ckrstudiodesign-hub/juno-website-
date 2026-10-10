@@ -108,26 +108,26 @@ const CoreServices = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10"
+          className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 md:gap-10"
         >
           {services.map((service, idx) => (
-            <motion.div key={idx} variants={item} className="group flex flex-col bg-gray-50 overflow-hidden rounded-[32px] md:rounded-[40px] border border-gray-100 hover:border-electric-sapphire/30 hover:bg-white hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] transition-all duration-700">
-              <div className="h-48 md:h-60 relative overflow-hidden shrink-0">
+            <motion.div key={idx} variants={item} className="group flex flex-col bg-gray-50 overflow-hidden rounded-[20px] md:rounded-[40px] border border-gray-100 hover:border-electric-sapphire/30 hover:bg-white hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] transition-all duration-700">
+              <div className="h-28 sm:h-36 md:h-60 relative overflow-hidden shrink-0">
                 <Image 
                   src={service.img} 
                   alt={service.title} 
                   fill 
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  sizes="(max-width: 768px) 50vw, 33vw"
                   className="object-cover group-hover:scale-110 transition-transform duration-1000" 
                 />
               </div>
-              <div className="p-6 md:p-10 flex flex-col grow">
-                <h4 className="text-xl md:text-2xl font-black text-deep-navy leading-tight mb-4 md:mb-6">{service.title}</h4>
-                <p className="text-deep-navy/70 font-medium leading-relaxed text-sm md:text-base mb-6 md:mb-8 grow">
+              <div className="p-4 sm:p-6 md:p-10 flex flex-col grow">
+                <h4 className="text-sm sm:text-base md:text-2xl font-black text-deep-navy leading-tight mb-2 md:mb-6 line-clamp-2 md:line-clamp-none">{service.title}</h4>
+                <p className="text-deep-navy/70 font-medium leading-snug md:leading-relaxed text-[10px] sm:text-xs md:text-base mb-4 md:mb-8 grow line-clamp-3 md:line-clamp-none">
                   {service.desc}
                 </p>
-                <Link href={service.link} className="inline-flex items-center gap-2 md:gap-3 text-electric-sapphire font-black hover:gap-4 md:hover:gap-6 transition-all uppercase tracking-widest text-[10px] md:text-xs mt-auto">
-                  Read Full Details <ArrowRight size={14} className="md:w-4 md:h-4" />
+                <Link href={service.link} className="inline-flex items-center gap-1.5 md:gap-3 text-electric-sapphire font-black hover:gap-2 md:hover:gap-6 transition-all uppercase tracking-widest text-[8px] sm:text-[9px] md:text-xs mt-auto">
+                  <span className="hidden sm:inline">Read Full Details</span><span className="sm:hidden">Details</span> <ArrowRight size={12} className="w-3 h-3 md:w-4 md:h-4" />
                 </Link>
               </div>
             </motion.div>
