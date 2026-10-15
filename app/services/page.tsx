@@ -21,7 +21,7 @@ const services = [
   {
     title: 'Free Zone Setup',
     icon: Building2,
-    description: "Benefit from tax exemptions and 100% foreign ownership in UAE's premier Free Zones.",
+    description: "Explore UAE free zones with 100% foreign ownership and possible 0% Corporate Tax on Qualifying Income, subject to conditions.",
     links: [
       { name: 'Free Zone Overview', href: '/dubai-free-zone-company-overview' },
       { name: 'IFZA', href: '/ifza-dubai-business-set-up' },

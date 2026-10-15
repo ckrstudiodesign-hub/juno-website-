@@ -1,4 +1,13 @@
 import ServicePage from '@/components/ServicePage';
+import type { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = constructMetadata({
+  title: "Ajman Free Zone Company Setup in the UAE",
+  description:
+    "Set up your company in Ajman Free Zone with Juno BizHub. We help with activity selection, licensing, visas and bank account support for a smooth launch.",
+  canonicalUrl: '/ajman-free-zone-business-setup',
+});
 
 export default function AjmanSetup() {
   return (
@@ -13,7 +22,7 @@ export default function AjmanSetup() {
       ]}
       advantages={[
         "100% foreign ownership and management control",
-        "0% Corporate and Personal Income tax",
+        "Possible 0% Corporate Tax on Qualifying Income, subject to conditions; no personal income tax",
         "Most competitive land and office rental rates in the region",
         "Full repatriation of capital and profits",
         "Multi-currency corporate bank account eligibility",

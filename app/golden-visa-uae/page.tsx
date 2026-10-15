@@ -1,24 +1,31 @@
 import ServicePage from '@/components/ServicePage';
+import type { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = constructMetadata({
+  title: "Golden Visa Services in Dubai",
+  description:
+    "Find out if you qualify for the UAE Golden Visa through property, business or talent routes. Juno BizHub checks eligibility and guides you through each step.",
+  canonicalUrl: '/golden-visa-uae',
+});
 
 export default function GoldenVisas() {
   return (
     <ServicePage
       title="Golden Visa UAE"
       subtitle="The Gateway to Long-Term UAE Residency"
-      heroImage="/images/mainland.png"
+      heroImage="/images/core_pro.jpg"
       description={[
         "The UAE Golden Visa is a revolutionary long-term residence permit designed to attract international investors, entrepreneurs, and highly talented professionals. This 10-year residency program offers unprecedented stability, allowing holders to live, work, and study in the UAE without the need for a national sponsor.",
-        "Juno BizHub provides specialized consultancy to determine your eligibility and streamline the application process. We handle the documentation for real estate investors, business owners, and specialized talents, ensuring a rapid transition to 'Golden' status.",
+        "Juno BizHub provides specialized consultancy to determine your eligibility and streamline the application process. We handle the documentation for real estate investors, business owners, and specialized talents, guiding you through each step.",
         "With a Golden Visa, you gain the freedom to stay outside the UAE for as long as needed without losing residency status, alongside the ability to sponsor your family and domestic staff under a long-term, secure framework."
       ]}
       advantages={[
-        "10-year long-term residency with automatic renewal options",
+        "10-year long-term residency, renewable while you continue to meet the criteria",
         "Self-sponsored residency—no local employer or sponsor required",
         "Ability to stay outside the UAE for more than 6 months without losing residency",
         "Sponsorship of family members, including spouse and children of any age",
-        "Sponsorship of an unlimited number of domestic helpers",
-        "Specialized 'Easa' privilege card for exclusive discounts and services",
-        "Exemption from annual medical and visa renewal procedures for 10 years",
+        "Sponsorship of domestic workers, subject to current rules",
         "Higher eligibility for mortgage and personal financing in the UAE",
         "Strategic stability for business owners and long-term investors",
         "Direct access to a world-class lifestyle and business ecosystem"
@@ -29,7 +36,8 @@ export default function GoldenVisas() {
           "10-year renewable residency visa",
           "No local sponsor or employer required",
           "Can stay outside the UAE for >6 months without visa cancellation",
-          "Sponsor family members (including parents) and unlimited domestic staff"
+          "Sponsor family members and domestic workers, subject to current rules",
+          "Criteria and fees are set by ICA and GDRFA and can change. We confirm your eligibility before you apply."
         ]
       }}
       decisionTable={{
@@ -37,7 +45,7 @@ export default function GoldenVisas() {
         option1Name: "Real Estate Investor",
         option2Name: "Entrepreneur / Startup",
         features: [
-          { name: "Investment Amount", option1: "Minimum AED 2 Million", option2: "Min AED 500,000 capital or approved project" },
+          { name: "Investment Amount", option1: "Minimum AED 2 Million", option2: "Project or company approved by the relevant authority" },
           { name: "Property Status", option1: "Off-plan or completed (can be mortgaged)", option2: "Approval from an official incubator or Ministry" },
           { name: "Duration", option1: "10 Years", option2: "10 Years" },
           { name: "Target Audience", option1: "Property Buyers", option2: "Founders & Innovators" }

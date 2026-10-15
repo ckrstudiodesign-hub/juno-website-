@@ -1,4 +1,13 @@
 import ServicePage from '@/components/ServicePage';
+import type { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = constructMetadata({
+  title: "DWTC Free Zone Company Formation in Dubai",
+  description:
+    "Form your company in Dubai World Trade Centre (DWTC) Free Zone. Juno BizHub guides activity selection, licensing, visas and corporate bank account support.",
+  canonicalUrl: '/dwtc-free-zone-company-formation',
+});
 
 export default function DWTCSetup() {
   return (
@@ -13,7 +22,7 @@ export default function DWTCSetup() {
       ]}
       advantages={[
         "100% foreign ownership and full capital/profit repatriation",
-        "0% Corporate and Personal Income tax environment",
+        "Possible 0% Corporate Tax on Qualifying Income, subject to conditions; no personal income tax",
         "Strategic location in the heart of Dubai's central business and exhibition district",
         "Unique 'One-Stop-Shop' for all government and administrative services",
         "Flexible office solutions: from startup desks to premium, full-floor corporate suites",
@@ -21,7 +30,7 @@ export default function DWTCSetup() {
         "Direct access to international exhibitions and global networking events",
         "World-class telecommunications and digital infrastructure",
         "Simplified and fast-track residency visa and work permit processing",
-        "No requirement for paid-up share capital or mandatory annual audit filing"
+        "Capital and audit requirements depend on the activity, authority rules and applicable UAE requirements"
       ]}
       sections={[
         {

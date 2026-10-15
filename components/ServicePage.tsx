@@ -10,17 +10,21 @@ import ExecutiveSummary from './geo/ExecutiveSummary';
 import DecisionTable from './geo/DecisionTable';
 import StepByStep from './geo/StepByStep';
 import FaqAccordion from './geo/FaqAccordion';
+interface ServiceSection {
+  title: string;
+  content?: string | string[];
+  list?: (string | { name: string; logo: string })[];
+  footer?: string;
+}
+
 interface ServicePageProps {
   title: string;
   subtitle?: string;
   description: string | string[];
   advantagesTitle?: string;
   advantages?: string[];
-  sections?: {
-    title: string;
-    content?: string | string[];
-    list?: (string | { name: string; logo: string })[];
-  }[];
+  sections?: ServiceSection[];
+  sectionsAfterTable?: ServiceSection[];
   hallmarksTitle?: string;
   hallmarks?: {
     title: string;
@@ -46,8 +50,66 @@ const ServicePage = ({
   executiveSummary,
   decisionTable,
   stepByStep,
-  faqs
+  faqs,
+  sectionsAfterTable
 }: ServicePageProps) => {
+  const renderSection = (section: ServiceSection, idx: number) => (
+              <motion.section 
+                key={idx} 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="space-y-8 md:space-y-12"
+              >
+                <div className="flex items-center gap-4 md:gap-6">
+                  <div className="w-8 md:w-12 h-px bg-electric-sapphire"></div>
+                  <h2 className="text-xl sm:text-2xl md:text-4xl font-black text-deep-navy uppercase tracking-tight">{section.title}</h2>
+                </div>
+                
+                <div className="space-y-10">
+                  {section.content && (
+                    <div className="text-deep-navy/80 text-lg leading-relaxed font-light">
+                      {Array.isArray(section.content) ? (
+                        section.content.map((p, i) => <p key={i} className="mb-6">{p}</p>)
+                      ) : (
+                        <p>{section.content}</p>
+                      )}
+                    </div>
+                  )}
+                  
+                  {section.list && (
+                    <div className="grid md:grid-cols-2 gap-6">
+                      {section.list.map((item, i) => {
+                         const isString = typeof item === 'string';
+                         const name = isString ? item : item.name;
+                         const logo = isString ? null : item.logo;
+                         
+                         return (
+                          <div key={i} className="bg-deep-navy/5 p-4 md:p-6 rounded-[2rem] md:rounded-3xl flex items-center gap-4 md:gap-6 hover:bg-white/10 transition-all border border-deep-navy/10 hover:border-electric-sapphire/30 group">
+                            {logo ? (
+                              <div className="w-16 h-12 md:w-20 md:h-16 relative shrink-0 transition-all">
+                                <Image src={logo} alt={name} fill className="object-contain object-left" unoptimized />
+                              </div>
+                            ) : (
+                              <div className="w-6 h-6 bg-electric-sapphire/10 rounded-full flex items-center justify-center shrink-0 group-hover:bg-electric-sapphire transition-colors">
+                                <CheckCircle2 className="text-electric-sapphire group-hover:text-black w-4 h-4 transition-colors" />
+                              </div>
+                            )}
+                            <span className={`text-deep-navy font-bold text-sm md:text-base leading-relaxed`}>{name}</span>
+                          </div>
+                         );
+                      })}
+                    </div>
+                  )}
+
+                  {section.footer && (
+                    <p className="text-deep-navy/80 text-lg leading-relaxed font-light">{section.footer}</p>
+                  )}
+                </div>
+              </motion.section>
+  );
+
   return (
     <div className="bg-white text-deep-navy min-h-screen pb-32 pt-20">
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-electric-sapphire/5 blur-[150px] rounded-full pointer-events-none"></div>
@@ -119,61 +181,12 @@ const ServicePage = ({
               <DecisionTable {...decisionTable} />
             )}
 
+            {sectionsAfterTable && sectionsAfterTable.map(renderSection)}
+
             {stepByStep && (
               <StepByStep {...stepByStep} />
             )}
-            {sections && sections.map((section, idx) => (
-              <motion.section 
-                key={idx} 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="space-y-8 md:space-y-12"
-              >
-                <div className="flex items-center gap-4 md:gap-6">
-                  <div className="w-8 md:w-12 h-px bg-electric-sapphire"></div>
-                  <h2 className="text-xl sm:text-2xl md:text-4xl font-black text-deep-navy uppercase tracking-tight">{section.title}</h2>
-                </div>
-                
-                <div className="space-y-10">
-                  {section.content && (
-                    <div className="text-deep-navy/80 text-lg leading-relaxed font-light">
-                      {Array.isArray(section.content) ? (
-                        section.content.map((p, i) => <p key={i} className="mb-6">{p}</p>)
-                      ) : (
-                        <p>{section.content}</p>
-                      )}
-                    </div>
-                  )}
-                  
-                  {section.list && (
-                    <div className="grid md:grid-cols-2 gap-6">
-                      {section.list.map((item, i) => {
-                         const isString = typeof item === 'string';
-                         const name = isString ? item : item.name;
-                         const logo = isString ? null : item.logo;
-                         
-                         return (
-                          <div key={i} className="bg-deep-navy/5 p-4 md:p-6 rounded-[2rem] md:rounded-3xl flex items-center gap-4 md:gap-6 hover:bg-white/10 transition-all border border-deep-navy/10 hover:border-electric-sapphire/30 group">
-                            {logo ? (
-                              <div className="w-16 h-12 md:w-20 md:h-16 relative shrink-0 transition-all">
-                                <Image src={logo} alt={name} fill className="object-contain object-left" unoptimized />
-                              </div>
-                            ) : (
-                              <div className="w-6 h-6 bg-electric-sapphire/10 rounded-full flex items-center justify-center shrink-0 group-hover:bg-electric-sapphire transition-colors">
-                                <CheckCircle2 className="text-electric-sapphire group-hover:text-black w-4 h-4 transition-colors" />
-                              </div>
-                            )}
-                            <span className={`text-deep-navy font-bold text-sm md:text-base leading-relaxed`}>{name}</span>
-                          </div>
-                         );
-                      })}
-                    </div>
-                  )}
-                </div>
-              </motion.section>
-            ))}
+            {sections && sections.map(renderSection)}
 
             {/* Standard Service Highlights - Universal Content Expansion */}
             <section className="space-y-8 md:space-y-12 pt-8 md:pt-12 border-t border-deep-navy/10">

@@ -1,4 +1,13 @@
 import ServicePage from '@/components/ServicePage';
+import type { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = constructMetadata({
+  title: "JAFZA Company Formation in Dubai",
+  description:
+    "Form your company in Jebel Ali Free Zone (JAFZA) for trading, logistics and industry. Juno BizHub handles licensing, facilities, visas and bank support.",
+  canonicalUrl: '/jafza-company-formation',
+});
 
 export default function JAFZASetup() {
   return (

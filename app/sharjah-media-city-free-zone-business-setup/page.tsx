@@ -1,4 +1,13 @@
 import ServicePage from '@/components/ServicePage';
+import type { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = constructMetadata({
+  title: "Sharjah Media City (Shams) Business Setup",
+  description:
+    "Start a media, creative or freelance business in Sharjah Media City (Shams). Juno BizHub handles licensing, documentation, visas and bank account support.",
+  canonicalUrl: '/sharjah-media-city-free-zone-business-setup',
+});
 
 export default function ShamsSetup() {
   return (
@@ -13,7 +22,7 @@ export default function ShamsSetup() {
       ]}
       advantages={[
         "100% Foreign Ownership and full management control of your entity",
-        "0% Corporate and Personal Income Tax environment (subject to UAE laws)",
+        "Possible 0% Corporate Tax on Qualifying Income, subject to conditions; no personal income tax",
         "Diverse range of media and creative activities allowed on a single license",
         "No mandatory requirement for physical office space (Shared Desk/Flexi Desk options)",
         "Up to 6 residence visas allowed on a shared desk facility",

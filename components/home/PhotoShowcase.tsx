@@ -11,7 +11,7 @@ const shots = [
     src: '/images/mainland_new.jpg',
     alt: 'Dubai mainland business district',
     label: 'Mainland',
-    caption: 'Trade anywhere in the UAE from a DED licence.',
+    caption: 'Trade anywhere in the UAE from a DET licence.',
     href: '/mainland-company-formation-in-dubai',
     strength: 70,
   },

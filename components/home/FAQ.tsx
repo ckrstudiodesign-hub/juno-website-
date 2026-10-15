@@ -24,7 +24,7 @@ const faqs = [
   {
     question: 'Do you support post-incorporation services like accounting, tax, visas, and regulatory compliance?',
     answer:
-      'Yes. Juno BizHub provides complete corporate lifecycle support across the UAE. Beyond business setup, we manage accounting and bookkeeping, VAT and Corporate Tax filings, AML/goAML compliance, visa and PRO processing, and ongoing regulatory approvals to keep your company fully compliant.',
+      'Yes. Juno BizHub provides complete corporate lifecycle support across the UAE. Beyond business setup, we manage accounting and bookkeeping, VAT and Corporate Tax filings, AML/goAML compliance, visa and PRO processing, and ongoing regulatory approvals to help keep your company compliant.',
   },
   {
     question: 'How do I contact Juno BizHub for a consultation?',

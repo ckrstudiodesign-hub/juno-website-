@@ -56,7 +56,7 @@ const CoreServices = () => {
       title: "Corporate Compliance & Ongoing Support",
       desc: "Juno BizHub supports businesses beyond incorporation by helping coordinate ongoing corporate administration, renewals, regulatory requirements and compliance processes throughout the business lifecycle.",
       img: "/images/core_compliance.jpg",
-      link: "/services",
+      link: "/corporate-compliance-and-ongoing-support",
       icon: <Shield className="text-electric-sapphire mb-4" />
     },
     {

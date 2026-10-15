@@ -1,4 +1,13 @@
 import ServicePage from '@/components/ServicePage';
+import type { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = constructMetadata({
+  title: "Fujairah Free Zone Company Formation in the UAE",
+  description:
+    "Set up a cost-effective company in Fujairah Free Zone with Juno BizHub. We handle activity selection, licensing, visas and corporate bank account support.",
+  canonicalUrl: '/fujairah-free-zone-company-formation',
+});
 
 export default function FujairahSetup() {
   return (
@@ -13,7 +22,7 @@ export default function FujairahSetup() {
       ]}
       advantages={[
         "100% foreign ownership and full capital/profit repatriation",
-        "0% Corporate and Personal Income tax environment",
+        "Possible 0% Corporate Tax on Qualifying Income, subject to conditions; no personal income tax",
         "Unique strategic location on the UAE's East Coast with Indian Ocean access",
         "Multimodal connectivity via Fujairah Port and Fujairah International Airport",
         "Highly competitive and cost-efficient business setup packages",

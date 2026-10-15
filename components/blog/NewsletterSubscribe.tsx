@@ -57,18 +57,8 @@ export default function NewsletterSubscribe() {
               Stay Ahead with Our <span className="text-[#00B4D8]">Weekly Briefing</span>
             </h3>
             <p className="text-white/80 font-light text-sm md:text-base leading-relaxed max-w-lg mx-auto lg:mx-0">
-              Subscribe to our exclusive newsletter to receive premium weekly insights directly to your inbox. We cover actionable strategies across Corporate Tax, Mainland & Free Zone structuring, UAE Visas, and advanced optimization tactics including SEO, AEO, GEO, LLM, and RAG intelligence.
+              Subscribe to our exclusive newsletter to receive premium weekly insights directly to your inbox. We cover actionable strategies across Corporate Tax, Mainland & Free Zone structuring, and UAE Visas.
             </p>
-            <div className="flex items-center justify-center lg:justify-start gap-4">
-              <div className="flex -space-x-3">
-                {[1, 2, 3].map((i) => (
-                  <div key={i} className="w-8 h-8 rounded-full bg-gray-800 border-2 border-[#111111] flex items-center justify-center">
-                    <UserIcon />
-                  </div>
-                ))}
-              </div>
-              <p className="text-xs font-bold text-white/70 tracking-widest uppercase">Join 5,000+ Executives</p>
-            </div>
           </div>
 
           <div className="bg-white p-6 md:p-8 rounded-[32px] border border-black/10 backdrop-blur-md">

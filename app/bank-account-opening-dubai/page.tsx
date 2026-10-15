@@ -1,11 +1,20 @@
 import ServicePage from '@/components/ServicePage';
+import type { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = constructMetadata({
+  title: "Corporate Banking Assistance in Dubai",
+  description:
+    "Get help opening a corporate bank account in Dubai. Juno BizHub guides bank selection, documents and follow-ups; approval is at the bank's discretion.",
+  canonicalUrl: '/bank-account-opening-dubai',
+});
 
 export default function BankAccountServices() {
   return (
     <ServicePage
       title="Corporate Banking Assistance"
       subtitle="Elite Corporate Banking Introductions"
-      heroImage="/images/mainland.png"
+      heroImage="/images/core_banking.jpg"
       description={[
         "In the UAE's complex regulatory landscape, opening a corporate bank account is often the most challenging step of business setup. Juno BizHub leverages two decades of leadership in the UAE banking sector to provide our clients with a significant advantage.",
         "We don't just provide a list of banks; we provide direct introductions to senior relationship managers and assist in structuring your corporate documents to meet the rigorous 'Know Your Customer' (KYC) and compliance standards of Tier-1 UAE banks.",

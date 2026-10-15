@@ -1,4 +1,13 @@
 import ServicePage from '@/components/ServicePage';
+import type { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = constructMetadata({
+  title: "Branch and Representative Office in Dubai",
+  description:
+    "Open a branch or representative office of your foreign or UAE company on the Dubai mainland. Juno BizHub handles approvals, licensing, visas and bank support.",
+  canonicalUrl: '/branch-representative-office-in-main-land',
+});
 
 export default function BranchOffice() {
   return (
@@ -27,7 +36,7 @@ export default function BranchOffice() {
             "Trade Name Reservation",
             "Initial Approval",
             "Ministry of Economy (MOE) Approval",
-            "DED License"
+            "DET License"
           ]
         },
         {

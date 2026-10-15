@@ -1,4 +1,13 @@
 import ServicePage from '@/components/ServicePage';
+import type { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = constructMetadata({
+  title: "Offshore Company Formation in Dubai",
+  description:
+    "Register a UAE offshore company with RAK ICC, JAFZA or Ajman for holding and international activities, with Corporate Tax registration handled for you.",
+  canonicalUrl: '/offshore-company-formation-in-dubai',
+});
 
 export default function OffshoreOverview() {
   return (
@@ -7,28 +16,27 @@ export default function OffshoreOverview() {
       subtitle="Overview of Offshore Company Setup"
       heroImage="/images/offshore.png"
       description={[
-        "Setting up an Offshore Company in Dubai entitles you to tax incentives, confidentiality, and minimal bureaucracy. Offshore companies often play the role of holding companies and enjoy zero or low-tax regimes.",
-        "The UAE is ranked among the top 10 countries with the highest offshore wealth. This setup maximizes earnings with tax minimization and provides better access to global funding and expansion into international markets.",
+        "An offshore company in the UAE is a company registered with RAK ICC, JAFZA Offshore or Ajman Offshore. It is typically used to hold shares, intellectual property, investments or approved real estate, and to run international business that does not trade inside the UAE.",
+        "Offshore companies are recognised as juridical persons under UAE Corporate Tax law. They must register with the Federal Tax Authority and meet ongoing filing obligations. Juno BizHub helps you choose the right registry, set up the company, and stay compliant from day one.",
         "UAE has three major offshore jurisdictions: RAK (RAKICC), JAFZA, and Ajman."
       ]}
       advantages={[
-        "Quick and simple setup",
-        "Asset protection across the globe",
-        "100% foreign ownership and shares",
-        "Favorable corporate tax environment",
-        "Asset protection structures",
-        "100% repatriation of profits",
-        "Multi-currency bank account eligibility",
-        "High level of confidentiality for corporate structuring",
-        "No requirement for a physical office"
+        "Quick, document-light setup",
+        "100% foreign ownership",
+        "Suited to holding shares, IP and international investments",
+        "No physical office required",
+        "Shareholder details kept off public registers",
+        "Repatriation of capital and profits",
+        "Bank account support (subject to bank approval)",
+        "Corporate Tax registration handled for you"
       ]}
       executiveSummary={{
-        summary: "An Offshore Company in the UAE is a legal entity designed to operate outside its registered jurisdiction. It serves primarily as a holding company or a vehicle for international trading, offering maximum asset protection and privacy.",
+        summary: "A UAE offshore company is a legal entity registered with an offshore registry (RAK ICC, JAFZA or Ajman). It cannot trade within the UAE, cannot sponsor residence visas, and is mainly used for holding and international activities. It must register for UAE Corporate Tax.",
         keyFacts: [
-          "100% Foreign Ownership",
-          "0% Corporate Tax",
-          "High confidentiality for shareholders and directors",
-          "Cannot trade locally in the UAE"
+          "100% foreign ownership",
+          "Must register for UAE Corporate Tax with the FTA",
+          "Shareholder details held by the registry and the UBO register, not publicly listed",
+          "Cannot trade within the UAE or sponsor residence visas"
         ]
       }}
       decisionTable={{
@@ -39,7 +47,7 @@ export default function OffshoreOverview() {
           { name: "Residency Visas", option1: "Not Eligible", option2: "Eligible" },
           { name: "Physical Office", option1: "Not Allowed (Registered Address only)", option2: "Allowed & Required for Visas" },
           { name: "Local Trading", option1: "Strictly Prohibited", option2: "Prohibited without distributor" },
-          { name: "Primary Purpose", option1: "Asset Holding / Wealth Management", option2: "Active Business Operations" }
+          { name: "Primary Purpose", option1: "Holding and international activities", option2: "Active Business Operations" }
         ]
       }}
       stepByStep={{
@@ -48,13 +56,17 @@ export default function OffshoreOverview() {
           { title: "Select Jurisdiction", description: "Choose between JAFZA, RAKICC, or Ajman Offshore based on your needs (e.g., JAFZA is required to own Dubai property)." },
           { title: "Document Collation", description: "Gather passport copies, utility bills, CVs, and a bank reference letter for the shareholders." },
           { title: "Application & Due Diligence", description: "Submit the application through Juno BizHub as your registered agent." },
-          { title: "Incorporation", description: "Receive your Certificate of Incorporation and open your multi-currency bank account." }
+          { title: "Incorporation", description: "Receive your Certificate of Incorporation, register for Corporate Tax, and apply for a bank account with our support (approval is at the bank's discretion)." }
         ]
       }}
       faqs={[
         {
           question: "Can an offshore company buy property in Dubai?",
-          answer: "Yes, but it must be a JAFZA (Jebel Ali Free Zone Authority) offshore company, as this is the only offshore jurisdiction approved by the Dubai Land Department to hold freehold real estate in Dubai."
+          answer: "Offshore companies from approved registries can hold freehold property in designated areas, subject to Dubai Land Department rules. JAFZA Offshore is commonly used for Dubai property. Confirm eligibility with us before purchase, as rules can change."
+        },
+        {
+          question: "Does an offshore company pay Corporate Tax?",
+          answer: "It must register for Corporate Tax with the FTA. How much tax applies depends on its income, where it is managed and controlled, and its activities. We assess this before setup."
         },
         {
           question: "Can I get a UAE residence visa with an offshore company?",

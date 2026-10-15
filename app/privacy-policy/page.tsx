@@ -1,14 +1,15 @@
 import React from 'react';
 import type { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo';
 import Link from 'next/link';
 import { MapPin, Mail, Phone } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Privacy Policy — Juno BizHub Corporate Services Providers',
+export const metadata: Metadata = constructMetadata({
+  title: 'Privacy Policy',
   description:
-    'Privacy Policy for Juno BizHub Corporate Services Providers LLC. How we collect, use, store and protect personal data when you use junobizhub.com.',
-  alternates: { canonical: '/privacy-policy' },
-};
+    'Privacy Policy for Juno BizHub Corporate Services Providers LLC. How we collect, use, store and protect personal data when you use junobizhub.com or contact us.',
+  canonicalUrl: '/privacy-policy',
+});
 
 const LAST_UPDATED = 'May 7, 2026';
 
@@ -68,8 +69,7 @@ export default function PrivacyPolicyPage() {
                 <h3>2. Who We Are</h3>
                 <p>
                   <strong>Company name:</strong> Juno BizHub Corporate Services Providers LLC<br />
-                  <strong>Office address:</strong> Office 24, Floor 26, Aspin Commercial Tower, Sheikh Zayed Road, Near Financial Centre Metro Station, Dubai, UAE,
-                  Business Bay Metro Station, Dubai, United Arab Emirates<br />
+                  <strong>Office address:</strong> Office 24, Floor 26, Aspin Commercial Tower, Sheikh Zayed Road, Near Financial Centre Metro Station, Dubai, UAE<br />
                   <strong>Website:</strong> <a href="https://junobizhub.com" className="text-electric-sapphire">https://junobizhub.com</a><br />
                   <strong>Contact email:</strong> <a href="mailto:info@junobizhub.ae" className="text-electric-sapphire">info@junobizhub.ae</a><br />
                   <strong>Contact number:</strong> <a href="tel:+971 54 129 0038" className="text-electric-sapphire">+971 54 129 0038</a>
@@ -201,7 +201,7 @@ export default function PrivacyPolicyPage() {
                 <ul className="list-disc pl-6">
                   <li>Enable core site functionality</li>
                   <li>Understand how visitors use our website and improve performance</li>
-                  <li>Support marketing and remarketing activities (for example, Google Analytics, Meta Pixel), if implemented</li>
+                  <li>Support marketing and remarketing activities. We use the Meta Pixel on this website; it loads only after you accept cookies in our cookie banner.</li>
                 </ul>
                 <p>You can manage cookies through your browser settings. Please note that disabling certain cookies may affect the functionality or performance of our website.</p>
                 <p>We may provide more detailed information about specific cookies in a separate cookie notice or within this section as our implementation evolves.</p>

@@ -343,7 +343,7 @@ const ServicesOrbit = () => {
                       >
                         <Orbit className="w-5 h-5 md:w-6 md:h-6 text-[#0077B6] md:mb-2 animate-slow-spin" />
                         <h3 className="hidden md:block text-[13px] lg:text-[15px] font-black uppercase tracking-tight text-gray-900 leading-tight">
-                          Five core pillars
+                          Our core services
                         </h3>
                         <p className="hidden lg:block text-gray-500 text-[11px] font-medium leading-snug mt-2">
                           One partner for the full lifecycle of your UAE company.

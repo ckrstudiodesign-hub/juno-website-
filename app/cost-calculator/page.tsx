@@ -458,9 +458,9 @@ const CostCalculatorPage = () => {
           {/* Value Props Info */}
           <div className="grid md:grid-cols-3 gap-8 mt-20">
              {[
-               { t: "Expert Analysis", d: "Results based on current 2024 DED & Free Zone regulations.", icon: <ShieldCheck className="text-electric-sapphire" /> },
+               { t: "Expert Analysis", d: "Estimates based on current DET and free zone fee schedules. Final costs are confirmed in your quotation.", icon: <ShieldCheck className="text-electric-sapphire" /> },
                { t: "Banking Ready", d: "Every estimate includes essential corporate banking support.", icon: <Landmark className="text-electric-sapphire" /> },
-               { t: "Confidential", d: "Your data is encrypted and handled by senior consultants.", icon: <ShieldCheck className="text-electric-sapphire" /> }
+               { t: "Confidential", d: "Your details are handled in line with our Privacy Policy.", icon: <ShieldCheck className="text-electric-sapphire" /> }
              ].map((p, idx) => (
                 <div key={idx} className="flex gap-4 items-start">
                    <div className="mt-1">{p.icon}</div>
@@ -491,7 +491,7 @@ const CostCalculatorPage = () => {
               </thead>
               <tbody className="text-sm font-medium text-deep-navy/80">
                 {[
-                  { cat: "1. Consultancies & Tech", diff: "Instant / No NOC", prem: "Virtual / Flexi-Desk", cost: "$" },
+                  { cat: "1. Consultancies & Tech", diff: "Usually no external approval", prem: "Virtual / Flexi-Desk", cost: "$" },
                   { cat: "2. Commercial Trading", diff: "Low / Customs Only", prem: "Office or Warehouse", cost: "$$" },
                   { cat: "3. Food & Beverage (F&B)", diff: "High (Municipality)", prem: "Retail / Commercial Kitchen", cost: "$$$" },
                   { cat: "4. Healthcare & Beauty", diff: "High (DHA / Health Dept)", prem: "Specialized Clinical/Salon", cost: "$$$" },
@@ -530,7 +530,7 @@ const CostCalculatorPage = () => {
               {
                 title: "2. Commercial Trading, E-Commerce & Retail",
                 activities: "General Trading, Goods-Specific Trading (Garments, Electronics, Auto Parts), E-Commerce, Import/Export, Wholesale.",
-                costDrivers: ["Customs Code registration (~AED 1,000–1,500).", "Foreign Trade Name fee (~AED 2,000 for non-Arabic names).", "Warehouse or retail shop Ejari depending on inventory size."],
+                costDrivers: ["Customs Code registration (approximate; confirm with us).", "Foreign Trade Name fee for non-Arabic names (approximate; confirm with us).", "Warehouse or retail shop Ejari depending on inventory size."],
                 approvals: "Dubai Customs (post-issuance).",
                 budget: "Moderate"
               },

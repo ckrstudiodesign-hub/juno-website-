@@ -1,4 +1,13 @@
 import ServicePage from '@/components/ServicePage';
+import type { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = constructMetadata({
+  title: "Dubai Media City Business Setup in Dubai",
+  description:
+    "Start a media, marketing or creative business in Dubai Media City. Juno BizHub supports licensing, office options, visas and corporate bank account setup.",
+  canonicalUrl: '/dubai-media-city-business-set-up',
+});
 
 export default function DubaiMediaCity() {
   return (
@@ -13,7 +22,7 @@ export default function DubaiMediaCity() {
       ]}
       advantages={[
         "100% foreign ownership and full capital repatriation",
-        "0% Corporate and Personal Income tax",
+        "Possible 0% Corporate Tax on Qualifying Income, subject to conditions; no personal income tax",
         "No local sponsorship or local partner required",
         "Host to a community of 25,000+ media professionals",
         "Specialized infrastructure for broadcasting and digital production",

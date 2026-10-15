@@ -2,11 +2,24 @@ import React from 'react';
 import { teamMembers } from '@/lib/team-data';
 import TeamMemberClient from '@/components/about/TeamMemberClient';
 import Link from 'next/link';
+import type { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo';
 
 export async function generateStaticParams() {
   return teamMembers.map((member) => ({
     slug: member.slug,
   }));
+}
+
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const member = teamMembers.find((m) => m.slug === params.slug);
+  if (!member) return {};
+  return constructMetadata({
+    title: `${member.name}, ${member.role}`,
+    description: `${member.name} is ${member.role} at Juno BizHub, a Dubai corporate services provider for business setup, banking, visas, tax and compliance.`,
+    canonicalUrl: `/team/${member.slug}`,
+    type: 'profile',
+  });
 }
 
 export default function Page({ params }: { params: { slug: string } }) {

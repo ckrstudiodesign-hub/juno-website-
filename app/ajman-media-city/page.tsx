@@ -1,4 +1,13 @@
 import ServicePage from '@/components/ServicePage';
+import type { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = constructMetadata({
+  title: "Ajman Media City Free Zone Setup in the UAE",
+  description:
+    "Launch a media, creative or consultancy business in Ajman Media City Free Zone. Juno BizHub handles licensing, documentation, visas and bank account support.",
+  canonicalUrl: '/ajman-media-city',
+});
 
 export default function AjmanMediaCity() {
   return (
@@ -13,7 +22,7 @@ export default function AjmanMediaCity() {
       ]}
       advantages={[
         "100% Foreign Ownership and complete capital/profit repatriation",
-        "0% Corporate and Personal Income Tax environment",
+        "Possible 0% Corporate Tax on Qualifying Income, subject to conditions; no personal income tax",
         "Most competitive and flexible media license packages in the UAE",
         "Fast-track company formation: Licenses often issued within 24 hours",
         "Combine multiple media and creative activities on a single trade license",

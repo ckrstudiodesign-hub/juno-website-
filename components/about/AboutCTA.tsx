@@ -12,7 +12,7 @@ const AboutCTA = () => {
            Experience the <br className="hidden sm:block" /><span className="text-[#0077B6]">Juno BizHub</span> Journey
          </h2>
          <p className="text-lg md:text-xl text-gray-600 font-light leading-relaxed max-w-2xl mx-auto">
-           Join the ranks of successful international businesses that started their UAE journey with us.
+           Start your UAE journey with us.
          </p>
          <div className="flex justify-center pt-4">
             <Link href="/contact" className="inline-flex items-center justify-center bg-[#0077B6] hover:bg-[#03045E] text-white px-8 py-4 rounded-xl font-bold uppercase tracking-widest text-sm transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 gap-4">

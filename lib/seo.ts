@@ -8,9 +8,13 @@ interface ConstructMetadataProps {
   description?: string;
   image?: string;
   noIndex?: boolean;
-  canonicalUrl?: string;
+  /** Page path, e.g. '/corporate-tax-uae'. Pass null to omit canonical and og:url (root layout default). */
+  canonicalUrl?: string | null;
   type?: 'website' | 'article' | 'book' | 'profile';
+  /** Accepted for backwards compatibility; the meta keywords tag is no longer output. */
   keywords?: string[];
+  /** Use the title exactly as given, without the ' | Juno BizHub' template. */
+  absoluteTitle?: boolean;
 }
 
 /**
@@ -24,35 +28,23 @@ export function constructMetadata({
   noIndex = false,
   canonicalUrl = '/',
   type = 'website',
-  keywords = [
-    'Business Setup Consultant in Dubai',
-    'Business Setup Company Dubai',
-    'Company Formation Dubai',
-    'Business Setup UAE',
-    'Company Registration Dubai',
-    'Trade License Dubai',
-    'Golden Visa Dubai',
-    'Corporate Services Dubai',
-    'Free Zone Company Setup',
-    'Mainland Company Formation'
-  ],
+  absoluteTitle = false,
 }: ConstructMetadataProps = {}): Metadata {
-  const fullUrl = `${SITE_URL}${canonicalUrl}`;
+  const fullUrl = canonicalUrl === null ? undefined : `${SITE_URL}${canonicalUrl}`;
   const fullImage = image.startsWith('http') ? image : `${SITE_URL}${image}`;
 
   return {
-    title: {
-      default: title,
-      template: '%s | Juno BizHub',
-    },
+    title: absoluteTitle
+      ? { absolute: title, template: '%s | Juno BizHub' }
+      : {
+          default: title,
+          template: '%s | Juno BizHub',
+        },
     description,
-    keywords,
     authors: [{ name: 'Juno BizHub' }],
     creator: 'Juno BizHub',
     publisher: 'Juno BizHub',
-    alternates: {
-      canonical: fullUrl,
-    },
+    ...(fullUrl ? { alternates: { canonical: fullUrl } } : {}),
     robots: {
       index: !noIndex,
       follow: !noIndex,
@@ -67,7 +59,7 @@ export function constructMetadata({
     openGraph: {
       type: type as any,
       locale: 'en_AE',
-      url: fullUrl,
+      ...(fullUrl ? { url: fullUrl } : {}),
       siteName: 'Juno BizHub',
       title,
       description,

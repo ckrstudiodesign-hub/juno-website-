@@ -1,4 +1,13 @@
 import ServicePage from '@/components/ServicePage';
+import type { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = constructMetadata({
+  title: "DIFC Company Setup in Dubai",
+  description:
+    "Set up a non-financial, holding or family company in Dubai International Financial Centre (DIFC). Regulated activities are handled with licensed partners.",
+  canonicalUrl: '/difc-company-setup',
+});
 
 export default function DIFCSetup() {
   return (
@@ -9,11 +18,12 @@ export default function DIFCSetup() {
       description={[
         "The Dubai International Financial Centre (DIFC) is the leading global financial hub in the Middle East, Africa, and South Asia (MEASA) region. It is a world-class financial ecosystem that operates under an independent, internationally recognized regulatory and legal framework based on English Common Law. This unique jurisdiction provides a stable and secure platform for the world's most prestigious financial institutions and global corporations.",
         "DIFC is home to a massive range of businesses, from global Tier-1 banks and asset management firms to innovative FinTech startups and legal consultancies. It serves as a bridge between the economies of the East and the West, providing companies with direct access to the region's vast wealth and capital markets.",
-        "Juno BizHub offers elite advisory services for DIFC establishment, ensuring your business structure complies with the high standards of the Dubai Financial Services Authority (DFSA). We guide you through the complexities of 'Common Law' entity formation, helping you secure a foothold in one of the world's most influential financial districts."
+        "Juno BizHub supports DIFC company formation for non-financial businesses, holding companies and family structures, and coordinates with licensed advisers where your activity is regulated by the Dubai Financial Services Authority (DFSA).",
+        "Regulated financial services licences are handled with our licensed partners."
       ]}
       advantages={[
         "100% Foreign Ownership and complete capital/profit repatriation",
-        "0% Tax on corporate income and profits for a guaranteed 50 years",
+        "Free zone Corporate Tax treatment: DIFC entities register for Corporate Tax and may pay 0% on Qualifying Income if they meet the Qualifying Free Zone Person conditions",
         "Operates under English Common Law jurisdiction with its own DIFC Courts",
         "Independent and internationally respected regulator (Dubai Financial Services Authority - DFSA)",
         "Direct access to the region's largest concentration of Tier-1 financial institutions",
@@ -43,7 +53,7 @@ export default function DIFCSetup() {
         },
         {
           title: "Regulatory Categories",
-          content: "Entities in DIFC are generally categorized based on their primary activity, each overseen by specific DFSA regulations:",
+          content: "Entities in DIFC are generally categorized based on their primary activity, with financial services regulated by the DFSA and other activities registered with the DIFC Registrar of Companies:",
           list: [
             "Financial Services: Banking, Asset Management, Insurance, and Brokerage.",
             "Non-Financial Services: Legal, Engineering, Accounting, and Business Consultancy.",
@@ -57,7 +67,7 @@ export default function DIFCSetup() {
         },
         {
           title: "Strategic Advisory",
-          content: "Navigating DIFC requires a deep understanding of its rigorous compliance and reporting requirements. Our team manages the entire application process—from the initial 'Letter of Intent' to final licensing—ensuring your entity is positioned as a prestigious member of the Dubai financial community."
+          content: "Navigating DIFC requires a deep understanding of its rigorous compliance and reporting requirements. Our team manages the entire application process—from the initial 'Letter of Intent' to final licensing."
         }
       ]}
     />

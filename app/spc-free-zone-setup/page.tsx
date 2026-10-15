@@ -1,4 +1,13 @@
 import ServicePage from '@/components/ServicePage';
+import type { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = constructMetadata({
+  title: "SPC Free Zone Business Setup in Sharjah",
+  description:
+    "Set up your company in Sharjah Publishing City (SPC) Free Zone. Juno BizHub handles activity selection, licensing, visas and corporate bank account support.",
+  canonicalUrl: '/spc-free-zone-setup',
+});
 
 export default function SPCSetup() {
   return (
@@ -13,14 +22,14 @@ export default function SPCSetup() {
       ]}
       advantages={[
         "100% Foreign Ownership and full profit repatriation",
-        "0% Corporate and Personal Income Tax environment",
+        "Possible 0% Corporate Tax on Qualifying Income, subject to conditions; no personal income tax",
         "Dual-licensing options: Operate in both Free Zone and UAE Mainland",
         "Fastest company formation in the UAE (licenses issued in under 2 hours)",
         "Over 1,500 diverse business activities: Trading, Service, E-commerce, and more",
         "Up to 20 residence visas allowed on a single trade license",
         "No mandatory requirement for physical office space (Virtual/Coworking options)",
         "Strategically located just 15 minutes from Dubai International Airport",
-        "No requirement for paid-up share capital or annual audit filing",
+        "Capital and audit requirements depend on the activity, authority rules and applicable UAE requirements",
         "Simplified corporate bank account assistance through partner financial institutions"
       ]}
       sections={[

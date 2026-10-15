@@ -1,4 +1,13 @@
 import ServicePage from '@/components/ServicePage';
+import type { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = constructMetadata({
+  title: "JAFZA Offshore Company Setup in Dubai",
+  description:
+    "Register a JAFZA offshore company to hold shares and approved Dubai property. Juno BizHub manages incorporation, Corporate Tax registration and bank support.",
+  canonicalUrl: '/jafza-offshore-company-setup',
+});
 
 export default function JAFZAOffshore() {
   return (
@@ -18,7 +27,7 @@ export default function JAFZAOffshore() {
         "No requirement for filing Annual Audit Reports",
         "Can open Corporate Bank accounts in multi-currencies",
         "Does not fall within the ambit of VAT",
-        "Profit maximization through tax minimization"
+        "Support for compliant international structuring and Corporate Tax registration"
       ]}
       sections={[
         {

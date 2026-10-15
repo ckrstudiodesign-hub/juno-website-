@@ -1,4 +1,13 @@
 import ServicePage from '@/components/ServicePage';
+import type { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = constructMetadata({
+  title: "IFZA Business Setup in Dubai",
+  description:
+    "Set up your company in IFZA (International Free Zone Authority) Dubai. Juno BizHub handles activity selection, licensing, visas and bank account support.",
+  canonicalUrl: '/ifza-dubai-business-set-up',
+});
 
 export default function IFZASetup() {
   return (
@@ -13,14 +22,14 @@ export default function IFZASetup() {
       ]}
       advantages={[
         "100% Foreign Ownership and full management control",
-        "0% Corporate and Personal Income Tax (subject to UAE laws)",
+        "Possible 0% Corporate Tax on Qualifying Income, subject to conditions; no personal income tax",
         "Most cost-effective and efficient company incorporation in Dubai",
         "No requirement for physical presence during the setup process",
         "Wide range of office solutions: from Flexi-desks to private executive offices",
         "No requirement for paid-up share capital guarantee",
         "Ability to combine Professional, Commercial, and Industrial activities on one license",
         "Seamless residency visa processing for shareholders and employees",
-        "No mandatory annual audit filing for small and medium enterprises",
+        "Audit requirements depend on the activity, authority rules and applicable UAE requirements",
         "Access to a global network of partners and business support services"
       ]}
       sections={[

@@ -1,4 +1,13 @@
 import ServicePage from '@/components/ServicePage';
+import type { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = constructMetadata({
+  title: "PRO Services in Dubai",
+  description:
+    "PRO services across the UAE: visas, Emirates ID, labour and immigration paperwork, licence renewals and government approvals, all handled by Juno BizHub.",
+  canonicalUrl: '/pro-services-dubai',
+});
 
 export default function PROServices() {
   return (

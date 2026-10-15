@@ -1,4 +1,13 @@
 import ServicePage from '@/components/ServicePage';
+import type { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = constructMetadata({
+  title: "Hamriyah Free Zone Company Setup in Sharjah",
+  description:
+    "Set up an industrial, trading or logistics company in Hamriyah Free Zone, Sharjah. Juno BizHub handles licensing, facilities, visas and bank account support.",
+  canonicalUrl: '/hamriyah-free-zone-company-setup',
+});
 
 export default function HamriyahSetup() {
   return (
@@ -13,7 +22,7 @@ export default function HamriyahSetup() {
       ]}
       advantages={[
         "100% Foreign Ownership and full capital/profit repatriation",
-        "0% Corporate and Personal Income Tax environment",
+        "Possible 0% Corporate Tax on Qualifying Income, subject to conditions; no personal income tax",
         "Direct access to a world-class 14-meter deep-water port",
         "Strategic location connecting the Arabian Gulf and the Indian Ocean markets",
         "Exemption from all import, export, and re-export duties",

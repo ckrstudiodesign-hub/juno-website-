@@ -1,4 +1,13 @@
 import ServicePage from '@/components/ServicePage';
+import type { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = constructMetadata({
+  title: "Offshore Banking Services in Dubai",
+  description:
+    "Support with opening bank accounts for UAE offshore companies. Juno BizHub prepares documents and liaises with banks; approval is at the bank's discretion.",
+  canonicalUrl: '/offshore-banking-services',
+});
 
 export default function OffshoreBankingServices() {
   return (
@@ -9,7 +18,7 @@ export default function OffshoreBankingServices() {
       description={[
         "Offshore banking in the UAE offers a strategic advantage for международный businesses and investors seeking asset protection, tax efficiency, and financial privacy. Juno BizHub specializes in navigating the specific requirements of offshore jurisdictions.",
         "We assist in setting up corporate bank accounts for offshore entities, providing a gateway to global markets while operating within a stable and regulated financial environment.",
-        "Our expertise ensures that your offshore structure is fully compliant with economic substance regulations, facilitating smoother banking relationships and reducing the risk of account closures."
+        "Our team helps align your offshore structure and banking documents with current UAE requirements, supporting smoother banking relationships and reducing avoidable delays."
       ]}
       advantages={[
         "High level of financial privacy and confidentiality",

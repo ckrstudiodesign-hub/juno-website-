@@ -1,4 +1,13 @@
 import ServicePage from '@/components/ServicePage';
+import type { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = constructMetadata({
+  title: "Document Attestation Services in Dubai",
+  description:
+    "Attestation of personal, educational and commercial documents for use in the UAE. Juno BizHub coordinates with the relevant authorities to save you time.",
+  canonicalUrl: '/document-attestation-services',
+});
 
 export default function DocumentAttestation() {
   return (

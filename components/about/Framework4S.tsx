@@ -10,7 +10,7 @@ const Framework4S = () => {
       title: "SIMPLIFIED",
       subtitle: "Establishment",
       icon: Rocket,
-      desc: "The UAE offers over 40 free zones alongside mainland jurisdictions, each with distinct legal structures, activity choices, and office requirements. Making the wrong choice early on leads to operational restrictions and costly restructuring later.\n\nWe strip away legal jargon and evaluate your commercial goals upfront. By aligning your business activity with the precise legal framework, jurisdiction, and banking requirements, we eliminate guesswork and set your entity up for long-term operational efficiency.",
+      desc: "The UAE offers many free zones alongside mainland jurisdictions, each with distinct legal structures, activity choices, and office requirements. Making the wrong choice early on leads to operational restrictions and costly restructuring later.\n\nWe strip away legal jargon and evaluate your commercial goals upfront. By aligning your business activity with the precise legal framework, jurisdiction, and banking requirements, we eliminate guesswork and set your entity up for long-term operational efficiency.",
     },
     {
       title: "SEAMLESS",
@@ -22,7 +22,7 @@ const Framework4S = () => {
       title: "SECURE",
       subtitle: "Compliance",
       icon: ShieldCheck,
-      desc: "Modern UAE business requires strict adherence to evolving legislation, including Economic Substance Regulations (ESR), Ultimate Beneficial Ownership (UBO), Anti-Money Laundering (AML/CFT) laws, VAT, and Corporate Tax.\n\nWe build compliance into your corporate DNA from day one. Through proactive record management, timely tax filings, AML compliance setups, and automated renewal tracking, we shield your enterprise from fines, portal freezes, and legal exposure.",
+      desc: "Modern UAE business must keep up with evolving rules on Ultimate Beneficial Ownership (UBO), anti-money laundering (AML/CFT), VAT, Corporate Tax and, from 2027, e-invoicing.\n\nWe build compliance into your corporate DNA from day one. Through proactive record management, timely tax filings, AML compliance setups, and automated renewal tracking, we help protect your business from fines, portal freezes, and legal exposure.",
     },
     {
       title: "SUSTAINED",

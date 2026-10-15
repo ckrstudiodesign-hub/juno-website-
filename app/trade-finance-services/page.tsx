@@ -1,4 +1,13 @@
 import ServicePage from '@/components/ServicePage';
+import type { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = constructMetadata({
+  title: "Trade Finance Services in Dubai",
+  description:
+    "Support with trade finance in Dubai, including letters of credit, guarantees and working capital, arranged with our banking partners and subject to approval.",
+  canonicalUrl: '/trade-finance-services',
+});
 
 export default function TradeFinanceServices() {
   return (

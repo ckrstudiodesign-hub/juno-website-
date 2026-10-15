@@ -15,16 +15,6 @@ const ServiceContactForm = ({
 }: ServiceContactFormProps) => {
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
   const [validationError, setValidationError] = useState<string>('');
-  const [service, setService] = useState(defaultService);
-  const nameRef = useRef<HTMLInputElement>(null);
-  const emailRef = useRef<HTMLInputElement>(null);
-  const phoneRef = useRef<HTMLInputElement>(null);
-  const messageRef = useRef<HTMLTextAreaElement>(null);
-
-  React.useEffect(() => {
-    setService(defaultService);
-  }, [defaultService]);
-
   const allServices = [
     "Mainland Company Formation in Dubai",
     "LLC Company Formation in Dubai",
@@ -38,6 +28,34 @@ const ServiceContactForm = ({
     "Offshore Company Formation in Dubai",
     "RAK Offshore Company Formation"
   ];
+
+  // Map the page's service title to the matching dropdown option so it is pre-selected
+  const resolveService = (pageService: string): string => {
+    const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9]/g, '');
+    const aliases: Record<string, string> = {
+      [norm("Sharjah Media City Free Zone Business Setup")]: "Sharjah Media City (Shams) Free Zone Business Setup",
+    };
+    const n = norm(pageService);
+    if (aliases[n]) return aliases[n];
+    const match = allServices.find((option) => {
+      const o = norm(option);
+      return o === n || n.startsWith(o) || o.startsWith(n);
+    });
+    return match ?? pageService;
+  };
+
+  const resolvedDefault = resolveService(defaultService);
+  const [service, setService] = useState(resolvedDefault);
+  const nameRef = useRef<HTMLInputElement>(null);
+  const emailRef = useRef<HTMLInputElement>(null);
+  const phoneRef = useRef<HTMLInputElement>(null);
+  const messageRef = useRef<HTMLTextAreaElement>(null);
+
+  React.useEffect(() => {
+    setService(resolveService(defaultService));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [defaultService]);
+
 
   // ✅ SECURITY: Basic client-side validation
   const validateForm = (): boolean => {
@@ -142,7 +160,7 @@ const ServiceContactForm = ({
       <div className="relative z-10 space-y-6">
         <div className="space-y-1">
           <h4 className="text-xl font-black text-black uppercase tracking-tighter">{title}</h4>
-          <p className="text-[10px] text-deep-navy/80 font-bold uppercase tracking-widest">Start your {defaultService.split(' ')[0]} setup</p>
+          <p className="text-[10px] text-deep-navy/80 font-bold uppercase tracking-widest">Request a consultation</p>
         </div>
 
         {/* ✅ SECURITY: Display validation errors */}
@@ -201,8 +219,8 @@ const ServiceContactForm = ({
                 onChange={(e) => setService(e.target.value)}
                 className="w-full bg-gray-50 border border-gray-100 rounded-xl py-3 pl-12 pr-4 text-sm text-black focus:bg-white focus:border-electric-sapphire/40 focus:ring-1 focus:ring-electric-sapphire/20 outline-none transition-all font-medium appearance-none cursor-pointer"
               >
-                {!allServices.includes(defaultService) && (
-                  <option value={defaultService}>{defaultService}</option>
+                {!allServices.includes(resolvedDefault) && (
+                  <option value={resolvedDefault}>{resolvedDefault}</option>
                 )}
                 <optgroup label="Mainland">
                   <option value="Mainland Company Formation in Dubai">Mainland Setup</option>
@@ -258,7 +276,7 @@ const ServiceContactForm = ({
         </form>
         
         <p className="text-[9px] text-deep-navy/80 text-center font-bold uppercase tracking-tighter">
-          Response within 2 business hours
+          We reply within one business day
         </p>
       </div>
     </div>

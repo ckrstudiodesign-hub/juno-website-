@@ -207,6 +207,10 @@ const ContactPage = () => {
                             <option>Free Zone Setup</option>
                             <option>Offshore Setup</option>
                             <option>Banking Assistance</option>
+                            <option>Tax &amp; Accounting</option>
+                            <option>Corporate Compliance</option>
+                            <option>PRO &amp; Visas</option>
+                            <option>Golden Visa</option>
                             <option>Other Consultations</option>
                           </select>
                           <ChevronDown className="absolute right-6 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" size={20} />

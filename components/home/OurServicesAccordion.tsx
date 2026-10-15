@@ -18,7 +18,7 @@ const services = [
     id: 'freezone',
     title: 'Free Zone Setup',
     icon: Globe2,
-    description: 'Benefit from tax exemptions and 100% foreign ownership in UAE\'s premier Free Zones.',
+    description: 'Explore UAE free zones with 100% foreign ownership and possible 0% Corporate Tax on Qualifying Income, subject to conditions.',
     links: ['SHAMS', 'RAKEZ', 'Fujairah FZ', 'Ajman FZ', 'ADGM — Abu Dhabi', 'Over 50 Other Free Zones'],
     href: '/services'
   },
@@ -28,7 +28,7 @@ const services = [
     icon: Briefcase,
     description: 'Licence renewals, document updates, shareholder changes, UBO coordination, and administrative assistance.',
     links: ['License Renewals', 'UBO Coordination', 'Shareholder Changes', 'Document Updates', 'Administrative Assistance', 'PRO Services', 'Legal Translation', 'AML Compliance', 'Business Advisory'],
-    href: '/services'
+    href: '/corporate-compliance-and-ongoing-support'
   },
   {
     id: 'residency',

@@ -1,4 +1,13 @@
 import ServicePage from '@/components/ServicePage';
+import type { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = constructMetadata({
+  title: "Ajman Offshore Company Setup in the UAE",
+  description:
+    "Register an Ajman offshore company for holding and international activities. Juno BizHub manages incorporation, Corporate Tax registration and bank support.",
+  canonicalUrl: '/ajman-offshore-company-setup',
+});
 
 export default function AjmanOffshore() {
   return (
@@ -14,7 +23,7 @@ export default function AjmanOffshore() {
         "100% Foreign Ownership",
         "No taxation Policy (Zero taxes)",
         "Robust and fast registration (2-3 working days)",
-        "Low barriers to entry (No auditing/bookkeeping requirement)",
+        "Streamlined setup, with accounting and audit requirements assessed for the company",
         "Multiple bank accounts in UAE or worldwide",
         "Shares in Local Companies (Freezone and LLCs)",
         "100% repatriation of profits",

@@ -1,4 +1,13 @@
 import ServicePage from '@/components/ServicePage';
+import type { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = constructMetadata({
+  title: "Personal Bank Account Services in Dubai",
+  description:
+    "Get help opening a personal bank account in Dubai. Juno BizHub guides bank selection, documents and all follow-ups; approval is at the bank's discretion.",
+  canonicalUrl: '/personal-bank-account-services',
+});
 
 export default function PersonalBankAccountServices() {
   return (

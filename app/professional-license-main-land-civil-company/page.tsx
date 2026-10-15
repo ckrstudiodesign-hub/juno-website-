@@ -1,4 +1,13 @@
 import ServicePage from '@/components/ServicePage';
+import type { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = constructMetadata({
+  title: "Professional License (Civil Company) in Dubai",
+  description:
+    "Get a Dubai mainland professional licence for a civil company or service business. Juno BizHub handles DET approvals, licensing, visas and bank support.",
+  canonicalUrl: '/professional-license-main-land-civil-company',
+});
 
 export default function ProfessionalLicense() {
   return (
@@ -17,7 +26,7 @@ export default function ProfessionalLicense() {
         "Exemption from Corporate or Income Taxes",
         "Diversity of business options",
         "Unlimited markets and clients",
-        "No restriction on business engagement with DED",
+        "No restriction on business engagement with the Department of Economy and Tourism (DET), subject to activity rules",
         "Freedom to apply for visas, labor quotas, etc."
       ]}
       sections={[
@@ -49,7 +58,7 @@ export default function ProfessionalLicense() {
             "UID Number/NOC of shareholder",
             "Ejari Registration / Rental Contract",
             "Name Reservation Certificate",
-            "Initial approval from authorities (DED, DM, RTA)",
+            "Initial approval from the relevant authorities (DET, DM, RTA)",
             "Visa Copy (visit, transit or tourist)"
           ]
         },

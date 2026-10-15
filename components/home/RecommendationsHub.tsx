@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FileText, Calculator, ShieldCheck, Download, FileBarChart, BookOpen, ArrowUpRight } from 'lucide-react';
+import { Calculator, ShieldCheck, Download, FileBarChart, BookOpen, ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
 
 export default function RecommendationsHub() {
@@ -71,7 +71,7 @@ export default function RecommendationsHub() {
                <FileBarChart className="w-10 h-10 mb-6 text-white/80" />
                <h3 className="text-xl font-black uppercase tracking-tight mb-3">E-Invoicing Readiness</h3>
                <p className="text-white/80 text-sm font-light leading-relaxed mb-6">
-                 Prepare for the 2026-2027 UAE e-invoicing mandates. Ensure your financial systems are fully compliant ahead of time.
+                 UAE e-invoicing starts on 1 January 2027 for businesses with revenue of AED 50 million or more, which must appoint an Accredited Service Provider by 30 October 2026. Other businesses follow from 1 July 2027. We help you get ready.
                </p>
              </div>
              <Link href="/bookkeeping-and-accounting-services" className="inline-flex items-center gap-2 font-bold uppercase tracking-widest text-xs border border-white/30 px-6 py-3 rounded-full hover:bg-white hover:text-electric-sapphire transition-colors w-fit">
@@ -92,12 +92,12 @@ export default function RecommendationsHub() {
              <p className="text-gray-500 text-sm font-light leading-relaxed mb-6">
                Demonstrate compliance maturity and build lasting trust with serious founders, international banks, and global clients.
              </p>
-             <Link href="/services" className="inline-flex items-center gap-2 font-bold uppercase tracking-widest text-xs text-electric-sapphire hover:text-deep-navy transition-colors">
+             <Link href="/corporate-compliance-and-ongoing-support" className="inline-flex items-center gap-2 font-bold uppercase tracking-widest text-xs text-electric-sapphire hover:text-deep-navy transition-colors">
                View Compliance Services <ArrowUpRight className="w-4 h-4" />
              </Link>
           </motion.div>
 
-          {/* Download Centre */}
+          {/* Request our checklists */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -106,16 +106,16 @@ export default function RecommendationsHub() {
             className="bg-white rounded-3xl p-6 md:p-8 border border-gray-100 shadow-xl group hover:border-electric-sapphire transition-colors"
           >
              <Download className="w-10 h-10 mb-6 text-deep-navy group-hover:text-electric-sapphire transition-colors" />
-             <h3 className="text-xl font-black text-deep-navy uppercase tracking-tight mb-3">Download Centre</h3>
+             <h3 className="text-xl font-black text-deep-navy uppercase tracking-tight mb-3">Request our checklists</h3>
              <p className="text-gray-500 text-sm font-light leading-relaxed mb-6">
-               Access essential resources including our 'Dubai Business Setup Document Checklist' and 'UAE Corporate Tax Readiness Checklist'.
+               Request essential resources including our 'Dubai Business Setup Document Checklist' and 'UAE Corporate Tax Readiness Checklist'.
              </p>
              <Link href="/contact" className="inline-flex items-center gap-2 font-bold uppercase tracking-widest text-xs text-electric-sapphire hover:text-deep-navy transition-colors">
-               Access Downloads <ArrowUpRight className="w-4 h-4" />
+               Request Checklists <ArrowUpRight className="w-4 h-4" />
              </Link>
           </motion.div>
 
-          {/* Insights & Case Studies - Combined split card */}
+          {/* Insights */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -123,7 +123,7 @@ export default function RecommendationsHub() {
             transition={{ delay: 0.4 }}
             className="col-span-1 md:col-span-2 lg:col-span-1 bg-white rounded-3xl border border-gray-100 shadow-xl overflow-hidden flex flex-col sm:flex-row lg:flex-col"
           >
-             <div className="flex-1 p-6 md:p-8 border-b sm:border-b-0 sm:border-r lg:border-r-0 lg:border-b border-gray-100 group hover:bg-gray-50 transition-colors">
+             <div className="flex-1 p-6 md:p-8 group hover:bg-gray-50 transition-colors">
                 <BookOpen className="w-8 h-8 mb-4 text-electric-sapphire" />
                 <h3 className="text-lg font-black text-deep-navy uppercase tracking-tight mb-2">Market Insights</h3>
                 <p className="text-gray-500 text-xs font-light leading-relaxed mb-4">
@@ -131,16 +131,6 @@ export default function RecommendationsHub() {
                 </p>
                 <Link href="/insights" className="inline-flex items-center gap-1 font-bold uppercase tracking-widest text-[10px] text-deep-navy hover:text-electric-sapphire transition-colors">
                   Read Articles <ArrowUpRight className="w-3 h-3" />
-                </Link>
-             </div>
-             <div className="flex-1 p-6 md:p-8 group hover:bg-gray-50 transition-colors">
-                <FileText className="w-8 h-8 mb-4 text-electric-sapphire" />
-                <h3 className="text-lg font-black text-deep-navy uppercase tracking-tight mb-2">Client Case Studies</h3>
-                <p className="text-gray-500 text-xs font-light leading-relaxed mb-4">
-                  Explore real problem-to-outcome stories from successful founders.
-                </p>
-                <Link href="/about-us" className="inline-flex items-center gap-1 font-bold uppercase tracking-widest text-[10px] text-deep-navy hover:text-electric-sapphire transition-colors">
-                  View Success Stories <ArrowUpRight className="w-3 h-3" />
                 </Link>
              </div>
           </motion.div>

@@ -1,4 +1,13 @@
 import ServicePage from '@/components/ServicePage';
+import type { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = constructMetadata({
+  title: "Dubai South Free Zone Business Setup in Dubai",
+  description:
+    "Set up your business in Dubai South Free Zone near Al Maktoum Airport. Juno BizHub handles licensing, office options, visas and corporate bank account support.",
+  canonicalUrl: '/dubai-south-free-zone-business-setup',
+});
 
 export default function DubaiSouthSetup() {
   return (
@@ -20,7 +29,7 @@ export default function DubaiSouthSetup() {
         "Wide variety of office solutions: from Smart Desks to dedicated commercial units",
         "Simplified and transparent business licensing and registration process",
         "Access to a massive, self-sustained urban community for employees",
-        "0% Corporate and Personal Income tax environment",
+        "Possible 0% Corporate Tax on Qualifying Income, subject to conditions; no personal income tax",
         "Multimodal transport ecosystem: Sea, Air, and Land connectivity"
       ]}
       sections={[

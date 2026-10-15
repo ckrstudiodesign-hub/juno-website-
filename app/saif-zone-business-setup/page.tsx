@@ -1,4 +1,13 @@
 import ServicePage from '@/components/ServicePage';
+import type { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = constructMetadata({
+  title: "SAIF Zone Business Setup in Sharjah",
+  description:
+    "Set up your company in Sharjah Airport International Free Zone (SAIF Zone). Juno BizHub handles licensing, office options, visas and bank account support.",
+  canonicalUrl: '/saif-zone-business-setup',
+});
 
 export default function SAIFSetup() {
   return (
@@ -13,7 +22,7 @@ export default function SAIFSetup() {
       ]}
       advantages={[
         "100% Foreign Ownership and complete capital/profit repatriation",
-        "0% Corporate and Personal Income Tax environment",
+        "Possible 0% Corporate Tax on Qualifying Income, subject to conditions; no personal income tax",
         "Trade license issued within 24 hours of application",
         "Strategic location adjacent to Sharjah International Airport",
         "Single-window system for all licensing and administrative tasks",

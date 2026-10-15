@@ -1,4 +1,13 @@
 import ServicePage from '@/components/ServicePage';
+import type { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = constructMetadata({
+  title: "LLC Company Formation in Dubai",
+  description:
+    "Form a limited liability company (LLC) on the Dubai mainland. Juno BizHub handles activity selection, DET licensing, office lease, visas and bank support.",
+  canonicalUrl: '/llc-company-formation-in-dubai',
+});
 
 export default function LLCFormation() {
   return (
@@ -7,7 +16,7 @@ export default function LLCFormation() {
       subtitle="Limited Liability Company Formation Services"
       heroImage="/images/mainland.png"
       description={[
-        "LLC (Limited Liability Company) is the most predominant type of business setup in the UAE Mainland. These companies are authorized to carry out business activities approved by the DED (Department of Economic Development).",
+        "An LLC (Limited Liability Company) is a common mainland business structure in the UAE. In Dubai, these companies carry out activities approved by the Department of Economy and Tourism (DET).",
         "A Limited Liability Company is governed by the UAE Commercial Companies Law of 2015 (CCL). The minimum number of shareholders required to form an LLC is 2 while the maximum is 50.",
         "The firm’s equity must be 51% for a UAE Local Partner and 49% for a foreign investor (Note: newer regulations allow 100% ownership in many activities, but traditionally this has been the structure). All liabilities of the company are limited to it, meaning shareholders cannot be held liable for the company's liabilities."
       ]}
@@ -15,9 +24,9 @@ export default function LLCFormation() {
         "No fixed or minimum share capital requirements",
         "No restriction on real estate ownership",
         "Can freely carry out trading across the UAE",
-        "Exemption on 5% customs duty on imported goods",
-        "Eligible for special licenses issued by the DED",
-        "Low VAT Rate",
+        "Customs treatment depends on the goods, destination and applicable customs rules",
+        "Eligible for licences issued by the Department of Economy and Tourism (DET)",
+        "VAT treatment follows UAE VAT rules",
         "Improved Credibility for multi-currency Corporate bank accounts"
       ]}
       sections={[

@@ -1,4 +1,13 @@
 import ServicePage from '@/components/ServicePage';
+import type { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = constructMetadata({
+  title: "DMCC Free Zone Company Setup in Dubai",
+  description:
+    "Form your company in DMCC, Dubai's free zone for trading and services. Juno BizHub handles activity selection, licensing, visas and bank account support.",
+  canonicalUrl: '/dmcc-free-zone-company-setup',
+});
 
 export default function DMCCSetup() {
   return (
@@ -13,7 +22,7 @@ export default function DMCCSetup() {
       ]}
       advantages={[
         "100% Foreign Ownership and complete operational control",
-        "0% Corporate and Personal Income Tax for 50 years (renewable)",
+        "Possible 0% Corporate Tax on Qualifying Income, subject to conditions; no personal income tax",
         "Strategic location in the heart of 'New Dubai' (JLT)",
         "Excellence in infrastructure specifically designed for commodity trading",
         "Full repatriation of capital and profits without currency restrictions",

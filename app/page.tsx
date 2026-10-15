@@ -1,6 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
+import { constructMetadata } from '@/lib/seo';
 
 // ========================================
 // Designed & Developed by CKR Creatives
@@ -10,14 +11,13 @@ import Hero from '@/components/home/Hero';
 import ServicesTicker from '@/components/home/ServicesTicker';
 import GlobalBackground from '@/components/global/GlobalBackground';
 
-export const metadata: Metadata = {
-  title: 'Business Setup Dubai & Corporate Services UAE',
+export const metadata: Metadata = constructMetadata({
+  title: 'Business Setup Dubai & Corporate Services UAE | Juno BizHub',
   description:
-    'Juno BizHub helps founders launch in Dubai with mainland, free zone, offshore, banking, VAT, PRO, and corporate advisory services.',
-  alternates: {
-    canonical: '/',
-  },
-};
+    'Juno BizHub helps founders launch in Dubai with mainland, free zone and offshore company setup, banking support, PRO and visas, VAT and Corporate Tax services.',
+  canonicalUrl: '/',
+  absoluteTitle: true,
+});
 
 const ServicesOrbit = dynamic(() => import('@/components/home/ServicesOrbit'));
 const PartnersMarquee = dynamic(() => import('@/components/home/PartnersMarquee'));

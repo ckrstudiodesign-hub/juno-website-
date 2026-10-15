@@ -20,6 +20,7 @@ import Analytics from "@/components/Analytics";
 import ScrollProgress from "@/components/global/ScrollProgress";
 import DisableServiceWorker from "@/components/DisableServiceWorker";
 import SuccessPopup from "@/components/global/SuccessPopup";
+import CookieConsent from "@/components/global/CookieConsent";
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 
@@ -33,7 +34,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.junobizhub.com"
 
 import { constructMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = constructMetadata();
+export const metadata: Metadata = constructMetadata({ canonicalUrl: null });
 
 export default function RootLayout({
   children,
@@ -57,6 +58,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <CookieConsent />
       </body>
     </html>
   );

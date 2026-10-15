@@ -1,4 +1,13 @@
 import ServicePage from '@/components/ServicePage';
+import type { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = constructMetadata({
+  title: "ISO Certification in Dubai",
+  description:
+    "ISO certification support in Dubai for quality, environmental and safety standards. Juno BizHub coordinates your documentation, audits and certification.",
+  canonicalUrl: '/iso-certification-dubai',
+});
 
 export default function ISOCertification() {
   return (

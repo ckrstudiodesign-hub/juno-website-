@@ -43,7 +43,7 @@ const ClientJourney = () => {
         
         <div className="text-center mb-24">
           <span className="text-electric-sapphire font-black tracking-[0.4em] uppercase text-xs block mb-4">How It Works</span>
-          <h2 className="text-4xl md:text-5xl font-black text-deep-navy tracking-tighter">Process section.</h2>
+          <h2 className="text-4xl md:text-5xl font-black text-deep-navy tracking-tighter">How We Work</h2>
         </div>
 
         <div className="relative">

@@ -1,4 +1,13 @@
 import ServicePage from '@/components/ServicePage';
+import type { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = constructMetadata({
+  title: "Mainland Company Formation in Dubai",
+  description:
+    "Set up a Dubai mainland company licensed by DET, with 100% foreign ownership for most activities. Juno BizHub handles licensing, visas and bank support.",
+  canonicalUrl: '/mainland-company-formation-in-dubai',
+});
 
 export default function MainlandOverview() {
   return (
@@ -7,24 +16,22 @@ export default function MainlandOverview() {
       subtitle="Overview of Dubai Mainland Company Formation Services"
       heroImage="/images/mainland.png"
       description={[
-        "Mainland is the most common form of Company set up in the United Arab Emirates. This business setup in UAE implies an onshore company that undertakes business in Dubai or other regions of the Emirates and outside the UAE.",
-        "Mainland business setup in Dubai gained tremendous preference owing to its high level of flexibility. The formation of a mainland company entitles you the right to trade with end-customers anywhere in UAE and across the world. (unlike Free Zone companies, An LLC enjoys the freedom to trade anywhere in the UAE or GCC. Further, minimum restriction on business activities, visas, and other benefits make this Company set up a highly lucrative business option.",
-        "Nevertheless, new investors have taken advantage of this option to establish an international brand reputation and plan their future growth strategy. If you are looking for a Business Setup in Dubai Mainland, you can bank on us."
+        "A mainland company is licensed by the emirate's economic department – in Dubai, the Department of Economy and Tourism (DET). It can trade directly with customers anywhere in the UAE and abroad, without the location limits that apply to free zone companies.",
+        "Most commercial and industrial activities now allow 100% foreign ownership. Some activities still need a local partner or a Local Service Agent, so we check your activity before you apply.",
+        "Juno BizHub handles the full process, from activity selection and trade name approval to office lease, licence issue, visas and bank account support."
       ]}
       advantages={[
-        "No fixed or minimum share capital requirements",
-        "No restriction on office space and visas (visas depends upon the office space)",
-        "Can freely carry out business across the UAE with local authorities and the government",
-        "Exemption from 5% customs duty on imported goods",
-        "Low VAT Rate",
-        "Improved Credibility for opening multi-currency Corporate bank accounts",
-        "Ability to diversify your business",
-        "Exemption on yearly audit"
+        "No fixed minimum share capital for most activities",
+        "Visa quota linked to office size",
+        "Trade freely across the UAE and with government entities",
+        "Credibility with banks and larger clients",
+        "Room to add activities and branches as you grow",
+        "100% foreign ownership for most activities"
       ]}
       executiveSummary={{
-        summary: "A mainland company in Dubai (often an LLC) is an onshore entity registered with the Department of Economic Development (DED). It allows you to trade freely anywhere in the UAE and internationally without restrictions.",
+        summary: "A Dubai mainland company is licensed by the Department of Economy and Tourism (DET). It can trade anywhere in the UAE and internationally, and can bid for government contracts. It is subject to UAE Corporate Tax and VAT rules like any other UAE business.",
         keyFacts: [
-          "Zero Corporate Tax on profits up to AED 375,000",
+          "0% Corporate Tax on taxable income up to AED 375,000; 9% above",
           "100% Foreign Ownership allowed in most sectors",
           "No currency restrictions",
           "Can bid for government contracts"
@@ -32,10 +39,10 @@ export default function MainlandOverview() {
       }}
       decisionTable={{
         title: "Mainland vs Free Zone",
-        option1Name: "Mainland (DED)",
+        option1Name: "Mainland (DET)",
         option2Name: "Free Zone",
         features: [
-          { name: "Trading Scope", option1: "Anywhere in UAE & Global", option2: "Only inside Free Zone & Global" },
+          { name: "Trading Scope", option1: "Anywhere in UAE & Global", option2: "Within the free zone and internationally; UAE mainland trade usually needs a distributor or extra permit" },
           { name: "Government Contracts", option1: true, option2: false },
           { name: "Office Requirement", option1: "Physical office mandatory", option2: "Flexi-desk allowed" },
           { name: "Foreign Ownership", option1: "100% (for most activities)", option2: "100%" }
@@ -44,10 +51,10 @@ export default function MainlandOverview() {
       stepByStep={{
         title: "Mainland Setup Process",
         steps: [
-          { title: "Initial Approval", description: "Select your business activity and reserve a trade name with the DED." },
+          { title: "Initial Approval", description: "Select your business activity and reserve a trade name with the DET." },
           { title: "Legal Drafting", description: "Draft the Memorandum of Association (MOA) and Local Service Agent agreement if required." },
           { title: "Office Lease", description: "Sign a tenancy contract (Ejari) for your physical office space in Dubai." },
-          { title: "Final License", description: "Submit all documents to the DED and obtain your official Trade License." }
+          { title: "Final License", description: "Submit all documents to the DET and obtain your official Trade License." }
         ]
       }}
       faqs={[
@@ -57,12 +64,12 @@ export default function MainlandOverview() {
         },
         {
           question: "What is the minimum capital requirement for an LLC?",
-          answer: "There is no statutory minimum share capital requirement for a standard LLC in Dubai Mainland, though it should be sufficient to achieve the purpose of incorporation."
+          answer: "There is no statutory minimum share capital requirement for a standard LLC in Dubai Mainland, though it should be sufficient to achieve the purpose of incorporation. Some activities and banks expect a set capital amount, so we confirm this for your activity."
         }
       ]}
       sections={[
         {
-          title: "Types of Licenses Issued by DED",
+          title: "Types of Licenses Issued by DET",
           content: "You are free to choose the license that fits your business model:",
           list: [
             "Professional License – For service-oriented businesses",
@@ -82,7 +89,7 @@ export default function MainlandOverview() {
         },
         {
           title: "Robust process",
-          description: "We ensure the process is streamlined and with the help of appropriate technology and automation. Your company formation process is just a step away."
+          description: "We use clear checklists and digital tracking so you always know the status of your application."
         },
         {
           title: "Transparency",

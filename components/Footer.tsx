@@ -38,7 +38,7 @@ const Footer = () => {
               </div>
             </Link>
             <p className="text-deep-navy/80 text-lg font-light leading-relaxed max-w-md">
-              The premier business gateway to the UAE. Leveraging two decades of elite banking expertise to architect your corporate future in Dubai and beyond.
+              The premier business gateway to the UAE. Backed by over 20 years of UAE banking experience.
             </p>
             <div className="flex gap-4">
               {[
@@ -135,7 +135,7 @@ const Footer = () => {
                  ckrcreatives.com
                </a>
              </p>
-             <p className="text-gray-700 text-xs font-light">© 2024 Juno BizHub. All rights reserved.</p>
+             <p className="text-gray-700 text-xs font-light">© 2026 Juno BizHub Corporate Services Providers LLC. All rights reserved.</p>
              <div className="flex gap-4 mt-2">
                <Link href="/privacy-policy" className="text-deep-navy/70 hover:text-electric-sapphire text-xs">Privacy Policy</Link>
              </div>

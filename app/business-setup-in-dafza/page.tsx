@@ -1,4 +1,13 @@
 import ServicePage from '@/components/ServicePage';
+import type { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = constructMetadata({
+  title: "DAFZA Business Setup in Dubai",
+  description:
+    "Set up your company in Dubai Airport Free Zone (DAFZA) with Juno BizHub. We guide activity selection, licensing, office options, visas and bank support.",
+  canonicalUrl: '/business-setup-in-dafza',
+});
 
 export default function DAFZASetup() {
   return (
@@ -13,12 +22,12 @@ export default function DAFZASetup() {
       advantages={[
         "100% foreign company ownership and control",
         "Full repatriation of capital and profits",
-        "0% Corporate and Personal Income tax",
+        "Possible 0% Corporate Tax on Qualifying Income, subject to conditions; no personal income tax",
         "Strategic proximity to Dubai International Airport (DXB)",
         "Exemption from all import and export duties",
         "Multi-currency corporate bank account eligibility",
         "24/7 dedicated customs services and rapid cargo clearance",
-        "Dual DED licensing options (allowing business in mainland)",
+        "Dual DET licensing options may be available for mainland activities, subject to approval",
         "World-class telecommunications and data infrastructure",
         "Smart services platform for all governmental and administrative tasks"
       ]}

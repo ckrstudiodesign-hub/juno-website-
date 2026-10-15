@@ -1,4 +1,13 @@
 import ServicePage from '@/components/ServicePage';
+import type { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = constructMetadata({
+  title: "Legal Translation Services in Dubai",
+  description:
+    "Certified legal translation in Dubai for contracts, court papers, corporate and personal documents in Arabic and English, all coordinated by Juno BizHub.",
+  canonicalUrl: '/legal-translation-dubai',
+});
 
 export default function LegalTranslation() {
   return (
@@ -9,7 +18,7 @@ export default function LegalTranslation() {
       description={[
         "In the UAE, Arabic is the primary language for all official government documentation. Any legal document issued in another language must be translated into Arabic by a licensed legal translator approved by the UAE Ministry of Justice. Juno BizHub provides high-precision legal translation services that are accepted by all courts and government entities.",
         "We specialize in the translation of corporate MOAs, Power of Attorneys, court orders, medical reports, and educational certificates. Our translations carry the weight of authority required for filing at the Department of Economy and Tourism (DET), the Ministry of Labor, and the UAE Judicial system.",
-        "Our team of sworn translators ensures that the legal terminology is preserved with 100% accuracy, maintaining the integrity and enforceability of your original documents."
+        "Our team of sworn translators carefully preserves the legal terminology and meaning of your original documents."
       ]}
       advantages={[
         "Certified translations approved by the UAE Ministry of Justice",

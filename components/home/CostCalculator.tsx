@@ -429,7 +429,7 @@ export default function CostCalculator() {
                           <span className="text-2xl font-bold mb-1">AED</span>
                           <span className="text-5xl font-black tracking-tighter">{calculateCost()}</span>
                         </div>
-                        <p className="text-xs text-gray-400 mt-4">*This is an approximate estimate based on current DED & Free Zone regulations. Final cost depends on specific license activities and approvals.</p>
+                        <p className="text-xs text-gray-400 mt-4">*Estimates are based on current DET and free zone fee schedules. Final costs are confirmed in your quotation.</p>
                       </div>
 
                       <div className="space-y-3 pt-2">

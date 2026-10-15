@@ -1,4 +1,13 @@
 import ServicePage from '@/components/ServicePage';
+import type { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = constructMetadata({
+  title: "Meydan Free Zone Company Setup in Dubai",
+  description:
+    "Set up your company in Meydan Free Zone, Dubai. Juno BizHub handles activity selection, licensing, visas and corporate bank account support from start to end.",
+  canonicalUrl: '/meydan-free-zone',
+});
 
 export default function MeydanSetup() {
   return (
@@ -16,7 +25,7 @@ export default function MeydanSetup() {
         "Prestigious Dubai business address within a world-class complex",
         "Over 1,500 business activities allowed on a single license",
         "No minimum paid-up capital requirement",
-        "0% Corporate and Personal Income tax",
+        "Possible 0% Corporate Tax on Qualifying Income, subject to conditions; no personal income tax",
         "No mandatory auditing requirements for many structures",
         "Simplified digital application through an intuitive portal",
         "Eligibility for UAE Residence Visas and family sponsorship",

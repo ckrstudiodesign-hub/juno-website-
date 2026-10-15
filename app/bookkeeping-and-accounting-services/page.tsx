@@ -1,13 +1,22 @@
 import ServicePage from '@/components/ServicePage';
+import type { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = constructMetadata({
+  title: "Bookkeeping and Accounting Services in Dubai",
+  description:
+    "Bookkeeping and accounting in Dubai with VAT and Corporate Tax support, plus audit-ready financial statements for licence renewals, banks and tax filings.",
+  canonicalUrl: '/bookkeeping-and-accounting-services',
+});
 
 export default function Bookkeeping() {
   return (
     <ServicePage
       title="Bookkeeping and Accounting Services"
       subtitle="Financial Clarity for Corporate Compliance"
-      heroImage="/images/mainland.png"
+      heroImage="/images/core_accounting.jpg"
       description={[
-        "Modern business in the UAE requires more than just high-level strategy; it requires rigorous and accurate financial record-keeping to meet VAT and Corporate Tax standards. Juno BizHub provides professional bookkeeping and accounting services designed to give you total visibility over your finances while ensuring 100% regulatory compliance.",
+        "Modern business in the UAE requires more than just high-level strategy; it requires rigorous and accurate financial record-keeping to meet VAT and Corporate Tax standards. Juno BizHub provides professional bookkeeping and accounting services designed to give you total visibility over your finances, designed to meet UAE regulatory requirements.",
         "We act as your extended finance department, managing day-to-day transactions, bank reconciliations, and payroll processing. Our services are tailored for startups, SMEs, and established firms that require professional-grade financial reporting without the overhead of a full-time in-house accountant.",
         "By integrating smart cloud-based accounting solutions, we provide you with real-time financial dashboards, allowing you to make data-driven decisions that propel your business forward in the UAE market."
       ]}
@@ -16,7 +25,7 @@ export default function Bookkeeping() {
         "Compliance with UAE VAT and Corporate Tax record-keeping laws",
         "Monthly and quarterly Profit & Loss (P&L) and Balance Sheet reporting",
         "Expert bank account reconciliation and cash flow monitoring",
-        "Audit-ready financial statements for annual license renewals",
+        "Audit-ready financial statements for licence renewals, banks and Corporate Tax",
         "Implementation of cloud-based accounting software (Xero, QuickBooks, Zoho)",
         "Management of Accounts Payable (AP) and Accounts Receivable (AR)",
         "Payroll processing and WPS (Wage Protection System) compliance",
@@ -27,7 +36,7 @@ export default function Bookkeeping() {
         {
           title: "Why Is Professional Bookkeeping Essential?",
           content: [
-            "With the introduction of Corporate Tax, holding a set of audited financial statements is becoming mandatory for many business categories. Professional bookkeeping is the foundation for a successful audit.",
+            "With the introduction of Corporate Tax, audited financial statements are required for businesses with revenue above AED 50 million, all Qualifying Free Zone Persons and all Tax Groups, and many free zones ask for them at licence renewal. Professional bookkeeping is the foundation for a successful audit.",
             "Choosing Juno BizHub for your accounting needs ensures that your books are structured to meet the specific requirements of UAE banks and the Federal Tax Authority."
           ]
         },
@@ -42,7 +51,7 @@ export default function Bookkeeping() {
           ]
         },
         {
-          title: "The bizhub Finance Standard",
+          title: "The BizHub Finance Standard",
           content: "We don't just 'do the numbers'; we provide financial insights. Our monthly reviews help you understand your burn rate, profit margins, and ROI, ensuring your UAE entity remains profitable and scalable for years to come."
         }
       ]}

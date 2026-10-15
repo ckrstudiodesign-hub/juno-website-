@@ -1,4 +1,13 @@
 import ServicePage from '@/components/ServicePage';
+import type { Metadata } from 'next';
+import { constructMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = constructMetadata({
+  title: "RAKEZ Company Formation in Ras Al Khaimah",
+  description:
+    "Set up your company in Ras Al Khaimah Economic Zone (RAKEZ). Juno BizHub handles activity selection, licensing, facilities, visas and bank account support.",
+  canonicalUrl: '/rakez-company-formation',
+});
 
 export default function RAKEZSetup() {
   return (
@@ -13,7 +22,7 @@ export default function RAKEZSetup() {
       ]}
       advantages={[
         "100% Foreign Ownership and full capital/profit repatriation",
-        "0% Corporate and Personal Income Tax environment",
+        "Possible 0% Corporate Tax on Qualifying Income, subject to conditions; no personal income tax",
         "Most cost-effective business setup and operational costs in the UAE",
         "Wide range of license types: Commercial, Service, Industrial, Media, and Education",
         "Strategic access to major seaports and international airports in Ras Al Khaimah and Dubai",
