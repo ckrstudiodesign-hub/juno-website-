@@ -1,6 +1,6 @@
 ---
 title: "Contact Juno BizHub — Dubai Corporate Services"
-meta_description: "Get in touch with Juno BizHub in Dubai for company formation, banking, VAT, PRO and residency services. Phone +971 54 129 0038."
+meta_description: "Get in touch with Juno BizHub in Dubai for company formation, banking, VAT, PRO and residency services. Phone +971 56 685 0911 / +971 54 129 0038."
 canonical: https://www.junobizhub.com/contact
 ---
 
@@ -8,7 +8,7 @@ canonical: https://www.junobizhub.com/contact
 
 **Headquarters:** 106 Sheikh Zayed Rd - Trade Center First - Dubai, Aspin Commercial Tower
 
-**Phone:** +971 54 129 0038
+**Phone:** +971 56 685 0911 / +971 54 129 0038
 **Email:** info.junobh@gmail.com
 
 **Office Hours:** Monday to Saturday | 9:30 AM – 6:30 PM (Closed on 1st & 2nd Saturdays)

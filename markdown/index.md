@@ -34,10 +34,10 @@ canonical: https://www.junobizhub.com/
 - Q: Where is Juno BizHub located?
   - A: Headquarters on 106 Sheikh Zayed Rd - Trade Center First - Dubai, Aspin Commercial Tower
 - Q: How do I contact the company?
-  - A: Phone +971 54 129 0038 or via the secure contact form at /contact.
+  - A: Phone +971 56 685 0911 / +971 54 129 0038 or via the secure contact form at /contact.
 
 ## Contact
-- Phone: +971 54 129 0038
+- Phone: +971 56 685 0911 / +971 54 129 0038
 - Email: info.junobh@gmail.com
 
 ## Important Links

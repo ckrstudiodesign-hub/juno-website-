@@ -267,9 +267,14 @@ const ServicePage = ({
                  <div className="absolute inset-0 bg-electric-sapphire translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
                  <div className="relative z-10 space-y-1">
                     <p className="text-black/40 font-black uppercase text-[10px] tracking-[0.2em] group-hover:text-black/60 transition-colors">Direct Desk</p>
-                    <a href="tel:+971 54 129 0038" className="text-black text-xl font-black tracking-tighter">
-                      +971 54 129 0038
-                    </a>
+                    <div className="flex flex-col">
+                      <a href="tel:+971 54 129 0038" className="text-black text-lg font-black tracking-tighter hover:underline">
+                        +971 54 129 0038
+                      </a>
+                      <a href="tel:+971566850911" className="text-black text-lg font-black tracking-tighter hover:underline">
+                        +971 56 685 0911
+                      </a>
+                    </div>
                  </div>
                  <div className="relative z-10 w-12 h-12 bg-black rounded-2xl flex items-center justify-center text-electric-sapphire group-hover:bg-white group-hover:text-black transition-all shadow-lg rotate-3 group-hover:rotate-0">
                     <Phone size={22} strokeWidth={2.5} />

@@ -4,7 +4,7 @@ ___
 3. Start your journery and our services - should be clickable (Button on top the video)
 4. Add Off-Shore Company, Strategic Business Advisory in the dots of the solar system
 5. Mainland Co., PJSC Formation, Professional License, Branch Office, Public Listing, Sub-Authorities Permissions
-6. Free zone - SHAMS, RAKEZ, FUJAIRAH FZ, AJMAN FZ, ADGM (ABU DHABI) AND OVER 50 OTHER FREE ZONES
+6. Free zone - SHAMS, RAKEZ, FUJAIRAH FZ, AJMAN FZ, ADGM (ABU DHABI), IFZA, SPC, JAFZA, DAFZA, DUBAI SOUTH AND OVER 50 OTHER FREE ZONES
 7. CORPORATE SERTIVES - AML COMPLIANCE, BUSINESS ADVISORY
 8. RESIDENCY AND VISAS - FREELANCER VISA, GOLDEN VISA, INVESTOR VISA, EMPLOYEE VISA, UAE WILLS, DOCUMENT ATTESTATION
 9. Be the part of Global Economic Hub and the button should be Juno color![[Screenshot 2026-10-05 at 5.25.03 pm.png]]

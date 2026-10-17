@@ -73,7 +73,7 @@ export default function LeadModal() {
     setIsSubmitting(true);
 
     try {
-      const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || '0d636ff5-c591-41c6-b8a6-12606869bb88';
+      const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || 'e6948b50-588e-4b63-af5f-f14b0de16dc4';
       if (!accessKey) {
         setError('Form is not configured. Please try again later.');
         return;

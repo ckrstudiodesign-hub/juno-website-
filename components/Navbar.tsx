@@ -77,6 +77,8 @@ const Navbar = () => {
         { name: 'JAFZA', href: '/jafza-company-formation' },
         { name: 'Meydan', href: '/meydan-free-zone' },
         { name: 'SPC', href: '/spc-free-zone-setup' },
+        { name: 'DAFZA', href: '/business-setup-in-dafza' },
+        { name: 'Dubai South', href: '/dubai-south-free-zone-business-setup' },
       ]
     },
     {

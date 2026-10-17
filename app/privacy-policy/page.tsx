@@ -72,7 +72,7 @@ export default function PrivacyPolicyPage() {
                   <strong>Office address:</strong> Office 24, Floor 26, Aspin Commercial Tower, Sheikh Zayed Road, Near Financial Centre Metro Station, Dubai, UAE<br />
                   <strong>Website:</strong> <a href="https://junobizhub.com" className="text-electric-sapphire">https://junobizhub.com</a><br />
                   <strong>Contact email:</strong> <a href="mailto:info@junobizhub.ae" className="text-electric-sapphire">info@junobizhub.ae</a><br />
-                  <strong>Contact number:</strong> <a href="tel:+971 54 129 0038" className="text-electric-sapphire">+971 54 129 0038</a>
+                  <strong>Contact number:</strong> <a href="tel:+971 54 129 0038" className="text-electric-sapphire">+971 54 129 0038</a>, <a href="tel:+971566850911" className="text-electric-sapphire">+971 56 685 0911</a>
                 </p>
                 <p>
                   Juno BizHub acts as a “data controller” when we decide how and why your personal
@@ -253,7 +253,11 @@ export default function PrivacyPolicyPage() {
                     </div>
                     <div>
                       <p className="font-bold">Phone / WhatsApp</p>
-                      <p className="text-sm text-gray-700"><a href="tel:+971 54 129 0038" className="text-electric-sapphire">+971 54 129 0038</a></p>
+                      <p className="text-sm text-gray-700">
+                        <a href="tel:+971 54 129 0038" className="text-electric-sapphire">+971 54 129 0038</a>
+                        {' · '}
+                        <a href="tel:+971566850911" className="text-electric-sapphire">+971 56 685 0911</a>
+                      </p>
                     </div>
                   </div>
                 </div>

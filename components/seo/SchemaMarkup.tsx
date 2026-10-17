@@ -61,6 +61,13 @@ export const GlobalSchemas = {
         areaServed: 'AE',
         availableLanguage: ['English', 'Arabic'],
       },
+      {
+        '@type': 'ContactPoint',
+        telephone: '+971 56 685 0911',
+        contactType: 'customer support',
+        areaServed: 'AE',
+        availableLanguage: ['English', 'Arabic'],
+      },
     ],
   },
   LocalBusiness: {
@@ -69,7 +76,7 @@ export const GlobalSchemas = {
     name: 'Juno BizHub Corporate Services Providers',
     image: `${SITE_URL}/golden-logo.png`,
     url: SITE_URL,
-    telephone: '+971 54 129 0038',
+    telephone: '+971 56 685 0911',
     email: 'info@junobizhub.ae',
     address: {
       '@type': 'PostalAddress',

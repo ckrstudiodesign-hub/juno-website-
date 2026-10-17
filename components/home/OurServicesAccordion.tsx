@@ -19,7 +19,7 @@ const services = [
     title: 'Free Zone Setup',
     icon: Globe2,
     description: 'Explore UAE free zones with 100% foreign ownership and possible 0% Corporate Tax on Qualifying Income, subject to conditions.',
-    links: ['SHAMS', 'RAKEZ', 'Fujairah FZ', 'Ajman FZ', 'ADGM — Abu Dhabi', 'Over 50 Other Free Zones'],
+    links: ['SHAMS', 'RAKEZ', 'Fujairah FZ', 'Ajman FZ', 'ADGM — Abu Dhabi', 'IFZA', 'SPC', 'JAFZA', 'DAFZA', 'Dubai South', 'Over 50 Other Free Zones'],
     href: '/services'
   },
   {

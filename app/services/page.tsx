@@ -25,10 +25,13 @@ const services = [
     links: [
       { name: 'Free Zone Overview', href: '/dubai-free-zone-company-overview' },
       { name: 'IFZA', href: '/ifza-dubai-business-set-up' },
-      { name: 'MEYDAN', href: '/meydan-free-zone' },
+      { name: 'SPC Free Zone', href: '/spc-free-zone-setup' },
+      { name: 'JAFZA', href: '/jafza-company-formation' },
+      { name: 'DAFZA', href: '/business-setup-in-dafza' },
+      { name: 'Dubai South', href: '/dubai-south-free-zone-business-setup' },
       { name: 'DMCC', href: '/dmcc-free-zone-company-setup' },
       { name: 'RAKEZ', href: '/rakez-company-formation' },
-      { name: 'SPC Free Zone', href: '/spc-free-zone-setup' },
+      { name: 'MEYDAN', href: '/meydan-free-zone' },
       { name: 'DIFC', href: '/difc-company-setup' },
     ]
   },

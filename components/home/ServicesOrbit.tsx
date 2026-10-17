@@ -55,11 +55,16 @@ const services: Service[] = [
     big: true,
     bgImage: '/images/freezone_new.jpg',
     links: [
-      { label: 'SHAMS', href: '/services' },
+      { label: 'SHAMS', href: '/sharjah-media-city-free-zone-business-setup' },
       { label: 'RAKEZ', href: '/rakez-company-formation' },
       { label: 'Fujairah FZ', href: '/fujairah-free-zone-company-formation' },
-      { label: 'Ajman FZ', href: '/services' },
+      { label: 'Ajman FZ', href: '/ajman-free-zone-business-setup' },
       { label: 'ADGM — Abu Dhabi', href: '/services' },
+      { label: 'IFZA', href: '/ifza-dubai-business-set-up' },
+      { label: 'SPC', href: '/spc-free-zone-setup' },
+      { label: 'JAFZA', href: '/jafza-company-formation' },
+      { label: 'DAFZA', href: '/business-setup-in-dafza' },
+      { label: 'Dubai South', href: '/dubai-south-free-zone-business-setup' },
       { label: 'Over 50 Other Free Zones', href: '/dubai-free-zone-company-overview' },
     ],
   },
@@ -461,7 +466,7 @@ const ServicesOrbit = () => {
                     <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
                       {active.links.map((link) => (
                         <Link
-                          key={link.href}
+                          key={link.label}
                           href={link.href}
                           className="px-3 py-1.5 md:px-4 md:py-2 rounded-full border border-electric-sapphire/20 bg-white/70 backdrop-blur-sm text-[9px] md:text-[11px] font-bold uppercase tracking-widest text-deep-navy hover:text-white hover:bg-electric-sapphire hover:border-electric-sapphire transition-all shadow-sm"
                         >

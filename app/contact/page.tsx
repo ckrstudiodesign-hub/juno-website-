@@ -19,7 +19,7 @@ const ContactPage = () => {
     setSubmitStatus('submitting');
 
     try {
-      const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || '0d636ff5-c591-41c6-b8a6-12606869bb88';
+      const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || 'e6948b50-588e-4b63-af5f-f14b0de16dc4';
       if (!accessKey) {
         setSubmitStatus('error');
         setTimeout(() => setSubmitStatus('idle'), 2000);
@@ -116,8 +116,10 @@ const ContactPage = () => {
                   </div>
                   <div className="space-y-1">
                     <p className="text-deep-navy font-black uppercase text-xs tracking-widest opacity-50">Call Us</p>
-                    <a href="tel:+971 54 129 0038" className="text-deep-navy text-lg font-medium hover:text-electric-sapphire transition-colors">+971 54 129 0038</a>
-                    <br />
+                    <div className="flex flex-col gap-0.5">
+                      <a href="tel:+971 54 129 0038" className="text-deep-navy text-lg font-medium hover:text-electric-sapphire transition-colors">+971 54 129 0038</a>
+                      <a href="tel:+971566850911" className="text-deep-navy text-lg font-medium hover:text-electric-sapphire transition-colors">+971 56 685 0911</a>
+                    </div>
                   </div>
                 </div>
 
